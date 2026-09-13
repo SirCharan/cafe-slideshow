@@ -23,56 +23,56 @@
       "We'll start with what it costs to get in the door."
     ],
     "audio": "/audio/open.mp3",
-    "duration": 34.100293,
+    "duration": 35.288,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "Okay, so you want to open a café in Bangalore.",
         "local_start": 0,
-        "duration": 2.171,
+        "duration": 3.288583,
         "global_start": 0
       },
       {
         "sentence_idx": 1,
         "text": "You picture a lane in Indiranagar or Koramangala, a proper espresso machine, flat whites at two hundred and eighty rupees a cup.",
-        "local_start": 2.5709999999999997,
-        "duration": 7.820667,
-        "global_start": 2.5709999999999997
+        "local_start": 3.688583,
+        "duration": 7.785167,
+        "global_start": 3.688583
       },
       {
         "sentence_idx": 2,
         "text": "Every table full by eleven in the morning.",
-        "local_start": 10.791667,
-        "duration": 2.440667,
-        "global_start": 10.791667
+        "local_start": 11.87375,
+        "duration": 2.44075,
+        "global_start": 11.87375
       },
       {
         "sentence_idx": 3,
         "text": "That is the picture in your head. Here's the problem.",
-        "local_start": 13.732334,
-        "duration": 2.798583,
-        "global_start": 13.732334
+        "local_start": 14.814499999999999,
+        "duration": 2.90925,
+        "global_start": 14.814499999999999
       },
       {
         "sentence_idx": 4,
         "text": "The room is full of laptops, and the average bill of eight hundred and forty rupees sits on the table for sixty-five minutes.",
-        "local_start": 17.080917,
-        "duration": 7.144042,
-        "global_start": 17.080917
+        "local_start": 18.27375,
+        "duration": 7.144125,
+        "global_start": 18.27375
       },
       {
         "sentence_idx": 5,
         "text": "It's not a coffee business. It's a rent and labour business that happens to sell coffee.",
-        "local_start": 24.724959,
-        "duration": 5.370542,
-        "global_start": 24.724959
+        "local_start": 25.917875,
+        "duration": 5.370583,
+        "global_start": 25.917875
       },
       {
         "sentence_idx": 6,
         "text": "We'll start with what it costs to get in the door.",
-        "local_start": 30.795500999999998,
-        "duration": 2.704792,
-        "global_start": 30.795500999999998
+        "local_start": 31.988457999999998,
+        "duration": 2.699542,
+        "global_start": 31.988457999999998
       }
     ],
     "video_script": {
@@ -161,49 +161,49 @@
       "The room is full. It looks like easy money."
     ],
     "audio": "/audio/b01.mp3",
-    "duration": 19.625750000000004,
+    "duration": 19.948083000000004,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "You want to open a café in Bangalore.",
         "local_start": 0,
-        "duration": 2.005333,
-        "global_start": 36.600293
+        "duration": 2.386958,
+        "global_start": 37.788
       },
       {
         "sentence_idx": 1,
         "text": "You pick a lane in Indiranagar, Koramangala, or HSR Layout.",
-        "local_start": 2.4053329999999997,
-        "duration": 4.023083,
-        "global_start": 39.005626
+        "local_start": 2.786958,
+        "duration": 4.023125,
+        "global_start": 40.574957999999995
       },
       {
         "sentence_idx": 2,
         "text": "You buy a commercial espresso machine.",
-        "local_start": 6.778415999999999,
-        "duration": 2.321958,
-        "global_start": 43.378709
+        "local_start": 7.160083,
+        "duration": 2.310625,
+        "global_start": 44.948083
       },
       {
         "sentence_idx": 3,
         "text": "You serve specialty coffee for two hundred and eighty rupees a cup.",
-        "local_start": 9.450374,
-        "duration": 3.717542,
-        "global_start": 46.050667000000004
+        "local_start": 9.820708,
+        "duration": 3.724417,
+        "global_start": 47.60870799999999
       },
       {
         "sentence_idx": 4,
         "text": "Customers sit for an hour with a laptop.",
-        "local_start": 13.567916,
-        "duration": 2.282542,
-        "global_start": 50.168209000000004
+        "local_start": 13.945125,
+        "duration": 2.282625,
+        "global_start": 51.733125
       },
       {
         "sentence_idx": 5,
         "text": "The room is full. It looks like easy money.",
-        "local_start": 16.200458,
-        "duration": 2.825292,
-        "global_start": 52.800751000000005
+        "local_start": 16.57775,
+        "duration": 2.770333,
+        "global_start": 54.36575
       }
     ],
     "video_script": {
@@ -309,49 +309,49 @@
       "Daily customer volume must pay your monthly bills."
     ],
     "audio": "/audio/b02.mp3",
-    "duration": 19.540333,
+    "duration": 18.113334000000002,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "A full room hides a simple fact.",
         "local_start": 0,
-        "duration": 2.217208,
-        "global_start": 56.226043000000004
+        "duration": 2.217292,
+        "global_start": 57.736083
       },
       {
         "sentence_idx": 1,
         "text": "Online photos show the single best hour of the week.",
-        "local_start": 2.6172079999999998,
-        "duration": 3.372667,
-        "global_start": 58.843251
+        "local_start": 2.617292,
+        "duration": 3.37275,
+        "global_start": 60.353375
       },
       {
         "sentence_idx": 2,
         "text": "This is Sunday morning peak rush.",
-        "local_start": 6.3698749999999995,
-        "duration": 3.269792,
-        "global_start": 62.595918000000005
+        "local_start": 6.370042,
+        "duration": 1.85575,
+        "global_start": 64.106125
       },
       {
         "sentence_idx": 3,
         "text": "The rest of the week is quiet.",
-        "local_start": 9.989666999999999,
-        "duration": 1.706375,
-        "global_start": 66.21571
+        "local_start": 8.575792,
+        "duration": 1.693083,
+        "global_start": 66.311875
       },
       {
         "sentence_idx": 4,
         "text": "Fixed rent and barista wages run every single day.",
-        "local_start": 12.096041999999999,
-        "duration": 3.303583,
-        "global_start": 68.322085
+        "local_start": 10.668875,
+        "duration": 3.303667,
+        "global_start": 68.404958
       },
       {
         "sentence_idx": 5,
         "text": "Daily customer volume must pay your monthly bills.",
-        "local_start": 15.799624999999999,
-        "duration": 3.140708,
-        "global_start": 72.025668
+        "local_start": 14.372542,
+        "duration": 3.140792,
+        "global_start": 72.108625
       }
     ],
     "video_script": {
@@ -445,49 +445,49 @@
       "This size keeps initial setup costs under control."
     ],
     "audio": "/audio/b03.mp3",
-    "duration": 21.960875,
+    "duration": 21.961249000000002,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "We must define the exact size of the café.",
         "local_start": 0,
-        "duration": 2.791625,
-        "global_start": 75.76637600000001
+        "duration": 2.791708,
+        "global_start": 75.849417
       },
       {
         "sentence_idx": 1,
         "text": "We look at one independent neighbourhood café.",
-        "local_start": 3.1716249999999997,
-        "duration": 2.612875,
-        "global_start": 78.93800100000001
+        "local_start": 3.1717079999999997,
+        "duration": 2.612958,
+        "global_start": 79.021125
       },
       {
         "sentence_idx": 2,
         "text": "The floor area is six hundred to one thousand square feet.",
-        "local_start": 6.134499999999999,
-        "duration": 3.527083,
-        "global_start": 81.90087600000001
+        "local_start": 6.134665999999999,
+        "duration": 3.527167,
+        "global_start": 81.984083
       },
       {
         "sentence_idx": 3,
         "text": "You pay setup costs for deposits, civil work, and machines.",
-        "local_start": 10.161583,
-        "duration": 4.034292,
-        "global_start": 85.92795900000002
+        "local_start": 10.161833,
+        "duration": 4.034333,
+        "global_start": 86.01125
       },
       {
         "sentence_idx": 4,
         "text": "Then you pay monthly costs to keep the doors open.",
-        "local_start": 14.545874999999999,
-        "duration": 3.005083,
-        "global_start": 90.312251
+        "local_start": 14.546166,
+        "duration": 3.005125,
+        "global_start": 90.395583
       },
       {
         "sentence_idx": 5,
         "text": "This size keeps initial setup costs under control.",
-        "local_start": 17.900958,
-        "duration": 3.459917,
-        "global_start": 93.66733400000001
+        "local_start": 17.901291,
+        "duration": 3.459958,
+        "global_start": 93.750708
       }
     ],
     "video_script": {
@@ -584,49 +584,49 @@
       "Funded corporate chains follow completely different rules."
     ],
     "audio": "/audio/b04.mp3",
-    "duration": 16.626250000000002,
+    "duration": 29.286501,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "This model is for one single outlet.",
         "local_start": 0,
-        "duration": 2.207833,
-        "global_start": 97.72725100000001
+        "duration": 15.128042,
+        "global_start": 97.810666
       },
       {
         "sentence_idx": 1,
         "text": "You run the café yourself.",
-        "local_start": 2.587833,
-        "duration": 1.699042,
-        "global_start": 100.31508400000001
+        "local_start": 15.508042000000001,
+        "duration": 1.699125,
+        "global_start": 113.318708
       },
       {
         "sentence_idx": 2,
         "text": "You check the daily cash register.",
-        "local_start": 4.636875,
-        "duration": 2.00375,
-        "global_start": 102.36412600000001
+        "local_start": 17.557167,
+        "duration": 2.003792,
+        "global_start": 115.36783299999999
       },
       {
         "sentence_idx": 3,
         "text": "You buy the coffee beans and manage the team.",
-        "local_start": 6.990625,
-        "duration": 2.400125,
-        "global_start": 104.717876
+        "local_start": 19.910959,
+        "duration": 3.319375,
+        "global_start": 117.72162499999999
       },
       {
         "sentence_idx": 4,
         "text": "Focus on friendly local neighbourhood service.",
-        "local_start": 9.74075,
-        "duration": 2.648042,
-        "global_start": 107.46800100000002
+        "local_start": 23.580333999999997,
+        "duration": 1.468667,
+        "global_start": 121.39099999999999
       },
       {
         "sentence_idx": 5,
         "text": "Funded corporate chains follow completely different rules.",
-        "local_start": 12.738792,
-        "duration": 3.287458,
-        "global_start": 110.46604300000001
+        "local_start": 25.399001,
+        "duration": 3.2875,
+        "global_start": 123.209667
       }
     ],
     "video_script": {
@@ -708,42 +708,42 @@
       "One thousand square feet gives room for brewing and seating."
     ],
     "audio": "/audio/b05.mp3",
-    "duration": 20.670042000000002,
+    "duration": 17.001083,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "Experienced operators recommend about one thousand square feet.",
         "local_start": 0,
-        "duration": 3.804583,
-        "global_start": 116.85350100000001
+        "duration": 2.963958,
+        "global_start": 129.597167
       },
       {
         "sentence_idx": 1,
         "text": "Two thousand square feet doubles your rent and fit-out cost.",
-        "local_start": 4.204583,
-        "duration": 3.469417,
-        "global_start": 121.05808400000001
+        "local_start": 3.363958,
+        "duration": 3.333125,
+        "global_start": 132.961125
       },
       {
         "sentence_idx": 2,
         "text": "Sales do not grow fast enough to pay for it.",
-        "local_start": 8.174,
-        "duration": 1.56925,
-        "global_start": 125.027501
+        "local_start": 7.197082999999999,
+        "duration": 2.882,
+        "global_start": 136.79425
       },
       {
         "sentence_idx": 3,
         "text": "Spaces under six hundred square feet feel crowded.",
-        "local_start": 10.09325,
-        "duration": 6.047917,
-        "global_start": 126.946751
+        "local_start": 10.429082999999999,
+        "duration": 2.043083,
+        "global_start": 140.02625
       },
       {
         "sentence_idx": 4,
         "text": "One thousand square feet gives room for brewing and seating.",
-        "local_start": 16.541167,
-        "duration": 3.528875,
-        "global_start": 133.39466800000002
+        "local_start": 12.872165999999998,
+        "duration": 3.528917,
+        "global_start": 142.469333
       }
     ],
     "video_script": {
@@ -820,49 +820,49 @@
       "Walk each street to verify customer traffic yourself."
     ],
     "audio": "/audio/b06.mp3",
-    "duration": 25.597541,
+    "duration": 21.162958000000003,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "Location sets your costs in Bangalore.",
         "local_start": 0,
-        "duration": 2.547875,
-        "global_start": 137.52354300000002
+        "duration": 2.547958,
+        "global_start": 146.59825
       },
       {
         "sentence_idx": 1,
         "text": "Indiranagar brings heavy footfall with prime commercial rents.",
-        "local_start": 2.927875,
-        "duration": 3.672667,
-        "global_start": 140.45141800000002
+        "local_start": 2.927958,
+        "duration": 3.67275,
+        "global_start": 149.526208
       },
       {
         "sentence_idx": 2,
         "text": "Koramangala is a dense and competitive dining hub.",
-        "local_start": 6.950542,
-        "duration": 2.768708,
-        "global_start": 144.47408500000003
+        "local_start": 6.9507080000000006,
+        "duration": 2.768792,
+        "global_start": 153.548958
       },
       {
         "sentence_idx": 3,
         "text": "HSR Layout is a popular home for specialty coffee shops.",
-        "local_start": 10.06925,
-        "duration": 3.976625,
-        "global_start": 147.59279300000003
+        "local_start": 10.069500000000001,
+        "duration": 3.979833,
+        "global_start": 156.66775
       },
       {
         "sentence_idx": 4,
         "text": "Whitefield has tech offices and residential communities.",
-        "local_start": 14.395875,
-        "duration": 6.938458,
-        "global_start": 151.919418
+        "local_start": 14.399333000000002,
+        "duration": 3.286125,
+        "global_start": 160.99758300000002
       },
       {
         "sentence_idx": 5,
         "text": "Walk each street to verify customer traffic yourself.",
-        "local_start": 21.684333,
-        "duration": 3.313208,
-        "global_start": 159.20787600000003
+        "local_start": 18.035458000000002,
+        "duration": 2.5275,
+        "global_start": 164.633708
       }
     ],
     "video_script": {
@@ -961,42 +961,42 @@
       "Steady income came from repeat local regulars."
     ],
     "audio": "/audio/b07.mp3",
-    "duration": 25.154417,
+    "duration": 17.34746,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "Look at real numbers from a Bangalore café.",
         "local_start": 0,
-        "duration": 5.272792,
-        "global_start": 165.62108400000002
+        "duration": 2.733417,
+        "global_start": 170.261208
       },
       {
         "sentence_idx": 1,
         "text": "The founders shared their data on a Wint Wealth interview.",
-        "local_start": 5.652792,
-        "duration": 2.895792,
-        "global_start": 171.27387600000003
+        "local_start": 3.113417,
+        "duration": 3.022542,
+        "global_start": 173.374625
       },
       {
         "sentence_idx": 2,
         "text": "Monthly sales reached five to six lakh rupees.",
-        "local_start": 8.898584,
-        "duration": 3.169958,
-        "global_start": 174.51966800000002
+        "local_start": 6.485959,
+        "duration": 3.170042,
+        "global_start": 176.74716700000002
       },
       {
         "sentence_idx": 3,
         "text": "They started the café while working full-time jobs.",
-        "local_start": 12.568541999999999,
-        "duration": 8.588583,
-        "global_start": 178.18962600000003
+        "local_start": 10.156001,
+        "duration": 3.193292,
+        "global_start": 180.417209
       },
       {
         "sentence_idx": 4,
         "text": "Steady income came from repeat local regulars.",
-        "local_start": 21.507125,
-        "duration": 3.047292,
-        "global_start": 187.12820900000003
+        "local_start": 13.699293,
+        "duration": 3.048167,
+        "global_start": 183.96050100000002
       }
     ],
     "video_script": {
@@ -1074,49 +1074,49 @@
       "Civil work and refrigeration took another four to five lakh rupees."
     ],
     "audio": "/audio/b08.mp3",
-    "duration": 23.554791,
+    "duration": 23.113,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "The founders planned a budget of ten lakh rupees.",
         "local_start": 0,
-        "duration": 2.744542,
-        "global_start": 190.77550100000002
+        "duration": 2.744583,
+        "global_start": 187.60866800000002
       },
       {
         "sentence_idx": 1,
         "text": "Their actual opening spend reached fifteen to sixteen lakh rupees.",
-        "local_start": 3.124542,
-        "duration": 3.944083,
-        "global_start": 193.900043
+        "local_start": 3.124583,
+        "duration": 3.944125,
+        "global_start": 190.73325100000002
       },
       {
         "sentence_idx": 2,
         "text": "They took eight lakh rupees as a bank loan.",
-        "local_start": 7.568625,
-        "duration": 2.733542,
-        "global_start": 198.34412600000002
+        "local_start": 7.568707999999999,
+        "duration": 2.733583,
+        "global_start": 195.177376
       },
       {
         "sentence_idx": 3,
         "text": "They paid two lakh rupees for the security deposit.",
-        "local_start": 10.652167,
-        "duration": 3.405458,
-        "global_start": 201.427668
+        "local_start": 10.652290999999998,
+        "duration": 2.963417,
+        "global_start": 198.260959
       },
       {
         "sentence_idx": 4,
         "text": "They spent five lakh rupees on the espresso machine and coffee bar.",
-        "local_start": 14.407625,
-        "duration": 4.146458,
-        "global_start": 205.18312600000002
+        "local_start": 13.965708,
+        "duration": 4.1465,
+        "global_start": 201.57437600000003
       },
       {
         "sentence_idx": 5,
         "text": "Civil work and refrigeration took another four to five lakh rupees.",
-        "local_start": 18.904083,
-        "duration": 4.050708,
-        "global_start": 209.67958400000003
+        "local_start": 18.462207999999997,
+        "duration": 4.050792,
+        "global_start": 206.07087600000003
       }
     ],
     "video_script": {
@@ -1220,42 +1220,42 @@
       "This cash covers your first three to six months of operations."
     ],
     "audio": "/audio/b09.mp3",
-    "duration": 27.534041000000002,
+    "duration": 23.476709000000003,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "For most new indie cafés in Bangalore, entry costs start at thirty lakh rupees.",
         "local_start": 0,
-        "duration": 5.347458,
-        "global_start": 214.33029200000001
+        "duration": 5.3475,
+        "global_start": 210.72166800000002
       },
       {
         "sentence_idx": 1,
         "text": "A high-spec space in a prime spot costs eighty lakh to over one crore rupees.",
-        "local_start": 5.747458,
-        "duration": 5.918625,
-        "global_start": 220.07775
+        "local_start": 5.7475000000000005,
+        "duration": 5.135875,
+        "global_start": 216.46916800000002
       },
       {
         "sentence_idx": 2,
         "text": "Espresso machines and grinders cost four to fifteen lakh rupees.",
-        "local_start": 12.166083,
-        "duration": 4.2315,
-        "global_start": 226.496375
+        "local_start": 11.383375000000001,
+        "duration": 4.231542,
+        "global_start": 222.10504300000002
       },
       {
         "sentence_idx": 3,
         "text": "Keep five to fifteen lakh rupees in reserve.",
-        "local_start": 16.747583,
-        "duration": 2.855875,
-        "global_start": 231.077875
+        "local_start": 15.964917,
+        "duration": 2.925292,
+        "global_start": 226.68658500000004
       },
       {
         "sentence_idx": 4,
         "text": "This cash covers your first three to six months of operations.",
-        "local_start": 20.003458,
-        "duration": 6.930583,
-        "global_start": 234.33375
+        "local_start": 19.290209,
+        "duration": 3.5865,
+        "global_start": 230.01187700000003
       }
     ],
     "video_script": {
@@ -1347,42 +1347,42 @@
       "Choose a format that fits your available capital."
     ],
     "audio": "/audio/b10.mp3",
-    "duration": 34.385667000000005,
+    "duration": 19.199458000000003,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "Main road high-street spaces need eighty lakh to one crore rupees for setup.",
         "local_start": 0,
-        "duration": 5.108042,
-        "global_start": 241.86433300000002
+        "duration": 4.833208,
+        "global_start": 234.19837700000002
       },
       {
         "sentence_idx": 1,
         "text": "A quiet side street in HSR Layout costs much less.",
-        "local_start": 5.5080420000000005,
-        "duration": 10.519958,
-        "global_start": 247.372375
+        "local_start": 5.233208,
+        "duration": 3.853292,
+        "global_start": 239.431585
       },
       {
         "sentence_idx": 2,
         "text": "Lower rent gives your business time to grow.",
-        "local_start": 16.378,
-        "duration": 9.827792,
-        "global_start": 258.24233300000003
+        "local_start": 9.4365,
+        "duration": 2.552208,
+        "global_start": 243.63487700000002
       },
       {
         "sentence_idx": 3,
         "text": "Make real estate decisions using Bangalore street data.",
-        "local_start": 26.555792,
-        "duration": 3.311458,
-        "global_start": 268.42012500000004
+        "local_start": 12.338708,
+        "duration": 3.3115,
+        "global_start": 246.53708500000002
       },
       {
         "sentence_idx": 4,
         "text": "Choose a format that fits your available capital.",
-        "local_start": 30.21725,
-        "duration": 3.568417,
-        "global_start": 272.081583
+        "local_start": 16.000208,
+        "duration": 2.59925,
+        "global_start": 250.19858500000004
       }
     ],
     "video_script": {
@@ -1458,42 +1458,42 @@
       "Inspect customer traffic in person before you agree."
     ],
     "audio": "/audio/b11.mp3",
-    "duration": 19.917,
+    "duration": 20.065792000000002,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "Commercial landlords in Bangalore ask for six to twelve months of rent as a deposit.",
         "local_start": 0,
-        "duration": 5.308833,
-        "global_start": 278.75
+        "duration": 5.308917,
+        "global_start": 255.89783500000001
       },
       {
         "sentence_idx": 1,
         "text": "This locks up large cash before you open your doors.",
-        "local_start": 5.808833,
-        "duration": 3.137583,
-        "global_start": 284.558833
+        "local_start": 5.808917,
+        "duration": 3.288708,
+        "global_start": 261.706752
       },
       {
         "sentence_idx": 2,
         "text": "Negotiate deposit terms before you sign.",
-        "local_start": 9.326416,
-        "duration": 2.749542,
-        "global_start": 288.076416
+        "local_start": 9.477625,
+        "duration": 2.747042,
+        "global_start": 265.37546000000003
       },
       {
         "sentence_idx": 3,
         "text": "Confirm the exact deposit months in your Letter of Intent.",
-        "local_start": 12.425958,
-        "duration": 3.523292,
-        "global_start": 291.175958
+        "local_start": 12.574667,
+        "duration": 3.523333,
+        "global_start": 268.472502
       },
       {
         "sentence_idx": 4,
         "text": "Inspect customer traffic in person before you agree.",
-        "local_start": 16.29925,
-        "duration": 3.01775,
-        "global_start": 295.04925000000003
+        "local_start": 16.448,
+        "duration": 3.017792,
+        "global_start": 272.345835
       }
     ],
     "video_script": {
@@ -1569,42 +1569,42 @@
       "Keep rent aligned with daily coffee sales."
     ],
     "audio": "/audio/b12.mp3",
-    "duration": 22.182208000000003,
+    "duration": 22.182542,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "Experienced operators keep monthly rent under fifteen percent of gross sales.",
         "local_start": 0,
-        "duration": 5.037958,
-        "global_start": 298.66700000000003
+        "duration": 5.038,
+        "global_start": 275.96362700000003
       },
       {
         "sentence_idx": 1,
         "text": "Small three hundred square foot shops start at forty to fifty thousand rupees a month.",
-        "local_start": 5.537958,
-        "duration": 5.167792,
-        "global_start": 304.20495800000003
+        "local_start": 5.538,
+        "duration": 5.167875,
+        "global_start": 281.50162700000004
       },
       {
         "sentence_idx": 2,
         "text": "A full café space on a main road costs much more.",
-        "local_start": 11.08575,
-        "duration": 3.316583,
-        "global_start": 309.75275000000005
+        "local_start": 11.085875000000001,
+        "duration": 3.316625,
+        "global_start": 287.049502
       },
       {
         "sentence_idx": 3,
         "text": "If rent takes twenty-five percent of sales, you will lose money.",
-        "local_start": 14.782333000000001,
-        "duration": 3.751042,
-        "global_start": 313.449333
+        "local_start": 14.782500000000002,
+        "duration": 3.751125,
+        "global_start": 290.74612700000006
       },
       {
         "sentence_idx": 4,
         "text": "Keep rent aligned with daily coffee sales.",
-        "local_start": 19.033375,
-        "duration": 2.548833,
-        "global_start": 317.700375
+        "local_start": 19.033625,
+        "duration": 2.548917,
+        "global_start": 294.997252
       }
     ],
     "video_script": {
@@ -1692,49 +1692,49 @@
       "Submit your licence papers early to avoid opening delays."
     ],
     "audio": "/audio/b13.mp3",
-    "duration": 22.121000000000002,
+    "duration": 22.1275,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "You need local government permits before you open.",
         "local_start": 0,
-        "duration": 2.932542,
-        "global_start": 320.84920800000003
+        "duration": 2.932625,
+        "global_start": 298.14616900000004
       },
       {
         "sentence_idx": 1,
         "text": "Get your FSSAI food licence on the FoSCoS portal.",
-        "local_start": 3.2825420000000003,
-        "duration": 3.096167,
-        "global_start": 324.13175
+        "local_start": 3.282625,
+        "duration": 3.09625,
+        "global_start": 301.42879400000004
       },
       {
         "sentence_idx": 2,
         "text": "Register for GST to claim tax credits and vendor billing.",
-        "local_start": 6.728709,
-        "duration": 3.532,
-        "global_start": 327.577917
+        "local_start": 6.728875,
+        "duration": 3.538083,
+        "global_start": 304.87504400000006
       },
       {
         "sentence_idx": 3,
         "text": "Apply for your BBMP trade licence and health permit.",
-        "local_start": 10.610709,
-        "duration": 3.480583,
-        "global_start": 331.459917
+        "local_start": 10.616958,
+        "duration": 3.480667,
+        "global_start": 308.76312700000005
       },
       {
         "sentence_idx": 4,
         "text": "Register under the Karnataka Shops and Establishments Act.",
-        "local_start": 14.441292,
-        "duration": 3.098208,
-        "global_start": 335.2905
+        "local_start": 14.447625,
+        "duration": 3.098292,
+        "global_start": 312.59379400000006
       },
       {
         "sentence_idx": 5,
         "text": "Submit your licence papers early to avoid opening delays.",
-        "local_start": 17.8895,
-        "duration": 3.6315,
-        "global_start": 338.73870800000003
+        "local_start": 17.895917,
+        "duration": 3.631583,
+        "global_start": 316.04208600000004
       }
     ],
     "video_script": {
@@ -1829,42 +1829,42 @@
       "Small overheads keep business stress low."
     ],
     "audio": "/audio/b14.mp3",
-    "duration": 20.188542,
+    "duration": 20.162750000000003,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "In the Wint Wealth case study, fixed monthly costs were about one point two lakh rupees.",
         "local_start": 0,
-        "duration": 5.447708,
-        "global_start": 345.470208
+        "duration": 5.44775,
+        "global_start": 322.77366900000004
       },
       {
         "sentence_idx": 1,
         "text": "This paid for base shop rent, barista wages, and power.",
-        "local_start": 5.847708000000001,
-        "duration": 3.495042,
-        "global_start": 351.317916
+        "local_start": 5.8477500000000004,
+        "duration": 3.472458,
+        "global_start": 328.62141900000006
       },
       {
         "sentence_idx": 2,
         "text": "The founders reported operational profit from month two.",
-        "local_start": 9.69275,
-        "duration": 3.197375,
-        "global_start": 355.162958
+        "local_start": 9.670208,
+        "duration": 3.197458,
+        "global_start": 332.44387700000004
       },
       {
         "sentence_idx": 3,
         "text": "Low fixed costs protect you during your first months.",
-        "local_start": 13.390125000000001,
-        "duration": 3.228667,
-        "global_start": 358.860333
+        "local_start": 13.367666,
+        "duration": 3.225292,
+        "global_start": 336.141335
       },
       {
         "sentence_idx": 4,
         "text": "Small overheads keep business stress low.",
-        "local_start": 16.968792,
-        "duration": 2.61975,
-        "global_start": 362.439
+        "local_start": 16.942958,
+        "duration": 2.619792,
+        "global_start": 339.716627
       }
     ],
     "video_script": {
@@ -1940,42 +1940,42 @@
       "Trained baristas keep your coffee quality consistent."
     ],
     "audio": "/audio/b15.mp3",
-    "duration": 21.083250000000003,
+    "duration": 21.075208000000003,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "Two operating rules guide your profit margins.",
         "local_start": 0,
-        "duration": 2.846917,
-        "global_start": 365.65875
+        "duration": 2.847,
+        "global_start": 342.93641900000006
       },
       {
         "sentence_idx": 1,
         "text": "Keep food and coffee bean costs at thirty percent of sales.",
-        "local_start": 3.226917,
-        "duration": 3.769333,
-        "global_start": 368.885667
+        "local_start": 3.227,
+        "duration": 3.769375,
+        "global_start": 346.16341900000003
       },
       {
         "sentence_idx": 2,
         "text": "Keep total staff salaries under fifteen percent of sales.",
-        "local_start": 7.39625,
-        "duration": 3.652833,
-        "global_start": 373.055
+        "local_start": 7.396375000000001,
+        "duration": 3.652875,
+        "global_start": 350.33279400000004
       },
       {
         "sentence_idx": 3,
         "text": "Starting barista pay in Bangalore is twenty-one to twenty-eight thousand rupees a month.",
-        "local_start": 11.449083000000002,
-        "duration": 5.318375,
-        "global_start": 377.107833
+        "local_start": 11.449250000000001,
+        "duration": 5.310125,
+        "global_start": 354.38566900000006
       },
       {
         "sentence_idx": 4,
         "text": "Trained baristas keep your coffee quality consistent.",
-        "local_start": 17.267458,
-        "duration": 3.215792,
-        "global_start": 382.926208
+        "local_start": 17.259375000000002,
+        "duration": 3.215833,
+        "global_start": 360.19579400000003
       }
     ],
     "video_script": {
@@ -2067,42 +2067,42 @@
       "Dine-in guests provide your highest profit margins."
     ],
     "audio": "/audio/b16.mp3",
-    "duration": 20.013083,
+    "duration": 24.544041000000004,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "Electricity and delivery fees often surprise new owners.",
         "local_start": 0,
-        "duration": 3.791917,
-        "global_start": 386.742
+        "duration": 10.391333,
+        "global_start": 364.0116270000001
       },
       {
         "sentence_idx": 1,
         "text": "Espresso boilers and summer air conditioning raise power bills.",
-        "local_start": 4.191917,
-        "duration": 3.666583,
-        "global_start": 390.933917
+        "local_start": 10.791333,
+        "duration": 3.666625,
+        "global_start": 374.8029600000001
       },
       {
         "sentence_idx": 2,
         "text": "Delivery apps charge twenty to thirty percent commission on each order.",
-        "local_start": 8.2085,
-        "duration": 4.152208,
-        "global_start": 394.95050000000003
+        "local_start": 14.807958,
+        "duration": 4.15225,
+        "global_start": 378.8195850000001
       },
       {
         "sentence_idx": 3,
         "text": "Delivery orders help fill quiet afternoon hours.",
-        "local_start": 12.860708,
-        "duration": 3.088292,
-        "global_start": 399.602708
+        "local_start": 19.460208,
+        "duration": 3.088375,
+        "global_start": 383.4718350000001
       },
       {
         "sentence_idx": 4,
         "text": "Dine-in guests provide your highest profit margins.",
-        "local_start": 16.299,
-        "duration": 3.114083,
-        "global_start": 403.041
+        "local_start": 22.898583000000002,
+        "duration": 1.045458,
+        "global_start": 386.9102100000001
       }
     ],
     "video_script": {
@@ -2178,42 +2178,42 @@
       "Fresh food increases the total spend per table."
     ],
     "audio": "/audio/b17.mp3",
-    "duration": 17.910208,
+    "duration": 17.900292,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "Coffee alone cannot pay commercial rent in Bangalore.",
         "local_start": 0,
-        "duration": 3.063333,
-        "global_start": 406.755083
+        "duration": 3.063417,
+        "global_start": 388.5556680000001
       },
       {
         "sentence_idx": 1,
         "text": "Blue Tokai data shows beverages bring forty-five percent of sales.",
-        "local_start": 3.463333,
-        "duration": 4.521208,
-        "global_start": 410.218416
+        "local_start": 3.4634169999999997,
+        "duration": 4.521292,
+        "global_start": 392.0190850000001
       },
       {
         "sentence_idx": 2,
         "text": "Food brings forty percent of sales.",
-        "local_start": 8.334541,
-        "duration": 2.346375,
-        "global_start": 415.089624
+        "local_start": 8.334709,
+        "duration": 2.346458,
+        "global_start": 396.89037700000006
       },
       {
         "sentence_idx": 3,
         "text": "Packaged retail beans bring fifteen percent.",
-        "local_start": 11.030916,
-        "duration": 2.767875,
-        "global_start": 417.785999
+        "local_start": 11.031167,
+        "duration": 2.757625,
+        "global_start": 399.58683500000006
       },
       {
         "sentence_idx": 4,
         "text": "Fresh food increases the total spend per table.",
-        "local_start": 14.148791,
-        "duration": 3.161417,
-        "global_start": 420.90387400000003
+        "local_start": 14.138792,
+        "duration": 3.1615,
+        "global_start": 402.6944600000001
       }
     ],
     "video_script": {
@@ -2305,42 +2305,42 @@
       "Friendly neighbourhood hospitality is your key advantage."
     ],
     "audio": "/audio/b18.mp3",
-    "duration": 19.240667000000002,
+    "duration": 24.256124000000003,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "National coffee chains operate with large funding and multi-crore budgets.",
         "local_start": 0,
-        "duration": 4.394542,
-        "global_start": 427.165291
+        "duration": 4.394583,
+        "global_start": 408.95596000000006
       },
       {
         "sentence_idx": 1,
         "text": "They use central roasting plants and large corporate teams.",
-        "local_start": 4.774542,
-        "duration": 3.330833,
-        "global_start": 431.939833
+        "local_start": 4.774583,
+        "duration": 3.330917,
+        "global_start": 413.73054300000007
       },
       {
         "sentence_idx": 2,
         "text": "An indie café wins with warm personal service.",
-        "local_start": 8.455375,
-        "duration": 3.042542,
-        "global_start": 435.620666
+        "local_start": 8.4555,
+        "duration": 2.391208,
+        "global_start": 417.41146000000003
       },
       {
         "sentence_idx": 3,
         "text": "Focus on loyal daily regulars instead of scale.",
-        "local_start": 11.847917,
-        "duration": 3.005375,
-        "global_start": 439.013208
+        "local_start": 11.196708000000001,
+        "duration": 3.005458,
+        "global_start": 420.15266800000006
       },
       {
         "sentence_idx": 4,
         "text": "Friendly neighbourhood hospitality is your key advantage.",
-        "local_start": 15.203292000000001,
-        "duration": 3.437375,
-        "global_start": 442.368583
+        "local_start": 14.552166000000001,
+        "duration": 9.103958,
+        "global_start": 423.50812600000006
       }
     ],
     "video_script": {
@@ -2435,49 +2435,49 @@
       "Walk Indiranagar, Koramangala, HSR, and Whitefield first."
     ],
     "audio": "/audio/b19.mp3",
-    "duration": 22.436666000000002,
+    "duration": 21.587666000000006,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "Check your finances before signing a commercial lease.",
         "local_start": 0,
-        "duration": 3.207125,
-        "global_start": 446.40595800000006
+        "duration": 2.519208,
+        "global_start": 433.21208400000006
       },
       {
         "sentence_idx": 1,
         "text": "Keep nine to twelve months of operating cash in reserve.",
-        "local_start": 3.607125,
-        "duration": 3.394583,
-        "global_start": 450.01308300000005
+        "local_start": 2.919208,
+        "duration": 3.394625,
+        "global_start": 436.1312920000001
       },
       {
         "sentence_idx": 2,
         "text": "Do not risk family emergency savings.",
-        "local_start": 7.381708,
-        "duration": 2.50525,
-        "global_start": 453.78766600000006
+        "local_start": 6.693833,
+        "duration": 2.343958,
+        "global_start": 439.90591700000004
       },
       {
         "sentence_idx": 3,
         "text": "Do not expect café profit to pay personal loans in month three.",
-        "local_start": 10.286958,
-        "duration": 4.033958,
-        "global_start": 456.6929160000001
+        "local_start": 9.437791,
+        "duration": 4.034,
+        "global_start": 442.64987500000007
       },
       {
         "sentence_idx": 4,
         "text": "Serve fresh food to lift average table spend.",
-        "local_start": 14.720916,
-        "duration": 2.953792,
-        "global_start": 461.12687400000004
+        "local_start": 13.871791000000002,
+        "duration": 2.953875,
+        "global_start": 447.08387500000003
       },
       {
         "sentence_idx": 5,
         "text": "Walk Indiranagar, Koramangala, HSR, and Whitefield first.",
-        "local_start": 18.024708,
-        "duration": 3.811958,
-        "global_start": 464.43066600000003
+        "local_start": 17.175666000000003,
+        "duration": 3.812,
+        "global_start": 450.38775000000004
       }
     ],
     "video_script": {
@@ -2581,42 +2581,42 @@
       "Next, we examine the economics of running a restaurant in Bangalore."
     ],
     "audio": "/audio/b20.mp3",
-    "duration": 17.514083,
+    "duration": 20.372333,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "Opening a café in Bangalore takes practical preparation.",
         "local_start": 0,
-        "duration": 3.514417,
-        "global_start": 468.84262400000006
+        "duration": 3.5145,
+        "global_start": 454.7997500000001
       },
       {
         "sentence_idx": 1,
         "text": "Balance your location costs, team training, and daily expenses.",
-        "local_start": 3.894417,
-        "duration": 2.202542,
-        "global_start": 472.73704100000003
+        "local_start": 3.8945,
+        "duration": 4.387208,
+        "global_start": 458.69425000000007
       },
       {
         "sentence_idx": 2,
         "text": "Secure the right deposit terms and coffee equipment.",
-        "local_start": 6.446959,
-        "duration": 3.297833,
-        "global_start": 475.28958300000005
+        "local_start": 8.631708,
+        "duration": 3.297875,
+        "global_start": 463.4314580000001
       },
       {
         "sentence_idx": 3,
         "text": "Daily cost control creates a lasting business.",
-        "local_start": 10.094792,
-        "duration": 3.058833,
-        "global_start": 478.93741600000004
+        "local_start": 12.279582999999999,
+        "duration": 3.058917,
+        "global_start": 467.0793330000001
       },
       {
         "sentence_idx": 4,
         "text": "Next, we examine the economics of running a restaurant in Bangalore.",
-        "local_start": 13.653625,
-        "duration": 3.260458,
-        "global_start": 482.49624900000003
+        "local_start": 15.8385,
+        "duration": 3.933833,
+        "global_start": 470.6382500000001
       }
     ],
     "video_script": {
@@ -2686,21 +2686,21 @@
       "Next in the series: the economics of owning a restaurant in Bangalore."
     ],
     "audio": "/audio/end.mp3",
-    "duration": 6.963540999999999,
+    "duration": 7.429458,
     "sentence_timings": [
       {
         "sentence_idx": 0,
         "text": "Master the basics before the rent does.",
         "local_start": 0,
-        "duration": 1.742583,
-        "global_start": 488.85670700000003
+        "duration": 2.205458,
+        "global_start": 477.6720830000001
       },
       {
         "sentence_idx": 1,
         "text": "Next in the series: the economics of owning a restaurant in Bangalore.",
-        "local_start": 2.342583,
-        "duration": 4.020958,
-        "global_start": 491.19929
+        "local_start": 2.8054580000000002,
+        "duration": 4.024,
+        "global_start": 480.4775410000001
       }
     ],
     "video_script": {

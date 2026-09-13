@@ -4,9 +4,14 @@ import type { Slide as SlideData, Theme, Visual } from "../types";
 import { SlideVisual } from "../visuals";
 import { clamp01, countUp, enter, sentenceAt, stagger } from "../anim";
 import { Captions } from "./Captions";
+import { Underline } from "../visuals/marker";
 
 const VISUAL_WIDTH_RATIO = 0.46;
 const COUNT_UP_FRAMES = 20;
+// Heuristic only (no DOM measurement, matches visuals/marker.tsx convention):
+// fontSize 32 body text at ~1.25 line-height.
+const BULLET_ROW_HEIGHT = 40;
+const BULLET_UNDERLINE_FRAMES = 12;
 
 // Texture only — a repeating pattern standing in for paper grain, never a decorative gradient.
 const backgroundTexture = (theme: Theme): React.CSSProperties =>
@@ -44,6 +49,8 @@ export const ChapterSlide: React.FC<{
 
   const visualWidth = Math.round(width * VISUAL_WIDTH_RATIO) - 120;
   const visualHeight = height - 460;
+  // Padding (72px * 2) + visual card + the row gap (48), leaves the bullet column's width.
+  const bulletColumnWidth = width - 144 - visualWidth - 48;
 
   return (
     <AbsoluteFill style={backgroundTexture(theme)}>
@@ -107,6 +114,7 @@ export const ChapterSlide: React.FC<{
               borderRadius: theme.radius,
               padding: 28,
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
             }}
@@ -128,6 +136,7 @@ export const ChapterSlide: React.FC<{
               const isActive = i === activeBullet;
               const countProgress = clamp01((frame - delay) / COUNT_UP_FRAMES);
               const text = isActive ? countUp(bullet, countProgress) : bullet;
+              const underlineWidth = Math.min(bulletColumnWidth, 14 * bullet.length * 0.55);
               return (
                 <div
                   key={i}
@@ -150,7 +159,7 @@ export const ChapterSlide: React.FC<{
                     {text}
                   </span>
                   {theme.strokeStyle === "marker" && isActive && (
-                    <RoughCircle theme={theme} frame={frame} delay={delay} />
+                    <BulletUnderline theme={theme} frame={frame} delay={delay} width={underlineWidth} />
                   )}
                 </div>
               );
@@ -187,31 +196,34 @@ const MarkerUnderline: React.FC<{ theme: Theme; frame: number; width: number }> 
   );
 };
 
-const RoughCircle: React.FC<{ theme: Theme; frame: number; delay: number }> = ({ theme, frame, delay }) => {
-  const progress = interpolate(frame, [delay, delay + 24], [0, 1], {
+const BulletUnderline: React.FC<{ theme: Theme; frame: number; delay: number; width: number }> = ({
+  theme,
+  frame,
+  delay,
+  width,
+}) => {
+  const progress = interpolate(frame, [delay, delay + BULLET_UNDERLINE_FRAMES], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  const length = 620;
+  // Text starts after the row's border (4px) + padding (22px).
+  const x = 26;
+  const y = BULLET_ROW_HEIGHT + 4;
   return (
     <svg
-      width="100%"
-      height={72}
-      style={{ position: "absolute", left: -12, top: -18, pointerEvents: "none" }}
-      viewBox="0 0 620 72"
-      preserveAspectRatio="none"
+      width={x + width + 12}
+      height={y + 16}
+      style={{
+        position: "absolute",
+        left: 0,
+        top: 0,
+        pointerEvents: "none",
+        overflow: "visible",
+        transform: "rotate(-0.6deg)",
+        transformOrigin: `${x}px ${y}px`,
+      }}
     >
-      <ellipse
-        cx={310}
-        cy={36}
-        rx={300}
-        ry={30}
-        fill="none"
-        stroke={theme.accent}
-        strokeWidth={5}
-        strokeDasharray={length}
-        strokeDashoffset={length * (1 - progress)}
-      />
+      <Underline x={x} y={y} width={width} progress={progress} theme={theme} color={theme.accent} />
     </svg>
   );
 };

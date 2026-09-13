@@ -17,7 +17,17 @@ export const Bars: React.FC<{
   const rowH = Math.min(74, (height - 170) / items.length);
 
   return (
-    <div style={{ width, height, fontFamily: theme.fontBody, position: "relative" }}>
+    <div
+      style={{
+        width,
+        height,
+        fontFamily: theme.fontBody,
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
+    >
       <div style={{ fontFamily: theme.fontDisplay, fontSize: 40, color: theme.ink, lineHeight: 1.1 }}>{title}</div>
       {sub ? <div style={{ fontSize: 26, color: theme.mute, marginTop: 8 }}>{sub}</div> : null}
 

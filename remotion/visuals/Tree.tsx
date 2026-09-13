@@ -3,29 +3,40 @@ import { interpolate } from "remotion";
 import type { Theme } from "../types";
 import { Arrow } from "./marker";
 
+const NODE_FONT = 24;
+const Q_WIDTH = 300;
+const CHILD_WIDTH = 220;
+const NODE_HALF = 42; // vertical half-height estimate for arrow anchoring
+
 const TreeNode: React.FC<{
   x: number;
   y: number;
+  width: number;
   label: string;
   color: string;
   opacity: number;
   theme: Theme;
-  nodeFont: number;
-}> = ({ x, y, label, color, opacity, theme, nodeFont }) => (
+}> = ({ x, y, width, label, color, opacity, theme }) => (
   <div
     style={{
       position: "absolute",
       left: x,
       top: y,
+      width,
       transform: "translate(-50%, -50%)",
       opacity,
       padding: "10px 20px",
-      borderRadius: 999,
+      borderRadius: theme.radius,
       border: `2px solid ${color}`,
       background: theme.paper,
       color: theme.ink,
-      fontSize: nodeFont,
-      whiteSpace: "nowrap",
+      fontSize: NODE_FONT,
+      lineHeight: 1.25,
+      textAlign: "center",
+      display: "-webkit-box",
+      WebkitBoxOrient: "vertical",
+      WebkitLineClamp: 2,
+      overflow: "hidden",
     }}
   >
     {label}
@@ -41,26 +52,37 @@ export const Tree: React.FC<{
   width: number;
   height: number;
 }> = ({ title, root, branches, theme, frame, width, height }) => {
-  const capped = branches.slice(0, 4);
-  const small = capped.length > 3;
-  const nodeFont = small ? 24 : 28;
   const framesPerBranch = 14;
+  const count = branches.length;
 
-  const rootY = 130;
-  const branchTop = 200;
-  const rowH = (height - branchTop - 20) / capped.length;
+  const topOffset = 160; // reserved for title + root, per spec formula
+  const pitch = count > 0 ? Math.min(120, (height - topOffset) / count) : 120;
+  const bottomSafety = height - 45;
+  // Tree nodes are absolutely positioned, so a flex wrapper can't centre them —
+  // instead centre the whole tree by offsetting every y-coordinate by the slack
+  // between the natural (unclamped) content height and the box height.
+  const naturalContentH = topOffset + count * pitch;
+  const offsetY = Math.max(0, (height - naturalContentH) / 2);
+  const rootY = 80 + offsetY;
+
+  const centreX = width / 2;
+  const qY = (i: number) => topOffset + offsetY + i * pitch + pitch / 2;
+  const childY = (i: number) => Math.min(topOffset + offsetY + (i + 1) * pitch, bottomSafety);
 
   return (
     <div style={{ width, height, fontFamily: theme.fontBody, position: "relative" }}>
       <div style={{ fontFamily: theme.fontDisplay, fontSize: 40, color: theme.ink, lineHeight: 1.1 }}>{title}</div>
 
-      <TreeNode x={width / 2} y={rootY} label={root} color={theme.accent} opacity={1} theme={theme} nodeFont={nodeFont} />
+      <TreeNode x={centreX} y={rootY} width={Q_WIDTH} label={root} color={theme.accent} opacity={1} theme={theme} />
 
-      {capped.map((b, i) => {
+      {branches.map((b, i) => {
         const start = i * framesPerBranch;
-        const y = branchTop + i * rowH + rowH / 2;
+        const y = qY(i);
+        const cy = childY(i);
+        const prevY = i === 0 ? rootY : qY(i - 1);
+
         const qOpacity = interpolate(frame - start, [0, 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-        const arrowProgress = interpolate(frame - (start + 4), [0, 8], [0, 1], {
+        const spineProgress = interpolate(frame - (start + 4), [0, 8], [0, 1], {
           extrapolateLeft: "clamp",
           extrapolateRight: "clamp",
         });
@@ -68,17 +90,17 @@ export const Tree: React.FC<{
           extrapolateLeft: "clamp",
           extrapolateRight: "clamp",
         });
-        const fromY = i === 0 ? rootY : branchTop + (i - 1) * rowH + rowH / 2;
+
         return (
           <React.Fragment key={i}>
             <svg width={width} height={height} style={{ position: "absolute", top: 0, left: 0, pointerEvents: "none" }}>
-              <Arrow from={{ x: width / 2, y: fromY + 24 }} to={{ x: width / 2, y: y - 24 }} progress={arrowProgress} theme={theme} />
-              <Arrow from={{ x: width / 2, y: y + 20 }} to={{ x: width / 2 - 160, y: y + 70 }} progress={childOpacity} theme={theme} color={theme.accent2} />
-              <Arrow from={{ x: width / 2, y: y + 20 }} to={{ x: width / 2 + 160, y: y + 70 }} progress={childOpacity} theme={theme} color={theme.accent} />
+              <Arrow from={{ x: centreX, y: prevY + NODE_HALF }} to={{ x: centreX, y: y - NODE_HALF }} progress={spineProgress} theme={theme} />
+              <Arrow from={{ x: centreX, y: y + NODE_HALF }} to={{ x: centreX - 280, y: cy - NODE_HALF }} progress={childOpacity} theme={theme} color={theme.accent2} />
+              <Arrow from={{ x: centreX, y: y + NODE_HALF }} to={{ x: centreX + 280, y: cy - NODE_HALF }} progress={childOpacity} theme={theme} color={theme.accent} />
             </svg>
-            <TreeNode x={width / 2} y={y} label={b.q} color={theme.ink} opacity={qOpacity} theme={theme} nodeFont={nodeFont} />
-            <TreeNode x={width / 2 - 160} y={y + 96} label={`Yes — ${b.yes}`} color={theme.accent2} opacity={childOpacity} theme={theme} nodeFont={nodeFont} />
-            <TreeNode x={width / 2 + 160} y={y + 96} label={`No — ${b.no}`} color={theme.accent} opacity={childOpacity} theme={theme} nodeFont={nodeFont} />
+            <TreeNode x={centreX} y={y} width={Q_WIDTH} label={b.q} color={theme.ink} opacity={qOpacity} theme={theme} />
+            <TreeNode x={centreX - 280} y={cy} width={CHILD_WIDTH} label={`Yes — ${b.yes}`} color={theme.accent2} opacity={childOpacity} theme={theme} />
+            <TreeNode x={centreX + 280} y={cy} width={CHILD_WIDTH} label={`No — ${b.no}`} color={theme.accent} opacity={childOpacity} theme={theme} />
           </React.Fragment>
         );
       })}

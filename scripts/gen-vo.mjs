@@ -7,8 +7,11 @@
 // For each targeted slide, for each sentence:
 //   1. `say -v Tara -r 138` renders an AIFF.
 //   2. ffmpeg converts to a 24kHz mono 16-bit PCM wav (public/audio/<id>_s<i>.wav).
-//   3. Leading silence over 0.15s is trimmed with ffmpeg silenceremove (measured via
-//      silencedetect first — kept simple: at most one trim pass per file).
+//   3. Leading and trailing silence are always trimmed with ffmpeg silenceremove
+//      (say pads the start of every clip): leading trim keeps 80ms of room
+//      (start_threshold=-45dB:start_silence=0.08), trailing trim keeps 120ms
+//      (via areverse + the same silenceremove with start_silence=0.12 + areverse
+//      back).
 //   4. ffprobe reports the final duration.
 //
 // sentence_timings are rebuilt: local_start accumulates duration + pause_s (pause_s
@@ -84,26 +87,18 @@ function ffprobeDuration(file) {
   return d;
 }
 
-// Detect leading silence via silencedetect; only trim if it exceeds 0.15s.
-function trimLeadingSilenceIfNeeded(wavPath) {
-  const res = spawnSync("ffmpeg", [
-    "-i", wavPath,
-    "-af", "silencedetect=noise=-40dB:d=0.05",
-    "-f", "null", "-",
-  ], { encoding: "utf8" });
-  // ffmpeg writes filter logs to stderr regardless of exit status; still validate.
-  if (res.status !== 0) {
-    throw new Error(`ffmpeg silencedetect failed on ${wavPath}\nstderr: ${res.stderr}`);
-  }
-  const m = res.stderr.match(/silence_start:\s*0(?:\.0+)?\b[\s\S]*?silence_end:\s*([\d.]+)/);
-  if (!m) return; // no leading silence detected at all
-  const leadingSilence = parseFloat(m[1]);
-  if (!Number.isFinite(leadingSilence) || leadingSilence <= 0.15) return;
-
+// Always trim leading silence (keeping 80ms of room) and trailing silence
+// (keeping 120ms of room). `say` pads the start of every clip, so this runs
+// unconditionally rather than gating on a separate silencedetect pass.
+function trimSilence(wavPath) {
   const trimmed = wavPath + ".trimmed.wav";
   run("ffmpeg", [
     "-y", "-i", wavPath,
-    "-af", `silenceremove=start_periods=1:start_duration=0:start_threshold=-40dB:start_silence=${leadingSilence}`,
+    "-af",
+    "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08," +
+      "areverse," +
+      "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.12," +
+      "areverse",
     "-ar", "24000", "-ac", "1", "-c:a", "pcm_s16le",
     trimmed,
   ]);
@@ -128,7 +123,7 @@ function synthesizeSentence(id, i, text, dryRun) {
       "-ar", "24000", "-ac", "1", "-c:a", "pcm_s16le",
       wavPath,
     ]);
-    trimLeadingSilenceIfNeeded(wavPath);
+    trimSilence(wavPath);
     const duration = ffprobeDuration(wavPath);
     return { wavPath, duration };
   } finally {

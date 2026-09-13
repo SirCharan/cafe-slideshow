@@ -46,8 +46,8 @@ else
 fi
 
 # --- codecs ---
-VCODEC="$(ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 "$MP4")"
-ACODEC="$(ffprobe -v error -select_streams a:0 -show_entries stream=codec_name -of csv=p=0 "$MP4")"
+VCODEC="$(ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of default=nw=1:nk=1 "$MP4" | tr -d ' \t\r\n,')"
+ACODEC="$(ffprobe -v error -select_streams a:0 -show_entries stream=codec_name -of default=nw=1:nk=1 "$MP4" | tr -d ' \t\r\n,')"
 
 if [ "$VCODEC" = "h264" ]; then
   pass "video codec h264"
@@ -68,7 +68,7 @@ ffmpeg -nostats -i "$MP4" -af ebur128=peak=true -f null - 2> "$EBUR_LOG"
 INTEGRATED="$(grep -A2 "Integrated loudness" "$EBUR_LOG" | grep "I:" | awk '{print $2}')"
 
 if [ -n "$INTEGRATED" ]; then
-  IN_RANGE="$(node -e "const v=parseFloat(process.argv[1]); console.log(Math.abs(v-(-14))<=2?1:0)" "$INTEGRATED")"
+  IN_RANGE="$(awk -v v="$INTEGRATED" 'BEGIN{print (v >= -16 && v <= -12) ? 1 : 0}')"
   if [ "$IN_RANGE" = "1" ]; then
     pass "integrated loudness ${INTEGRATED} LUFS (within -14 +/-2)"
   else
