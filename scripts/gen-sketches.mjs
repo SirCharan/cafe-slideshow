@@ -28,9 +28,9 @@ import path from "node:path";
 
 const OUT_DIR = path.resolve("public/assets/sketch");
 const MODEL = "flux_2_klein_4b_q6p.ckpt";
-const STEPS = "20";
+const STEPS = process.env.SKETCH_STEPS ?? "20";
 const CFG = "3.5";
-const SIZE = "1024";
+const SIZE = process.env.SKETCH_SIZE ?? "1024";
 const KEY_COLOR = "white";
 const KEY_SIMILARITY = "0.28";
 const KEY_BLEND = "0.12";
@@ -135,7 +135,7 @@ function generateSketch(name, subject, dryRun) {
   const rawFile = path.join(tmpDir, `${name}-raw.png`);
   try {
     run("draw-things-cli", [
-      "generate",
+      "generate", ...(process.env.SKETCH_CLOUD ? ["--cloud-compute"] : []),
       "--model", MODEL,
       "--prompt", prompt,
       "--negative-prompt", NEGATIVE_PROMPT,
