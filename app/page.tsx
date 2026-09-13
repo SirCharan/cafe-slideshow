@@ -29,7 +29,10 @@ import {
   Sparkles,
   Info,
   Check,
-  Code
+  Code,
+  Mic,
+  Clock,
+  Sparkle
 } from "lucide-react";
 
 interface SentenceTiming {
@@ -38,6 +41,22 @@ interface SentenceTiming {
   local_start: number;
   duration: number;
   global_start: number;
+}
+
+interface ScriptLine {
+  sentence_idx: number;
+  text: string;
+  duration_s: number;
+  pause_s: number;
+  expression: string;
+}
+
+interface VideoScript {
+  chapter_vibe: string;
+  tone: string;
+  pacing: string;
+  director_note: string;
+  script_lines: ScriptLine[];
 }
 
 interface Slide {
@@ -52,12 +71,7 @@ interface Slide {
   audio: string;
   duration: number;
   sentence_timings: SentenceTiming[];
-  // Optional customizable visual theme
-  theme?: {
-    accentColor?: string;
-    bgStyle?: "dark" | "gradient" | "cinema";
-    badgeText?: string;
-  };
+  video_script?: VideoScript;
 }
 
 const AVAILABLE_IMAGES = [
@@ -118,11 +132,13 @@ export default function CafeSlideshow() {
   const [copiedPrompt, setCopiedPrompt] = useState<boolean>(false);
   const [showJsonModal, setShowJsonModal] = useState<boolean>(false);
   const [jsonText, setJsonText] = useState<string>("");
+  const [activeTab, setActiveTab] = useState<"takeaways" | "script">("takeaways");
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const currentSlide = slides[currentIdx] || slides[0];
+  const videoScript = currentSlide.video_script;
 
   // Persist edits to localStorage
   const saveSlides = (newSlides: Slide[]) => {
@@ -132,7 +148,6 @@ export default function CafeSlideshow() {
     }
   };
 
-  // Reset to original default
   const resetToDefault = () => {
     if (confirm("Reset entire slideshow to default ground-truth version? Any custom edits will be cleared.")) {
       saveSlides(defaultSlidesData as Slide[]);
@@ -141,7 +156,6 @@ export default function CafeSlideshow() {
     }
   };
 
-  // Direct field update helper
   const updateCurrentSlide = (field: keyof Slide, value: any) => {
     const updated = [...slides];
     updated[currentIdx] = {
@@ -168,6 +182,34 @@ export default function CafeSlideshow() {
   const deleteBullet = (bIdx: number) => {
     const updated = [...slides];
     updated[currentIdx].bullets = updated[currentIdx].bullets.filter((_, i) => i !== bIdx);
+    saveSlides(updated);
+  };
+
+  const updateScriptLine = (sIdx: number, field: keyof ScriptLine, val: any) => {
+    const updated = [...slides];
+    if (!updated[currentIdx].video_script) return;
+    const lines = [...updated[currentIdx].video_script!.script_lines];
+    lines[sIdx] = {
+      ...lines[sIdx],
+      [field]: val
+    };
+    updated[currentIdx].video_script!.script_lines = lines;
+    // Also sync to sentences array if text changed
+    if (field === "text") {
+      const sents = [...updated[currentIdx].sentences];
+      sents[sIdx] = val;
+      updated[currentIdx].sentences = sents;
+    }
+    saveSlides(updated);
+  };
+
+  const updateDirectorNote = (field: keyof VideoScript, val: any) => {
+    const updated = [...slides];
+    if (!updated[currentIdx].video_script) return;
+    updated[currentIdx].video_script = {
+      ...updated[currentIdx].video_script!,
+      [field]: val
+    };
     saveSlides(updated);
   };
 
@@ -213,7 +255,6 @@ export default function CafeSlideshow() {
     }
   }, [isPlaying]);
 
-  // Audio settings
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.playbackRate = playbackSpeed;
@@ -249,10 +290,8 @@ export default function CafeSlideshow() {
     }
   };
 
-  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Don't trigger shortcuts if user is typing in an input/textarea
       const target = e.target as HTMLElement;
       if (target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.isContentEditable)) {
         return;
@@ -292,31 +331,43 @@ export default function CafeSlideshow() {
     }
   };
 
-  // Copy AI prompt for this slide or entire deck
   const copyAIPromptForSlide = () => {
-    const prompt = `I am refining slide #${currentSlide.index} ("${currentSlide.headline}") of my "Economics of Owning a Café in Bangalore" presentation deck.
-Current Details:
-- Chapter: ${currentSlide.headline}
+    const scriptLines = videoScript?.script_lines || [];
+    const formattedScript = scriptLines.map(sl => 
+      `  - Line ${sl.sentence_idx + 1} [Expression: ${sl.expression}] [Pause: ${sl.pause_s}s]: "${sl.text}"`
+    ).join("\n");
+
+    const prompt = `I am refining slide #${currentSlide.index} ("${currentSlide.headline}") of our YouTube documentary series "The Economics of Owning a Café in Bangalore".
+
+CURRENT CHAPTER DETAILS:
+- Title: ${currentSlide.headline}
 - Part / Module: ${currentSlide.part}
 - Category Chip: ${currentSlide.chip}
-- Image: ${currentSlide.image}
-- Key Takeaways:
+- Visual Asset: ${currentSlide.image}
+- Key Takeaways (On-Screen):
 ${currentSlide.bullets.map((b, i) => `  ${i+1}. ${b}`).join("\n")}
-- Spoken Voiceover Narration:
-${currentSlide.sentences.map((s, i) => `  ${i+1}. "${s}"`).join("\n")}
 
-Please review this slide and give me:
-1. Higher impact, more visceral headline options.
-2. Sharper, concrete Bangalore data numbers (rents, food cost %, barista salaries, deposit months).
-3. Suggestions for custom data visualization or UI layout improvements.
-4. An improved JSON block matching the exact Slide schema so I can paste it right back in.`;
+NARRATION SCRIPT & VOICE DIRECTION:
+- Tone: ${videoScript?.tone || "Conversational"}
+- Pacing: ${videoScript?.pacing || "142 wpm"}
+- Vibe: ${videoScript?.chapter_vibe || "Analytical"}
+- Director Note: "${videoScript?.director_note || ""}"
+- Spoken Lines with Pauses & Expressions:
+${formattedScript}
+
+TASK:
+Review this chapter as a world-class documentary director and financial scriptwriter:
+1. Polish the script lines to make them punchier, eliminating filler, and adding human cadence.
+2. Mark the exact emotional delivery/expression (e.g. wry, cautionary, deadpan, emphatic) for each sentence.
+3. Suggest precise pause durations (0.3s to 0.8s) for tension and breath.
+4. Improve the 4-5 on-screen visual takeaways with concrete Bangalore numbers (rents, food cost %, barista salaries).
+5. Output the revised JSON matching the Slide schema so I can paste it right into the web app!`;
 
     navigator.clipboard.writeText(prompt);
     setCopiedPrompt(true);
     setTimeout(() => setCopiedPrompt(false), 3000);
   };
 
-  // Export JSON file
   const exportJsonDeck = () => {
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(slides, null, 2));
     const downloadAnchor = document.createElement("a");
@@ -327,7 +378,6 @@ Please review this slide and give me:
     downloadAnchor.remove();
   };
 
-  // Import JSON file
   const importJsonDeck = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -360,7 +410,6 @@ Please review this slide and give me:
         preload="auto"
       />
 
-      {/* Hidden file input for JSON import */}
       <input 
         ref={fileInputRef} 
         type="file" 
@@ -380,7 +429,7 @@ Please review this slide and give me:
               <div className="flex items-center gap-2">
                 <span className="text-xs font-bold tracking-wider text-orange-500 uppercase">Not A Startup</span>
                 <span className="text-[10px] bg-orange-500/20 text-orange-300 font-bold px-1.5 py-0.2 rounded border border-orange-500/30">
-                  WYSIWYG Mode Ready
+                  Script & Director Deck
                 </span>
               </div>
               <h1 className="text-sm font-semibold tracking-tight text-white flex items-center gap-2">
@@ -460,7 +509,6 @@ Please review this slide and give me:
 
         {/* Right Tools: Edit Mode & AI Export */}
         <div className="flex items-center gap-2.5">
-          {/* WYSIWYG Toggle Button */}
           <button
             onClick={() => setIsEditMode(prev => !prev)}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition border ${
@@ -478,31 +526,29 @@ Please review this slide and give me:
             ) : (
               <>
                 <Edit3 className="w-3.5 h-3.5" />
-                <span>Edit Slide (WYSIWYG)</span>
+                <span>Edit Deck (WYSIWYG)</span>
               </>
             )}
           </button>
 
-          {/* AI Prompt Generator Button */}
           <button
             onClick={copyAIPromptForSlide}
             className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white flex items-center gap-1.5 shadow-md shadow-purple-600/20 transition"
-            title="Copy structured prompt for Claude/ChatGPT to improve this slide"
+            title="Copy structured script & slide prompt for Claude to improve"
           >
             {copiedPrompt ? (
               <>
                 <Check className="w-3.5 h-3.5 text-green-300" />
-                <span>Copied Prompt!</span>
+                <span>Copied for Claude!</span>
               </>
             ) : (
               <>
                 <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                <span>Ask AI to Improve</span>
+                <span>Ask Claude to Polish</span>
               </>
             )}
           </button>
 
-          {/* JSON Modal Trigger */}
           <button
             onClick={() => {
               setJsonText(JSON.stringify(currentSlide, null, 2));
@@ -514,7 +560,6 @@ Please review this slide and give me:
             <Code className="w-4 h-4" />
           </button>
 
-          {/* Slide Grid Drawer */}
           <button
             onClick={() => setShowOverviewGrid(prev => !prev)}
             className={`px-2.5 py-1.5 rounded-lg text-xs font-medium border flex items-center gap-1.5 transition ${
@@ -527,7 +572,6 @@ Please review this slide and give me:
             <span>Deck ({slides.length})</span>
           </button>
 
-          {/* Fullscreen */}
           <button
             onClick={toggleFullscreen}
             className="p-2 rounded-lg border border-white/10 hover:bg-white/5 text-slate-300 transition"
@@ -546,13 +590,13 @@ Please review this slide and give me:
         />
       </div>
 
-      {/* Edit Mode Alert Banner (Visible when editing) */}
+      {/* Edit Mode Alert Banner */}
       {isEditMode && (
         <div className="bg-amber-500/15 border-b border-amber-500/30 px-6 py-2 flex items-center justify-between text-xs text-amber-200 animate-in fade-in">
           <div className="flex items-center gap-2">
             <Edit3 className="w-4 h-4 text-amber-400" />
             <span className="font-semibold">WYSIWYG Editing Active:</span>
-            <span>Click directly on headlines, badges, takeaways, or choose an image below to customize this slide. Changes save automatically.</span>
+            <span>Edit headlines, bullets, script lines, pause timings, or delivery expressions below. Saves locally.</span>
           </div>
           <div className="flex items-center gap-3">
             <button
@@ -587,7 +631,7 @@ Please review this slide and give me:
             <div className="p-4 px-6 border-b border-white/10 flex items-center justify-between bg-white/5">
               <div className="flex items-center gap-2">
                 <Code className="w-4 h-4 text-orange-400" />
-                <h3 className="text-sm font-bold text-white">Edit Slide #{currentSlide.index} JSON (Copy/Paste with Claude)</h3>
+                <h3 className="text-sm font-bold text-white">Edit Slide #{currentSlide.index} JSON (With Video Script & Pauses)</h3>
               </div>
               <button 
                 onClick={() => setShowJsonModal(false)}
@@ -598,9 +642,6 @@ Please review this slide and give me:
             </div>
             
             <div className="p-6 flex-1 overflow-y-auto">
-              <p className="text-xs text-slate-400 mb-2">
-                You can copy this into Claude, ask it to modify the takeaways, and paste it back here:
-              </p>
               <textarea
                 value={jsonText}
                 onChange={(e) => setJsonText(e.target.value)}
@@ -645,7 +686,7 @@ Please review this slide and give me:
         </div>
       )}
 
-      {/* Overview Grid Drawer Modal */}
+      {/* Slide Overview Grid Drawer */}
       {showOverviewGrid && (
         <div className="fixed inset-0 z-40 bg-black/85 backdrop-blur-md pt-20 p-8 overflow-y-auto custom-scrollbar">
           <div className="max-w-7xl mx-auto">
@@ -772,7 +813,6 @@ Please review this slide and give me:
             {/* Graphic Container with Polaroid Frame */}
             <div className="my-auto py-2 flex flex-col items-center">
               <div className="relative group max-w-[420px] w-full bg-white p-3.5 pb-6 rounded-lg shadow-2xl rotate-[-0.5deg] hover:rotate-0 transition duration-300 border border-black/10">
-                {/* Washi tape sticker */}
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-6 bg-amber-100/80 backdrop-blur-sm border border-amber-300/50 shadow-sm rotate-[1.5deg] z-10" />
 
                 <div className="relative aspect-square w-full rounded overflow-hidden bg-slate-950 flex items-center justify-center">
@@ -824,90 +864,213 @@ Please review this slide and give me:
             </div>
           </div>
 
-          {/* Right Content Column: Structured Unit Economics & Spoken Sync */}
+          {/* Right Content Column: Dual View (Takeaways & Full Video Script) */}
           <div className="w-full md:w-[52%] p-6 md:p-8 flex flex-col justify-between bg-[#080B11]/90">
             <div>
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
-                  <Info className="w-3.5 h-3.5 text-orange-400" />
-                  Financial Breakdown & Ground Truth
-                </span>
-                
-                {isEditMode && (
+              {/* Header Tab Switcher */}
+              <div className="flex items-center justify-between mb-4 border-b border-white/10 pb-2">
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setActiveTab("takeaways")}
+                    className={`px-3 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${
+                      activeTab === "takeaways"
+                        ? "bg-orange-500/20 text-orange-300 border border-orange-500/40"
+                        : "text-slate-400 hover:text-white"
+                    }`}
+                  >
+                    <CheckCircle2 className="w-3.5 h-3.5" />
+                    Key Takeaways ({currentSlide.bullets.length})
+                  </button>
+                  <button
+                    onClick={() => setActiveTab("script")}
+                    className={`px-3 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${
+                      activeTab === "script"
+                        ? "bg-purple-500/20 text-purple-300 border border-purple-500/40"
+                        : "text-slate-400 hover:text-white"
+                    }`}
+                  >
+                    <Mic className="w-3.5 h-3.5" />
+                    Video Script & Expressions
+                  </button>
+                </div>
+
+                {isEditMode && activeTab === "takeaways" && (
                   <button
                     onClick={addBullet}
                     className="px-2 py-0.5 rounded bg-orange-500/20 hover:bg-orange-500/30 text-orange-300 text-[11px] font-semibold flex items-center gap-1 border border-orange-500/30 transition"
                   >
                     <Plus className="w-3 h-3" />
-                    Add Takeaway
+                    Add Bullet
                   </button>
                 )}
               </div>
 
-              {/* Bulleted Insights List with WYSIWYG support */}
-              <div className="space-y-3">
-                {currentSlide.bullets.map((bullet, bIdx) => {
-                  const isHighlighted = activeSentenceIdx === bIdx;
-                  return (
-                    <div
-                      key={bIdx}
-                      className={`p-3.5 rounded-xl border transition duration-200 flex items-start gap-3.5 ${
-                        isHighlighted
-                          ? "bg-orange-500/15 border-orange-500/50 shadow-md shadow-orange-500/5 scale-[1.01]"
-                          : "bg-white/[0.03] border-white/5 hover:bg-white/[0.06]"
-                      }`}
-                    >
-                      <div className={`mt-0.5 rounded-full p-1 ${
-                        isHighlighted 
-                          ? "bg-orange-500 text-white" 
-                          : "bg-white/10 text-slate-400"
-                      }`}>
-                        <CheckCircle2 className="w-3.5 h-3.5" />
+              {/* TAB 1: Key Takeaways */}
+              {activeTab === "takeaways" ? (
+                <div className="space-y-3">
+                  {currentSlide.bullets.map((bullet, bIdx) => {
+                    const isHighlighted = activeSentenceIdx === bIdx;
+                    return (
+                      <div
+                        key={bIdx}
+                        className={`p-3.5 rounded-xl border transition duration-200 flex items-start gap-3.5 ${
+                          isHighlighted
+                            ? "bg-orange-500/15 border-orange-500/50 shadow-md shadow-orange-500/5 scale-[1.01]"
+                            : "bg-white/[0.03] border-white/5 hover:bg-white/[0.06]"
+                        }`}
+                      >
+                        <div className={`mt-0.5 rounded-full p-1 ${
+                          isHighlighted 
+                            ? "bg-orange-500 text-white" 
+                            : "bg-white/10 text-slate-400"
+                        }`}>
+                          <CheckCircle2 className="w-3.5 h-3.5" />
+                        </div>
+                        
+                        <div className="flex-1">
+                          {isEditMode ? (
+                            <div className="flex items-center gap-2">
+                              <input
+                                type="text"
+                                value={bullet}
+                                onChange={(e) => updateBullet(bIdx, e.target.value)}
+                                className="w-full bg-black/50 border border-white/15 rounded p-1.5 text-sm text-white focus:border-orange-500 focus:outline-none"
+                              />
+                              <button
+                                onClick={() => deleteBullet(bIdx)}
+                                className="p-1 rounded text-red-400 hover:bg-red-500/20 transition"
+                                title="Delete takeaway"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                              </button>
+                            </div>
+                          ) : (
+                            <p className={`text-sm leading-snug ${
+                              isHighlighted ? "text-white font-semibold" : "text-slate-300"
+                            }`}>
+                              {bullet}
+                            </p>
+                          )}
+                        </div>
                       </div>
-                      
-                      <div className="flex-1">
-                        {isEditMode ? (
-                          <div className="flex items-center gap-2">
-                            <input
-                              type="text"
-                              value={bullet}
-                              onChange={(e) => updateBullet(bIdx, e.target.value)}
-                              className="w-full bg-black/50 border border-white/15 rounded p-1.5 text-sm text-white focus:border-orange-500 focus:outline-none"
-                            />
-                            <button
-                              onClick={() => deleteBullet(bIdx)}
-                              className="p-1 rounded text-red-400 hover:bg-red-500/20 transition"
-                              title="Delete takeaway"
-                            >
-                              <Trash2 className="w-4 h-4" />
-                            </button>
-                          </div>
-                        ) : (
-                          <p className={`text-sm leading-snug ${
-                            isHighlighted ? "text-white font-semibold" : "text-slate-300"
-                          }`}>
-                            {bullet}
-                          </p>
-                        )}
-                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                /* TAB 2: Video Script with Pauses & Expressions */
+                <div className="space-y-3">
+                  {/* Director Notes Header Box */}
+                  <div className="p-3.5 rounded-xl bg-purple-950/30 border border-purple-500/30 space-y-2 mb-3">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="font-bold text-purple-300 flex items-center gap-1.5">
+                        <Sparkle className="w-3.5 h-3.5 text-purple-400" />
+                        DIRECTOR VIBE: {videoScript?.chapter_vibe}
+                      </span>
+                      <span className="text-[11px] font-mono text-purple-400">
+                        {videoScript?.tone} · {videoScript?.pacing}
+                      </span>
                     </div>
-                  );
-                })}
-              </div>
+                    {isEditMode ? (
+                      <textarea
+                        value={videoScript?.director_note || ""}
+                        onChange={(e) => updateDirectorNote("director_note", e.target.value)}
+                        className="w-full bg-black/60 border border-purple-500/40 rounded p-2 text-xs text-purple-200 focus:outline-none"
+                        rows={2}
+                      />
+                    ) : (
+                      <p className="text-xs text-purple-200/90 italic">
+                        &ldquo;{videoScript?.director_note}&rdquo;
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Individual Script Lines with Pause Badges */}
+                  <div className="space-y-2.5 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+                    {(videoScript?.script_lines || []).map((line, lIdx) => {
+                      const isLineActive = activeSentenceIdx === lIdx;
+                      return (
+                        <div
+                          key={lIdx}
+                          className={`p-3 rounded-xl border transition ${
+                            isLineActive
+                              ? "bg-purple-500/20 border-purple-400 shadow-md shadow-purple-500/10"
+                              : "bg-white/[0.03] border-white/5 hover:bg-white/[0.06]"
+                          }`}
+                        >
+                          <div className="flex items-center justify-between text-[11px] mb-1.5">
+                            <span className="font-mono text-slate-400 font-semibold">
+                              Line {lIdx + 1}
+                            </span>
+                            
+                            <div className="flex items-center gap-2">
+                              {isEditMode ? (
+                                <input
+                                  type="text"
+                                  value={line.expression}
+                                  onChange={(e) => updateScriptLine(lIdx, "expression", e.target.value)}
+                                  className="bg-black/50 border border-purple-400/40 rounded px-1.5 py-0.5 text-[10px] text-purple-300 font-medium"
+                                />
+                              ) : (
+                                <span className="px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-medium border border-purple-500/30 text-[10px]">
+                                  {line.expression}
+                                </span>
+                              )}
+
+                              {isEditMode ? (
+                                <div className="flex items-center gap-1 text-[10px] text-slate-400">
+                                  <span>Pause:</span>
+                                  <input
+                                    type="number"
+                                    step="0.05"
+                                    value={line.pause_s}
+                                    onChange={(e) => updateScriptLine(lIdx, "pause_s", parseFloat(e.target.value))}
+                                    className="w-12 bg-black/50 border border-white/20 rounded px-1 text-center text-white"
+                                  />
+                                  <span>s</span>
+                                </div>
+                              ) : (
+                                <span className="px-1.5 py-0.5 rounded bg-white/10 text-slate-300 font-mono text-[10px] flex items-center gap-1">
+                                  <Clock className="w-3 h-3 text-amber-400" />
+                                  pause: {line.pause_s}s
+                                </span>
+                              )}
+                            </div>
+                          </div>
+
+                          {isEditMode ? (
+                            <textarea
+                              value={line.text}
+                              onChange={(e) => updateScriptLine(lIdx, "text", e.target.value)}
+                              className="w-full bg-black/50 border border-white/20 rounded p-2 text-sm text-white focus:outline-none"
+                              rows={2}
+                            />
+                          ) : (
+                            <p className={`text-sm leading-relaxed ${
+                              isLineActive ? "text-white font-medium" : "text-slate-300"
+                            }`}>
+                              &ldquo;{line.text}&rdquo;
+                            </p>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Dynamic Active Spoken Sentence Bar */}
-            <div className="mt-6 pt-4 border-t border-white/10">
+            <div className="mt-4 pt-3 border-t border-white/10">
               <div className="text-[11px] font-bold uppercase tracking-wider text-orange-400 flex items-center justify-between mb-1.5">
                 <span className="flex items-center gap-1.5">
                   <Volume2 className="w-3.5 h-3.5 text-orange-400" />
-                  Now Narrating (Tara · 146 WPM)
+                  Currently Speaking: Sentence {activeSentenceIdx + 1} of {currentSlide.sentences.length}
                 </span>
                 <span className="font-mono text-[10px] text-slate-400">
-                  Sentence {activeSentenceIdx + 1} of {currentSlide.sentences.length}
+                  Tara · 146 WPM · Storyteller Tone
                 </span>
               </div>
-              <div className="p-3 rounded-lg bg-black/40 border border-white/10 min-h-[48px] flex items-center">
+              <div className="p-3 rounded-lg bg-black/40 border border-white/10 min-h-[44px] flex items-center">
                 <p className="text-sm font-medium text-amber-200/90 leading-relaxed italic">
                   &ldquo;{currentSlide.sentences[activeSentenceIdx >= 0 ? activeSentenceIdx : 0]}&rdquo;
                 </p>
@@ -917,7 +1080,7 @@ Please review this slide and give me:
           </div>
         </div>
 
-        {/* Bottom Full Transcript Drawer (Collapsible) */}
+        {/* Bottom Full Transcript Drawer */}
         {showTranscript && (
           <div className="mt-6 p-5 glass-panel rounded-xl border border-white/10">
             <div className="flex items-center justify-between mb-3">
@@ -926,7 +1089,7 @@ Please review this slide and give me:
                 Full Chapter Script (Sentence-by-Sentence Timestamp Sync)
               </h3>
               <span className="text-[11px] font-mono text-slate-400">
-                Click any line to scrub audio
+                Click any line to scrub audio directly
               </span>
             </div>
 

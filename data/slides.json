@@ -66,7 +66,57 @@
         "duration": 2.700917,
         "global_start": 15.699959
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "Inviting, reflective hook with subtle irony",
+      "tone": "Conversational storyteller",
+      "pacing": "Gentle, measured (140 wpm)",
+      "director_note": "Start with romantic optimism. Gradually reveal the laptop-camper irony at the end of the beat.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "You want to open a caf\u00e9 in Bangalore.",
+          "duration_s": 2.34,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "You pick a lane in Indiranagar, Koramangala, or HSR Layout.",
+          "duration_s": 3.93,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "You buy a commercial espresso machine.",
+          "duration_s": 2.26,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "You serve specialty coffee for two hundred and eighty rupees a cup.",
+          "duration_s": 3.67,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Customers sit for an hour with a laptop.",
+          "duration_s": 2.25,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 5,
+          "text": "The room is full. It looks like easy money.",
+          "duration_s": 2.7,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b02",
@@ -135,7 +185,57 @@
         "duration": 3.071354,
         "global_start": 32.790418
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "Sober reality check, piercing the weekend rush fantasy",
+      "tone": "Analytical, cautionary",
+      "pacing": "Deliberate, grounded (142 wpm)",
+      "director_note": "Drop pitch and speed. Break the illusion of social media survivorship bias.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "A full room hides a simple fact.",
+          "duration_s": 2.17,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "Online photos show the single best hour of the week.",
+          "duration_s": 3.29,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "This is Sunday morning peak rush.",
+          "duration_s": 1.81,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "The rest of the week is quiet.",
+          "duration_s": 1.67,
+          "pause_s": 0.38,
+          "expression": "Cautionary / Serious"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Fixed rent and barista wages run every single day.",
+          "duration_s": 3.23,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 5,
+          "text": "Daily customer volume must pay your monthly bills.",
+          "duration_s": 3.07,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b03",
@@ -204,7 +304,57 @@
         "duration": 3.385229,
         "global_start": 53.702437
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "Framing the unit economics and architectural scope",
+      "tone": "Architectural, factual",
+      "pacing": "Structured, objective (146 wpm)",
+      "director_note": "Clear boundaries. Anchor the 600-1000 sqft format so audience knows the model scope.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "We must define the exact size of the caf\u00e9.",
+          "duration_s": 2.74,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "We look at one independent neighbourhood caf\u00e9.",
+          "duration_s": 2.55,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "The floor area is six hundred to one thousand square feet.",
+          "duration_s": 3.45,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "You pay setup costs for deposits, civil work, and machines.",
+          "duration_s": 3.94,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Then you pay monthly costs to keep the doors open.",
+          "duration_s": 2.94,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 5,
+          "text": "This size keeps initial setup costs under control.",
+          "duration_s": 3.39,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b04",
@@ -273,7 +423,57 @@
         "duration": 3.218063,
         "global_start": 70.027501
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "Owner-operator discipline versus corporate scale",
+      "tone": "Pragmatic mentor",
+      "pacing": "Warm, hands-on (144 wpm)",
+      "director_note": "Contrast indie operator dedication with VC chain models.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "This model is for one single outlet.",
+          "duration_s": 2.16,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "You run the caf\u00e9 yourself.",
+          "duration_s": 1.67,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "You check the daily cash register.",
+          "duration_s": 1.96,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "You buy the coffee beans and manage the team.",
+          "duration_s": 2.34,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Focus on friendly local neighbourhood service.",
+          "duration_s": 2.59,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 5,
+          "text": "Funded corporate chains follow completely different rules.",
+          "duration_s": 3.22,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b05",
@@ -334,7 +534,50 @@
         "duration": 3.454167,
         "global_start": 88.08250100000001
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "Operator wisdom from veterans",
+      "tone": "Expert debrief",
+      "pacing": "Authoritative, measured (145 wpm)",
+      "director_note": "Cite Nikhil Kamath restaurant game learnings. Warn against space bloat.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "Experienced operators recommend about one thousand square feet.",
+          "duration_s": 3.72,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "Two thousand square feet doubles your rent and fit-out cost.",
+          "duration_s": 3.26,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "Sales do not grow fast enough to pay for it.",
+          "duration_s": 2.83,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "Spaces under six hundred square feet feel crowded.",
+          "duration_s": 3.07,
+          "pause_s": 0.38,
+          "expression": "Cautionary / Serious"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "One thousand square feet gives room for brewing and seating.",
+          "duration_s": 3.45,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b06",
@@ -403,7 +646,57 @@
         "duration": 3.243813,
         "global_start": 109.56102200000001
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "Bangalore street survey across the 4 micro-markets",
+      "tone": "Market explorer",
+      "pacing": "Dynamic, geographic (148 wpm)",
+      "director_note": "Take the viewer on a street walk through Bangalore dining pockets.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "Location sets your costs in Bangalore.",
+          "duration_s": 2.48,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "Indiranagar brings heavy footfall with prime commercial rents.",
+          "duration_s": 3.59,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "Koramangala is a dense and competitive dining hub.",
+          "duration_s": 2.71,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "HSR Layout is a popular home for specialty coffee shops.",
+          "duration_s": 3.9,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Whitefield has tech offices and residential communities.",
+          "duration_s": 3.21,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 5,
+          "text": "Walk each street to verify customer traffic yourself.",
+          "duration_s": 3.24,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b07",
@@ -464,7 +757,50 @@
         "duration": 2.973396,
         "global_start": 126.61643900000001
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "Unveiling real audited numbers from founders",
+      "tone": "Case study reveal",
+      "pacing": "Intrigued, documentary (142 wpm)",
+      "director_note": "Highlight Wint Wealth case study. Ground truth from actual founders.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "Look at real numbers from a Bangalore caf\u00e9.",
+          "duration_s": 2.68,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "The founders shared their data on a Wint Wealth interview.",
+          "duration_s": 2.95,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "Monthly sales reached five to six lakh rupees.",
+          "duration_s": 3.11,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "They started the caf\u00e9 while working full-time jobs.",
+          "duration_s": 3.12,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Steady income came from repeat local regulars.",
+          "duration_s": 2.97,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b08",
@@ -534,7 +870,57 @@
         "duration": 3.970708,
         "global_start": 147.94800200000003
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "The capex reality shock: planned budget vs actual spend",
+      "tone": "Forensic, candid",
+      "pacing": "Precise financial breakdown (140 wpm)",
+      "director_note": "The classic entrepreneur mistake: 50% budget overshoot.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "The founders planned a budget of ten lakh rupees.",
+          "duration_s": 2.69,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "Their actual opening spend reached fifteen to sixteen lakh rupees.",
+          "duration_s": 3.86,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "They took eight lakh rupees as a bank loan.",
+          "duration_s": 2.69,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "They paid two lakh rupees for the security deposit.",
+          "duration_s": 2.91,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "They spent five lakh rupees on the espresso machine and coffee bar.",
+          "duration_s": 4.05,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 5,
+          "text": "Civil work and refrigeration took another four to five lakh rupees.",
+          "duration_s": 3.97,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b09",
@@ -595,7 +981,50 @@
         "duration": 3.517063,
         "global_start": 171.11873000000003
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "The full commercial budget spectrum in Bangalore",
+      "tone": "Pragmatic financial planner",
+      "pacing": "Stepped financial tiers (144 wpm)",
+      "director_note": "Differentiate between bare minimum entry and high-spec builds.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "For most new indie caf\u00e9s in Bangalore, entry costs start at thirty lakh rupees.",
+          "duration_s": 5.23,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "A high-spec space in a prime spot costs eighty lakh to over one crore rupees.",
+          "duration_s": 5.02,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "Espresso machines and grinders cost four to fifteen lakh rupees.",
+          "duration_s": 4.14,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "Keep five to fifteen lakh rupees in reserve.",
+          "duration_s": 2.87,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "This cash covers your first three to six months of operations.",
+          "duration_s": 3.52,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b10",
@@ -656,7 +1085,50 @@
         "duration": 2.535104,
         "global_start": 190.82683500000005
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "High-street glamour versus side-street survival",
+      "tone": "Advisory mentor",
+      "pacing": "Strategic tradeoff analysis (145 wpm)",
+      "director_note": "Advocate for low overhead over prime ego leases.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "Main road high-street spaces need eighty lakh to one crore rupees for setup.",
+          "duration_s": 4.77,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "A quiet side street in HSR Layout costs much less.",
+          "duration_s": 3.77,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "Lower rent gives your business time to grow.",
+          "duration_s": 2.51,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "Make real estate decisions using Bangalore street data.",
+          "duration_s": 3.25,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Choose a format that fits your available capital.",
+          "duration_s": 2.54,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b11",
@@ -717,7 +1189,50 @@
         "duration": 2.943,
         "global_start": 209.79079300000004
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "The Bangalore landlord rental deposit lockup",
+      "tone": "Negotiation warning",
+      "pacing": "Emphatic, firm (142 wpm)",
+      "director_note": "Warn about dead capital locked in deposits before opening day.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "Commercial landlords in Bangalore ask for six to twelve months of rent as a deposit.",
+          "duration_s": 5.2,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "This locks up large cash before you open your doors.",
+          "duration_s": 3.21,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "Negotiate deposit terms before you sign.",
+          "duration_s": 2.69,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "Confirm the exact deposit months in your Letter of Intent.",
+          "duration_s": 3.44,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Inspect customer traffic in person before you agree.",
+          "duration_s": 2.94,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b12",
@@ -778,7 +1293,50 @@
         "duration": 2.500792,
         "global_start": 231.52596000000005
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "The golden 15% rent benchmark rule",
+      "tone": "Benchmark law",
+      "pacing": "Measured mathematical rule (142 wpm)",
+      "director_note": "The most important financial ratio in the entire deck.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "Experienced operators keep monthly rent under fifteen percent of gross sales.",
+          "duration_s": 4.93,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "Small three hundred square foot shops start at forty to fifty thousand rupees a month.",
+          "duration_s": 5.07,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "A full caf\u00e9 space on a main road costs much more.",
+          "duration_s": 3.24,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "If rent takes twenty-five percent of sales, you will lose money.",
+          "duration_s": 3.67,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Keep rent aligned with daily coffee sales.",
+          "duration_s": 2.5,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b13",
@@ -847,7 +1405,57 @@
         "duration": 3.546125,
         "global_start": 251.99102300000004
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "Navigating the bureaucratic regulatory stack",
+      "tone": "Compliance runbook",
+      "pacing": "Crisp checklist clarity (150 wpm)",
+      "director_note": "Deliver like an operational checklist. Keep it brisk and clean.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "You need local government permits before you open.",
+          "duration_s": 2.87,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "Get your FSSAI food licence on the FoSCoS portal.",
+          "duration_s": 3.04,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "Register for GST to claim tax credits and vendor billing.",
+          "duration_s": 3.45,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "Apply for your BBMP trade licence and health permit.",
+          "duration_s": 3.42,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Register under the Karnataka Shops and Establishments Act.",
+          "duration_s": 3.03,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 5,
+          "text": "Submit your licence papers early to avoid opening delays.",
+          "duration_s": 3.55,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b14",
@@ -908,7 +1516,50 @@
         "duration": 2.571667,
         "global_start": 272.54569000000004
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "Lean overhead case: keeping monthly burn under control",
+      "tone": "Operational validation",
+      "pacing": "Optimistic, encouraging (145 wpm)",
+      "director_note": "Show that lean operations can be profitable from Month 2.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "In the Wint Wealth case study, fixed monthly costs were about one point two lakh rupees.",
+          "duration_s": 5.34,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "This paid for base shop rent, barista wages, and power.",
+          "duration_s": 3.41,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "The founders reported operational profit from month two.",
+          "duration_s": 3.12,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "Low fixed costs protect you during your first months.",
+          "duration_s": 3.17,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Small overheads keep business stress low.",
+          "duration_s": 2.57,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b15",
@@ -969,7 +1620,50 @@
         "duration": 3.162417,
         "global_start": 292.27146000000005
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "Core P&L laws: 30% COGS and 15% staff salaries",
+      "tone": "Financial principle",
+      "pacing": "Deliberate, pedagogical (142 wpm)",
+      "director_note": "Enunciate the two fundamental percentage ceilings clearly.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "Two operating rules guide your profit margins.",
+          "duration_s": 2.78,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "Keep food and coffee bean costs at thirty percent of sales.",
+          "duration_s": 3.68,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "Keep total staff salaries under fifteen percent of sales.",
+          "duration_s": 3.57,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "Starting barista pay in Bangalore is twenty-one to twenty-eight thousand rupees a month.",
+          "duration_s": 5.21,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Trained baristas keep your coffee quality consistent.",
+          "duration_s": 3.16,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b16",
@@ -1030,7 +1724,50 @@
         "duration": 3.055375,
         "global_start": 311.730024
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "The hidden cost leaks: AC electricity and Swiggy cuts",
+      "tone": "Forensic revelation",
+      "pacing": "Alert, analytical (146 wpm)",
+      "director_note": "Expose the two silent cash drainers: power tariffs and delivery cuts.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "Electricity and delivery fees often surprise new owners.",
+          "duration_s": 3.71,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "Espresso boilers and summer air conditioning raise power bills.",
+          "duration_s": 3.59,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "Delivery apps charge twenty to thirty percent commission on each order.",
+          "duration_s": 4.06,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "Delivery orders help fill quiet afternoon hours.",
+          "duration_s": 3.03,
+          "pause_s": 0.38,
+          "expression": "Cautionary / Serious"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Dine-in guests provide your highest profit margins.",
+          "duration_s": 3.06,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b17",
@@ -1091,7 +1828,50 @@
         "duration": 3.097833,
         "global_start": 329.12921100000005
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "The menu mix secret: coffee doesn't pay the rent",
+      "tone": "Industry truth",
+      "pacing": "Surprising, counter-intuitive (142 wpm)",
+      "director_note": "Break down Blue Tokai actual revenue mix. Fresh food is essential.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "Coffee alone cannot pay commercial rent in Bangalore.",
+          "duration_s": 3.0,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "Blue Tokai data shows beverages bring forty-five percent of sales.",
+          "duration_s": 4.43,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "Food brings forty percent of sales.",
+          "duration_s": 2.3,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "Packaged retail beans bring fifteen percent.",
+          "duration_s": 2.71,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Fresh food increases the total spend per table.",
+          "duration_s": 3.1,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b18",
@@ -1152,7 +1932,50 @@
         "duration": 3.368042,
         "global_start": 347.56287800000007
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "David vs Goliath: indie warmth vs funded chain scale",
+      "tone": "Strategic positioning",
+      "pacing": "Warm, inspiring (145 wpm)",
+      "director_note": "Empower the indie founder. Do not compete on VC scale; compete on hospitality.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "National coffee chains operate with large funding and multi-crore budgets.",
+          "duration_s": 4.29,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "They use central roasting plants and large corporate teams.",
+          "duration_s": 3.27,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "An indie caf\u00e9 wins with warm personal service.",
+          "duration_s": 2.97,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "Focus on loyal daily regulars instead of scale.",
+          "duration_s": 2.94,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Friendly neighbourhood hospitality is your key advantage.",
+          "duration_s": 3.37,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b19",
@@ -1221,7 +2044,57 @@
         "duration": 3.731896,
         "global_start": 368.79294100000004
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "The 5-point pre-lease decision checklist",
+      "tone": "Final gatekeeper",
+      "pacing": "Strict, disciplined (140 wpm)",
+      "director_note": "A strict warning list before anyone signs a commercial lease.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "Check your finances before signing a commercial lease.",
+          "duration_s": 3.14,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "Keep nine to twelve months of operating cash in reserve.",
+          "duration_s": 3.31,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "Do not risk family emergency savings.",
+          "duration_s": 2.45,
+          "pause_s": 0.38,
+          "expression": "Cautionary / Serious"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "Do not expect caf\u00e9 profit to pay personal loans in month three.",
+          "duration_s": 3.93,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Serve fresh food to lift average table spend.",
+          "duration_s": 2.88,
+          "pause_s": 0.38,
+          "expression": "Conversational / Flow"
+        },
+        {
+          "sentence_idx": 5,
+          "text": "Walk Indiranagar, Koramangala, HSR, and Whitefield first.",
+          "duration_s": 3.73,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   },
   {
     "id": "b20",
@@ -1282,6 +2155,49 @@
         "duration": 3.864979,
         "global_start": 388.4441280000001
       }
-    ]
+    ],
+    "video_script": {
+      "chapter_vibe": "Grand conclusion and transition to next episode",
+      "tone": "Closing summation",
+      "pacing": "Resolute, concluding (144 wpm)",
+      "director_note": "Summarize the ground-truth philosophy. Tease the restaurant episode.",
+      "script_lines": [
+        {
+          "sentence_idx": 0,
+          "text": "Opening a caf\u00e9 in Bangalore takes practical preparation.",
+          "duration_s": 3.44,
+          "pause_s": 0.38,
+          "expression": "Opening premise / Engaging"
+        },
+        {
+          "sentence_idx": 1,
+          "text": "Balance your location costs, team training, and daily expenses.",
+          "duration_s": 4.29,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 2,
+          "text": "Secure the right deposit terms and coffee equipment.",
+          "duration_s": 3.23,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 3,
+          "text": "Daily cost control creates a lasting business.",
+          "duration_s": 2.99,
+          "pause_s": 0.38,
+          "expression": "Serious / Data Emphasis"
+        },
+        {
+          "sentence_idx": 4,
+          "text": "Next, we examine the economics of running a restaurant in Bangalore.",
+          "duration_s": 3.86,
+          "pause_s": 0.7,
+          "expression": "Conclusion / Emphatic"
+        }
+      ]
+    }
   }
 ]
