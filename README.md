@@ -20,6 +20,18 @@ An interactive web slideshow application presenting **The Economics of Owning a 
 
 ---
 
+## Pipeline
+
+Voiceover, script export, loudness normalization and ship gates for the Remotion episode:
+
+- `npm run vo` — regenerate narration audio + sentence timings from `data/slides.json` (`scripts/gen-vo.mjs`; supports `--only <id>[,<id>]` and `--dry-run`).
+- `npm run script` — write `SCRIPT.md` from `data/slides.json` (`scripts/export-script.mjs`).
+- `npm run render:ledger` / `npm run render:whiteboard` — render the full episode with Remotion in each theme.
+- `bash scripts/loudnorm.sh <in.mp4> [out.mp4]` — two-pass EBU R128 loudness normalization (I=-14 LUFS, TP=-1.5, LRA=11), video copied, audio re-encoded AAC 192k.
+- `npm run gates` — run `scripts/check-gates.sh <mp4> [expected_seconds]`: resolution/fps, codecs, loudness, leading silence, frozen-frame, and duration checks; exits non-zero on any failure.
+
+---
+
 ## Tech Stack
 - Next.js 16 (App Router) + React 19
 - TypeScript

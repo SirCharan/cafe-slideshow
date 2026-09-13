@@ -2,21 +2,28 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import defaultSlidesData from "@/data/slides.json";
-import { 
-  Play, 
-  Pause, 
-  SkipBack, 
-  SkipForward, 
-  Volume2, 
-  VolumeX, 
-  Maximize2, 
-  Minimize2, 
-  Layers, 
-  FileText, 
-  CheckCircle2, 
-  Coffee, 
-  Store, 
+import type { Slide, VideoScript, ScriptLine, Visual, ThemeName } from "@/remotion/types";
+import { getTheme } from "@/remotion/theme";
+// remotion's visuals use Remotion hooks (useCurrentFrame via <Img> premounting) that only
+// work inside a registered Composition/Player; this preview renders them standalone, so
+// load client-only to avoid the SSR/prerender crash.
+const SlideVisual = dynamic(() => import("@/remotion/visuals").then((m) => m.SlideVisual), { ssr: false });
+import {
+  Play,
+  Pause,
+  SkipBack,
+  SkipForward,
+  Volume2,
+  VolumeX,
+  Maximize2,
+  Minimize2,
+  Layers,
+  FileText,
+  CheckCircle2,
+  Coffee,
+  Store,
   ExternalLink,
   Edit3,
   Eye,
@@ -27,51 +34,47 @@ import {
   Trash2,
   Copy,
   Sparkles,
-  Info,
   Check,
   Code,
   Mic,
   Clock,
-  Sparkle
+  Sparkle,
+  MonitorPlay
 } from "lucide-react";
 
-interface SentenceTiming {
-  sentence_idx: number;
-  text: string;
-  local_start: number;
-  duration: number;
-  global_start: number;
-}
+const VISUAL_TYPES: Visual["type"][] = [
+  "receipt",
+  "bars",
+  "range",
+  "compare",
+  "logos",
+  "tree",
+  "photo",
+  "character",
+  "icon",
+];
 
-interface ScriptLine {
-  sentence_idx: number;
-  text: string;
-  duration_s: number;
-  pause_s: number;
-  expression: string;
-}
-
-interface VideoScript {
-  chapter_vibe: string;
-  tone: string;
-  pacing: string;
-  director_note: string;
-  script_lines: ScriptLine[];
-}
-
-interface Slide {
-  id: string;
-  index: number;
-  part: string;
-  headline: string;
-  chip: string;
-  image: string;
-  bullets: string[];
-  sentences: string[];
-  audio: string;
-  duration: number;
-  sentence_timings: SentenceTiming[];
-  video_script?: VideoScript;
+function defaultVisualForType(type: Visual["type"]): Visual {
+  switch (type) {
+    case "receipt":
+      return { type, title: "Title", lines: [] };
+    case "bars":
+      return { type, title: "Title", items: [] };
+    case "range":
+      return { type, title: "Title", min: 0, max: 100, unit: "", markers: [] };
+    case "compare":
+      return { type, title: "Title", left: { title: "Left", rows: [] }, right: { title: "Right", rows: [] } };
+    case "logos":
+      return { type, title: "Title", items: [] };
+    case "tree":
+      return { type, title: "Title", root: "Root", branches: [] };
+    case "photo":
+      return { type, src: "", caption: "" };
+    case "character":
+      return { type, src: "", caption: "" };
+    case "icon":
+      return { type, src: "", stat: "", caption: "" };
+  }
 }
 
 const AVAILABLE_IMAGES = [
@@ -124,7 +127,7 @@ export default function CafeSlideshow() {
   const [playbackSpeed, setPlaybackSpeed] = useState<number>(1.0);
   const [isMuted, setIsMuted] = useState<boolean>(false);
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
-  const [showTranscript, setShowTranscript] = useState<boolean>(true);
+  const [showTranscript] = useState<boolean>(true);
   const [showOverviewGrid, setShowOverviewGrid] = useState<boolean>(false);
   
   // WYSIWYG & Prompting state
@@ -134,11 +137,33 @@ export default function CafeSlideshow() {
   const [jsonText, setJsonText] = useState<string>("");
   const [activeTab, setActiveTab] = useState<"takeaways" | "script">("takeaways");
 
+  // Present-mode theme toggle
+  const [presentTheme, setPresentTheme] = useState<ThemeName>(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("cafe_slideshow_theme");
+      if (saved === "ledger" || saved === "whiteboard") return saved;
+    }
+    return "ledger";
+  });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("cafe_slideshow_theme", presentTheme);
+    }
+  }, [presentTheme]);
+
+  // Live visual preview (build animation loop + fit-to-container scale)
+  const [previewFrame, setPreviewFrame] = useState<number>(0);
+  const [visualScale, setVisualScale] = useState<number>(0.525);
+  const visualContainerRef = useRef<HTMLDivElement | null>(null);
+  const previewRafRef = useRef<number | null>(null);
+
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const currentSlide = slides[currentIdx] || slides[0];
   const videoScript = currentSlide.video_script;
+  const currentVisual = currentSlide.visual;
 
   // Persist edits to localStorage
   const saveSlides = (newSlides: Slide[]) => {
@@ -156,7 +181,7 @@ export default function CafeSlideshow() {
     }
   };
 
-  const updateCurrentSlide = (field: keyof Slide, value: any) => {
+  const updateCurrentSlide = (field: keyof Slide, value: Slide[keyof Slide]) => {
     const updated = [...slides];
     updated[currentIdx] = {
       ...updated[currentIdx],
@@ -185,7 +210,7 @@ export default function CafeSlideshow() {
     saveSlides(updated);
   };
 
-  const updateScriptLine = (sIdx: number, field: keyof ScriptLine, val: any) => {
+  const updateScriptLine = (sIdx: number, field: keyof ScriptLine, val: ScriptLine[keyof ScriptLine]) => {
     const updated = [...slides];
     if (!updated[currentIdx].video_script) return;
     const lines = [...updated[currentIdx].video_script!.script_lines];
@@ -197,13 +222,13 @@ export default function CafeSlideshow() {
     // Also sync to sentences array if text changed
     if (field === "text") {
       const sents = [...updated[currentIdx].sentences];
-      sents[sIdx] = val;
+      sents[sIdx] = val as string;
       updated[currentIdx].sentences = sents;
     }
     saveSlides(updated);
   };
 
-  const updateDirectorNote = (field: keyof VideoScript, val: any) => {
+  const updateDirectorNote = (field: keyof VideoScript, val: VideoScript[keyof VideoScript]) => {
     const updated = [...slides];
     if (!updated[currentIdx].video_script) return;
     updated[currentIdx].video_script = {
@@ -267,6 +292,41 @@ export default function CafeSlideshow() {
     }
   }, [isMuted]);
 
+  // Measure the visual preview box so the fixed 800x640 render scales to fit.
+  useEffect(() => {
+    const el = visualContainerRef.current;
+    if (!el || typeof ResizeObserver === "undefined") return;
+    const ro = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setVisualScale(entry.contentRect.width / 800);
+      }
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  // Reset the preview frame when the slide changes (adjust state during render, not in an effect).
+  const [previewSlideIdx, setPreviewSlideIdx] = useState<number>(currentIdx);
+  if (previewSlideIdx !== currentIdx) {
+    setPreviewSlideIdx(currentIdx);
+    setPreviewFrame(0);
+  }
+
+  // Drive the visual preview's build animation, looping while the slide with a visual is shown.
+  useEffect(() => {
+    if (!currentVisual) return;
+    let frame = 0;
+    const step = () => {
+      frame = (frame + 1) % 900;
+      setPreviewFrame(frame);
+      previewRafRef.current = requestAnimationFrame(step);
+    };
+    previewRafRef.current = requestAnimationFrame(step);
+    return () => {
+      if (previewRafRef.current !== null) cancelAnimationFrame(previewRafRef.current);
+    };
+  }, [currentIdx, currentVisual]);
+
   const handleTimeUpdate = () => {
     if (!audioRef.current) return;
     const t = audioRef.current.currentTime;
@@ -289,6 +349,18 @@ export default function CafeSlideshow() {
       setIsPlaying(false);
     }
   };
+
+  const toggleFullscreen = useCallback(() => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+      setIsFullscreen(true);
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+        setIsFullscreen(false);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -317,19 +389,7 @@ export default function CafeSlideshow() {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [handleNext, handlePrev, togglePlay]);
-
-  const toggleFullscreen = () => {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(() => {});
-      setIsFullscreen(true);
-    } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen().catch(() => {});
-        setIsFullscreen(false);
-      }
-    }
-  };
+  }, [handleNext, handlePrev, togglePlay, toggleFullscreen]);
 
   const copyAIPromptForSlide = () => {
     const scriptLines = videoScript?.script_lines || [];
@@ -400,7 +460,7 @@ Review this chapter as a world-class documentary director and financial scriptwr
   };
 
   return (
-    <div className="min-h-screen bg-[#07090E] text-slate-100 flex flex-col selection:bg-orange-500 selection:text-white">
+    <div className="min-h-screen bg-[var(--chrome)] text-slate-100 flex flex-col selection:bg-orange-500 selection:text-white">
       {/* Hidden audio element */}
       <audio
         ref={audioRef}
@@ -419,7 +479,7 @@ Review this chapter as a world-class documentary director and financial scriptwr
       />
 
       {/* Top Header Navigation Bar */}
-      <header className="h-16 border-b border-white/10 bg-[#0B0F17]/95 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-50">
+      <header className="h-16 border-b border-white/10 bg-[var(--chrome-2)]/95 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-50">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-amber-600 to-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/20">
@@ -509,6 +569,32 @@ Review this chapter as a world-class documentary director and financial scriptwr
 
         {/* Right Tools: Edit Mode & AI Export */}
         <div className="flex items-center gap-2.5">
+          {/* Present theme toggle */}
+          <div className="flex items-center gap-1 text-xs bg-white/5 border border-white/10 rounded-xl px-1 py-1">
+            {(["ledger", "whiteboard"] as ThemeName[]).map((t) => (
+              <button
+                key={t}
+                onClick={() => setPresentTheme(t)}
+                className={`px-2 py-1 rounded-md text-[11px] font-semibold capitalize transition ${
+                  presentTheme === t
+                    ? "bg-white/20 text-orange-400"
+                    : "text-slate-400 hover:text-white"
+                }`}
+              >
+                {t}
+              </button>
+            ))}
+          </div>
+
+          <button
+            onClick={() => window.open(`/present?theme=${presentTheme}&slide=${currentIdx}`, "_blank")}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold border border-white/15 hover:bg-white/10 text-slate-200 flex items-center gap-1.5 transition"
+            title="Open live Remotion present mode in a new tab"
+          >
+            <MonitorPlay className="w-3.5 h-3.5" />
+            <span>Present</span>
+          </button>
+
           <button
             onClick={() => setIsEditMode(prev => !prev)}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition border ${
@@ -627,7 +713,7 @@ Review this chapter as a world-class documentary director and financial scriptwr
       {/* Raw JSON Editor Modal */}
       {showJsonModal && (
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-6">
-          <div className="bg-[#0D111A] border border-white/20 rounded-2xl w-full max-w-3xl flex flex-col shadow-2xl overflow-hidden max-h-[85vh]">
+          <div className="bg-[var(--chrome-3)] border border-white/20 rounded-2xl w-full max-w-3xl flex flex-col shadow-2xl overflow-hidden max-h-[85vh]">
             <div className="p-4 px-6 border-b border-white/10 flex items-center justify-between bg-white/5">
               <div className="flex items-center gap-2">
                 <Code className="w-4 h-4 text-orange-400" />
@@ -706,13 +792,13 @@ Review this chapter as a world-class documentary director and financial scriptwr
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {slides.map((slide) => {
-                const isSelected = slide.index - 1 === currentIdx;
+              {slides.map((slide, slideIdx) => {
+                const isSelected = slideIdx === currentIdx;
                 return (
                   <div
                     key={slide.id}
                     onClick={() => {
-                      goToSlide(slide.index - 1);
+                      goToSlide(slideIdx);
                       setShowOverviewGrid(false);
                     }}
                     className={`p-4 rounded-xl cursor-pointer transition border relative group overflow-hidden ${
@@ -789,7 +875,7 @@ Review this chapter as a world-class documentary director and financial scriptwr
         <div className="w-full aspect-[16/9] glass-panel-glow rounded-2xl overflow-hidden border border-white/15 relative shadow-2xl flex flex-col md:flex-row">
           
           {/* Left Visual Column: Polaroid / Component Graphic */}
-          <div className="w-full md:w-[48%] p-6 md:p-8 flex flex-col justify-between border-b md:border-b-0 md:border-r border-white/10 bg-[#0B0E16]/85 relative">
+          <div className="w-full md:w-[48%] p-6 md:p-8 flex flex-col justify-between border-b md:border-b-0 md:border-r border-white/10 bg-[var(--chrome-4)]/85 relative">
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-bold tracking-wider text-orange-400 uppercase mb-3">
                 <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
@@ -815,14 +901,42 @@ Review this chapter as a world-class documentary director and financial scriptwr
               <div className="relative group max-w-[420px] w-full bg-white p-3.5 pb-6 rounded-lg shadow-2xl rotate-[-0.5deg] hover:rotate-0 transition duration-300 border border-black/10">
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-6 bg-amber-100/80 backdrop-blur-sm border border-amber-300/50 shadow-sm rotate-[1.5deg] z-10" />
 
-                <div className="relative aspect-square w-full rounded overflow-hidden bg-slate-950 flex items-center justify-center">
-                  <Image
-                    src={`/assets/${currentSlide.image}`}
-                    alt={currentSlide.headline}
-                    fill
-                    className="object-contain p-1"
-                    priority
-                  />
+                <div
+                  ref={visualContainerRef}
+                  className={`relative w-full rounded overflow-hidden bg-slate-950 flex items-center justify-center ${
+                    currentVisual ? "aspect-[5/4]" : "aspect-square"
+                  }`}
+                >
+                  {currentVisual ? (
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: 800,
+                        height: 640,
+                        transform: `scale(${visualScale})`,
+                        transformOrigin: "top left",
+                      }}
+                    >
+                      <SlideVisual
+                        visual={currentVisual}
+                        theme={getTheme(presentTheme)}
+                        frame={previewFrame}
+                        activeSentence={activeSentenceIdx}
+                        width={800}
+                        height={640}
+                      />
+                    </div>
+                  ) : (
+                    <Image
+                      src={`/assets/${currentSlide.image}`}
+                      alt={currentSlide.headline}
+                      fill
+                      className="object-contain p-1"
+                      priority
+                    />
+                  )}
                 </div>
 
                 <div className="mt-3.5 px-1 flex items-center justify-between text-slate-800">
@@ -842,7 +956,7 @@ Review this chapter as a world-class documentary director and financial scriptwr
                   <select
                     value={currentSlide.image}
                     onChange={(e) => updateCurrentSlide("image", e.target.value)}
-                    className="w-full bg-[#121622] text-xs text-amber-200 border border-white/15 rounded p-1 focus:outline-none"
+                    className="w-full bg-[var(--chrome-7)] text-xs text-amber-200 border border-white/15 rounded p-1 focus:outline-none"
                   >
                     {AVAILABLE_IMAGES.map((imgName) => (
                       <option key={imgName} value={imgName}>
@@ -850,6 +964,38 @@ Review this chapter as a world-class documentary director and financial scriptwr
                       </option>
                     ))}
                   </select>
+                </div>
+              )}
+
+              {/* Visual field group in Edit Mode */}
+              {isEditMode && (
+                <div className="mt-3 w-full max-w-[420px] flex items-center gap-2 bg-black/60 p-2 rounded-lg border border-white/10">
+                  <span className="text-[10px] uppercase font-bold text-slate-400 shrink-0">Visual:</span>
+                  <select
+                    value={currentVisual?.type ?? ""}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      updateCurrentSlide("visual", val ? defaultVisualForType(val as Visual["type"]) : undefined);
+                    }}
+                    className="w-full bg-[var(--chrome-7)] text-xs text-amber-200 border border-white/15 rounded p-1 focus:outline-none"
+                  >
+                    <option value="">None (use image)</option>
+                    {VISUAL_TYPES.map((t) => (
+                      <option key={t} value={t}>
+                        {t}
+                      </option>
+                    ))}
+                  </select>
+                  <button
+                    onClick={() => {
+                      setJsonText(JSON.stringify(currentSlide, null, 2));
+                      setShowJsonModal(true);
+                    }}
+                    className="px-2 py-1 rounded bg-white/10 hover:bg-white/20 text-white text-[11px] font-semibold flex items-center gap-1 shrink-0 transition"
+                  >
+                    <Code className="w-3 h-3" />
+                    Edit JSON
+                  </button>
                 </div>
               )}
             </div>
@@ -865,7 +1011,7 @@ Review this chapter as a world-class documentary director and financial scriptwr
           </div>
 
           {/* Right Content Column: Dual View (Takeaways & Full Video Script) */}
-          <div className="w-full md:w-[52%] p-6 md:p-8 flex flex-col justify-between bg-[#080B11]/90">
+          <div className="w-full md:w-[52%] p-6 md:p-8 flex flex-col justify-between bg-[var(--chrome-5)]/90">
             <div>
               {/* Header Tab Switcher */}
               <div className="flex items-center justify-between mb-4 border-b border-white/10 pb-2">
@@ -1127,7 +1273,7 @@ Review this chapter as a world-class documentary director and financial scriptwr
       </main>
 
       {/* Footer info banner */}
-      <footer className="h-12 border-t border-white/10 bg-[#06080C] px-6 flex items-center justify-between text-xs text-slate-400">
+      <footer className="h-12 border-t border-white/10 bg-[var(--chrome-6)] px-6 flex items-center justify-between text-xs text-slate-400">
         <div className="flex items-center gap-4">
           <span>Not A Startup · Episode 1: Café in Bangalore</span>
           <span>•</span>

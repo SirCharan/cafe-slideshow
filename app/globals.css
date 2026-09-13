@@ -3,11 +3,28 @@
 :root {
   --background: #090b10;
   --foreground: #f8fafc;
+
+  /* Brand kit (~/Downloads/Not-a-Startup-Brand-Kit/04-tokens/tokens.css) — present-mode palette */
+  --paper: #F5F1EA;
+  --paper-2: #EBE6DC;
+  --ink: #141414;
+  --accent: #C45C26;
+  --mute: #6B6560;
+  --line: rgba(20, 20, 20, 0.08);
+
+  /* Dark editor chrome (WYSIWYG deck only, not present mode) */
+  --chrome: #07090E;
+  --chrome-2: #0B0F17;
+  --chrome-3: #0D111A;
+  --chrome-4: #0B0E16;
+  --chrome-5: #080B11;
+  --chrome-6: #06080C;
+  --chrome-7: #121622;
 }
 
 body {
-  background-color: #090b10;
-  color: #f8fafc;
+  background-color: var(--background);
+  color: var(--foreground);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
 }
