@@ -43,3 +43,4 @@ next-env.d.ts
 # render output + tts intermediates
 out/
 *.aiff
+.env.blob
