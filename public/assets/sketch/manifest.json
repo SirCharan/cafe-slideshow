@@ -1,0 +1,122 @@
+[
+  {
+    "name": "cafe-front",
+    "subject": "a small independent café storefront with an awning",
+    "prompt": "black marker sketch of a small independent café storefront with an awning, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/cafe-front.png"
+  },
+  {
+    "name": "espresso-machine",
+    "subject": "an espresso machine",
+    "prompt": "black marker sketch of an espresso machine, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/espresso-machine.png"
+  },
+  {
+    "name": "croissant",
+    "subject": "a croissant",
+    "prompt": "black marker sketch of a croissant, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/croissant.png"
+  },
+  {
+    "name": "coffee-cup",
+    "subject": "a takeaway coffee cup",
+    "prompt": "black marker sketch of a takeaway coffee cup, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/coffee-cup.png"
+  },
+  {
+    "name": "laptop-table",
+    "subject": "a laptop on a café table",
+    "prompt": "black marker sketch of a laptop on a café table, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/laptop-table.png"
+  },
+  {
+    "name": "cash-register",
+    "subject": "a cash register",
+    "prompt": "black marker sketch of a cash register, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/cash-register.png"
+  },
+  {
+    "name": "receipt",
+    "subject": "a paper receipt",
+    "prompt": "black marker sketch of a paper receipt, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/receipt.png"
+  },
+  {
+    "name": "lease-document",
+    "subject": "a rental agreement document with a pen",
+    "prompt": "black marker sketch of a rental agreement document with a pen, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/lease-document.png"
+  },
+  {
+    "name": "keys",
+    "subject": "a bunch of keys",
+    "prompt": "black marker sketch of a bunch of keys, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/keys.png"
+  },
+  {
+    "name": "office-building",
+    "subject": "a small government office building",
+    "prompt": "black marker sketch of a small government office building, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/office-building.png"
+  },
+  {
+    "name": "licence-certificate",
+    "subject": "a framed licence certificate",
+    "prompt": "black marker sketch of a framed licence certificate, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/licence-certificate.png"
+  },
+  {
+    "name": "delivery-scooter",
+    "subject": "a delivery rider on a scooter with a delivery bag",
+    "prompt": "black marker sketch of a delivery rider on a scooter with a delivery bag, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/delivery-scooter.png"
+  },
+  {
+    "name": "electricity-meter",
+    "subject": "a wall-mounted electricity meter box",
+    "prompt": "black marker sketch of a wall-mounted electricity meter box, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/electricity-meter.png"
+  },
+  {
+    "name": "kitchen-counter",
+    "subject": "a commercial kitchen counter",
+    "prompt": "black marker sketch of a commercial kitchen counter, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/kitchen-counter.png"
+  },
+  {
+    "name": "chair-table",
+    "subject": "a café chair and a round table",
+    "prompt": "black marker sketch of a café chair and a round table, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/chair-table.png"
+  },
+  {
+    "name": "beans-sack",
+    "subject": "a sack of coffee beans",
+    "prompt": "black marker sketch of a sack of coffee beans, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/beans-sack.png"
+  },
+  {
+    "name": "refrigerator",
+    "subject": "a commercial refrigerator",
+    "prompt": "black marker sketch of a commercial refrigerator, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/refrigerator.png"
+  },
+  {
+    "name": "signboard",
+    "subject": "a hanging shop signboard, blank",
+    "prompt": "black marker sketch of a hanging shop signboard, blank, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/signboard.png"
+  },
+  {
+    "name": "queue-people",
+    "subject": "a queue of five simple people",
+    "prompt": "black marker sketch of a queue of five simple people, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/queue-people.png"
+  },
+  {
+    "name": "tiny-cafe",
+    "subject": "a hole-in-the-wall café counter",
+    "prompt": "black marker sketch of a hole-in-the-wall café counter, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/tiny-cafe.png"
+  }
+]

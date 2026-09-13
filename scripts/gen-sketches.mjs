@@ -174,15 +174,30 @@ function main() {
   const targetNames = args.only ? new Set(args.only) : null;
   const results = [];
 
+  const failed = [];
   for (const [name, subject] of SKETCHES) {
     if (targetNames && !targetNames.has(name)) continue;
-    results.push(generateSketch(name, subject, args.dryRun));
+    // Retry transient backend errors (cloud "Remote echo timed out", Metal OOM) up to 3 times,
+    // then continue with the next sketch so one hiccup never aborts the batch.
+    let done = false;
+    for (let attempt = 1; attempt <= 3 && !done; attempt++) {
+      try {
+        results.push(generateSketch(name, subject, args.dryRun));
+        done = true;
+      } catch (err) {
+        console.error(`retry ${attempt}/3 ${name}: ${String(err.message).split("\n").find((l) => /Error:|timed out|Memory/.test(l)) ?? err.message.slice(0, 120)}`);
+        if (attempt < 3) spawnSync("sleep", ["15"]);
+      }
+    }
+    if (!done) failed.push(name);
   }
+  if (failed.length) console.error(`FAILED after retries: ${failed.join(", ")}`);
 
   if (args.dryRun) {
     console.log("Dry run complete. No files written.");
     return;
   }
+  process.exitCode = failed.length ? 1 : 0;
 
   // Rebuild manifest from every sketch that currently exists on disk (in
   // SKETCHES order), not just the ones touched this run.
