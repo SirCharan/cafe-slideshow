@@ -62,3 +62,5 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 107, 0, 0.5);
 }
+
+@font-face { font-family: "Kalam"; src: url("/fonts/Kalam-700.ttf") format("truetype"); font-weight: 700; font-display: swap; }
