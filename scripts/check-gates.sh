@@ -85,20 +85,11 @@ ffmpeg -nostats -i "$MP4" -t 3 -af "silencedetect=noise=-40dB:d=0.05" -f null - 
 LEAD_SIL_END="$(grep -o "silence_end: [0-9.]*" "$SIL_LOG" | head -1 | awk '{print $2}')"
 LEAD_SIL_START="$(grep -o "silence_start: [0-9.]*" "$SIL_LOG" | head -1 | awk '{print $2}')"
 
-if [ -z "$LEAD_SIL_START" ] || [ "$(node -e "console.log(parseFloat(process.argv[1])>0.001?1:0)" "$LEAD_SIL_START" 2>/dev/null)" != "1" ]; then
-  # no silence detected at the very start (start != ~0), or no silence at all
-  if [ -z "$LEAD_SIL_END" ]; then
-    pass "leading silence: none detected"
-  else
-    LEAD_OK="$(node -e "console.log(parseFloat(process.argv[1])<0.5?1:0)" "$LEAD_SIL_END")"
-    if [ "$LEAD_OK" = "1" ]; then
-      pass "leading silence ${LEAD_SIL_END}s (< 0.5s)"
-    else
-      fail "leading silence ${LEAD_SIL_END}s (>= 0.5s)"
-    fi
-  fi
+if [ -z "$LEAD_SIL_START" ] || [ "$(awk -v v="$LEAD_SIL_START" 'BEGIN{print (v>0.05)?1:0}')" = "1" ]; then
+  # speech is present from the first frame; any detected silence is a natural pause, not lead-in
+  pass "leading silence: none (speech starts at 0s${LEAD_SIL_START:+, first pause at ${LEAD_SIL_START}s})"
 else
-  LEAD_OK="$(node -e "console.log(parseFloat(process.argv[1])<0.5?1:0)" "$LEAD_SIL_END")"
+  LEAD_OK="$(awk -v v="$LEAD_SIL_END" 'BEGIN{print (v<0.5)?1:0}')"
   if [ "$LEAD_OK" = "1" ]; then
     pass "leading silence ${LEAD_SIL_END}s (< 0.5s)"
   else
