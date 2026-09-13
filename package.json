@@ -11,10 +11,13 @@
     "render:ledger": "remotion render remotion/index.ts CafeEpisode out/cafe-blr-001-ledger.mp4 --props=\"{\\\"theme\\\":\\\"ledger\\\",\\\"captions\\\":true}\" --codec=h264 --audio-codec=aac",
     "render:whiteboard": "remotion render remotion/index.ts CafeEpisode out/cafe-blr-001-whiteboard.mp4 --props=\"{\\\"theme\\\":\\\"whiteboard\\\",\\\"captions\\\":true}\" --codec=h264 --audio-codec=aac",
     "vo": "node scripts/gen-vo.mjs",
+    "sketches": "node scripts/gen-sketches.mjs",
+    "sfx": "node scripts/gen-sfx.mjs",
     "script": "node scripts/export-script.mjs",
     "gates": "bash scripts/check-gates.sh"
   },
   "dependencies": {
+    "@iconify-json/tabler": "^1.2.38",
     "@remotion/cli": "^4.0.524",
     "@remotion/media": "^4.0.524",
     "@remotion/player": "^4.0.524",
@@ -24,7 +27,8 @@
     "next": "16.3.5",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "remotion": "^4.0.524"
+    "remotion": "^4.0.524",
+    "roughjs": "^4.6.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

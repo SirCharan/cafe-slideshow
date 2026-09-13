@@ -2,17 +2,23 @@ import React, { useEffect, useMemo, useState } from "react";
 import { AbsoluteFill, Sequence, continueRender, delayRender, staticFile } from "remotion";
 import { Audio } from "@remotion/media";
 import { TransitionSeries, linearTiming } from "@remotion/transitions";
-import { slide } from "@remotion/transitions/slide";
 import { wipe } from "@remotion/transitions/wipe";
 import rawSlides from "../data/slides.json";
 import { ensureFonts, fontLoadPromise } from "./fonts";
 import { getTheme } from "./theme";
 import { DIVIDER_SECONDS, FPS, TRANSITION_FRAMES } from "./types";
 import type { EpisodeProps, Slide as SlideData, Theme, Timeline, TimelineItem } from "./types";
+import type { El } from "./board/types";
+import { elementStartFrame } from "./board/timing";
 import { ChapterSlide } from "./slides/Slide";
+import { ChapterBoard } from "./slides/ChapterBoard";
 import { ColdOpen } from "./slides/ColdOpen";
 import { EndCard } from "./slides/EndCard";
-import { PartDivider } from "./slides/PartDivider";
+import { PartWipe } from "./slides/PartWipe";
+
+// SFX kinds that skip the squeak sound (silent draws / effects with their own cue).
+const NO_SQUEAK_KINDS: ReadonlySet<El["kind"]> = new Set(["erase", "highlight", "component"]);
+const MIN_SFX_GAP_FRAMES = 6; // at most one squeak per 6 frames per slide
 
 // Placeholders until scripts/gen-vo.mjs fills in a real `duration` for these kinds.
 const COLD_OPEN_SECONDS = 8;
@@ -90,7 +96,7 @@ export const buildTimeline = (slides: SlideData[]): Timeline => {
 
 const renderTimelineItem = (item: TimelineItem, slides: SlideData[], theme: Theme, captions: boolean) => {
   if (item.kind === "divider") {
-    return <PartDivider theme={theme} part={item.part ?? ""} partNumber={item.partNumber ?? 0} />;
+    return <PartWipe theme={theme} part={item.part ?? ""} partNumber={item.partNumber ?? 0} />;
   }
   const slideData = slides[item.slideIndex ?? 0];
   const localSentenceStarts = item.sentenceStartFrames.map((f) => f - item.startFrame);
@@ -101,6 +107,9 @@ const renderTimelineItem = (item: TimelineItem, slides: SlideData[], theme: Them
   if (kind === "end_card") {
     return <EndCard slide={slideData} theme={theme} durationFrames={item.durationFrames} />;
   }
+  if (slideData.board) {
+    return <ChapterBoard slide={slideData} theme={theme} captions={captions} sentenceStartFrames={localSentenceStarts} />;
+  }
   return (
     <ChapterSlide
       slide={slideData}
@@ -109,6 +118,23 @@ const renderTimelineItem = (item: TimelineItem, slides: SlideData[], theme: Them
       sentenceStartFrames={localSentenceStarts}
     />
   );
+};
+
+/** Slide-local absolute frames (relative to the slide's own start) at which each of its
+ * board elements begins drawing, for squeak SFX — capped to one per MIN_SFX_GAP_FRAMES. */
+const boardSfxFrames = (slideData: SlideData, localSentenceStarts: number[]): { frame: number; index: number; isErase: boolean }[] => {
+  if (!slideData.board) return [];
+  const out: { frame: number; index: number; isErase: boolean }[] = [];
+  let lastFrame = -Infinity;
+  slideData.board.elements.forEach((el, i) => {
+    const isErase = el.kind === "erase";
+    if (!isErase && NO_SQUEAK_KINDS.has(el.kind)) return;
+    const frame = elementStartFrame(el, localSentenceStarts, FPS);
+    if (frame - lastFrame < MIN_SFX_GAP_FRAMES) return;
+    lastFrame = frame;
+    out.push({ frame, index: i, isErase });
+  });
+  return out;
 };
 
 export const Episode: React.FC<EpisodeProps> = ({ theme: themeName, captions, muted }) => {
@@ -130,25 +156,17 @@ export const Episode: React.FC<EpisodeProps> = ({ theme: themeName, captions, mu
       <TransitionSeries>
         {timeline.items.map((item, i) => {
           const isLast = i === timeline.items.length - 1;
-          const next = timeline.items[i + 1];
-          const wipeTransition = item.kind === "divider" || (next && next.kind === "divider");
           return (
             <React.Fragment key={i}>
               <TransitionSeries.Sequence durationInFrames={item.durationFrames}>
                 {renderTimelineItem(item, slides, theme, captions)}
               </TransitionSeries.Sequence>
-              {!isLast &&
-                (wipeTransition ? (
-                  <TransitionSeries.Transition
-                    presentation={wipe({ direction: "from-left" })}
-                    timing={linearTiming({ durationInFrames: TRANSITION_FRAMES })}
-                  />
-                ) : (
-                  <TransitionSeries.Transition
-                    presentation={slide({ direction: "from-right" })}
-                    timing={linearTiming({ durationInFrames: TRANSITION_FRAMES })}
-                  />
-                ))}
+              {!isLast && (
+                <TransitionSeries.Transition
+                  presentation={wipe({ direction: "from-left" })}
+                  timing={linearTiming({ durationInFrames: TRANSITION_FRAMES })}
+                />
+              )}
             </React.Fragment>
           );
         })}
@@ -163,11 +181,23 @@ export const Episode: React.FC<EpisodeProps> = ({ theme: themeName, captions, mu
             );
           }
           const slideData = slides[item.slideIndex ?? 0];
-          return slideData.sentences.map((_, sIdx) => (
-            <Sequence key={`audio-${i}-${sIdx}`} from={item.sentenceStartFrames[sIdx] ?? item.startFrame}>
-              <Audio src={staticFile(`audio/${slideData.id}_s${sIdx}.wav`)} />
-            </Sequence>
-          ));
+          const localSentenceStarts = item.sentenceStartFrames.map((f) => f - item.startFrame);
+          const sfx = boardSfxFrames(slideData, localSentenceStarts);
+          return [
+            ...slideData.sentences.map((_, sIdx) => (
+              <Sequence key={`audio-${i}-${sIdx}`} from={item.sentenceStartFrames[sIdx] ?? item.startFrame}>
+                <Audio src={staticFile(`audio/${slideData.id}_s${sIdx}.wav`)} />
+              </Sequence>
+            )),
+            ...sfx.map((s) => (
+              <Sequence key={`sfx-${i}-${s.index}`} from={item.startFrame + s.frame}>
+                <Audio
+                  src={staticFile(s.isErase ? "audio/sfx/erase.wav" : `audio/sfx/squeak-${(s.index % 3) + 1}.wav`)}
+                  volume={0.35}
+                />
+              </Sequence>
+            )),
+          ];
         })}
     </AbsoluteFill>
   );

@@ -1,24 +1,19 @@
 import React from "react";
-import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from "remotion";
+import { AbsoluteFill, useCurrentFrame } from "remotion";
 import type { Slide, Theme } from "../types";
 import { sentenceAt } from "../anim";
+import { Board } from "../board/Board";
 
 const CHARS_PER_FRAME = 1.2;
 
-const photoSrc = (slideData: Slide): string =>
-  slideData.visual?.type === "photo" ? slideData.visual.src : slideData.image;
-
+/** v2: the cold open is the first board on the same cream paper — no photo, no typewriter panel. */
 export const ColdOpen: React.FC<{
   slide: Slide;
   theme: Theme;
   sentenceStartFrames: number[];
   durationFrames: number;
-}> = ({ slide, theme, sentenceStartFrames, durationFrames }) => {
+}> = ({ slide, theme, sentenceStartFrames }) => {
   const frame = useCurrentFrame();
-  const kenBurns = interpolate(frame, [0, Math.max(durationFrames, 1)], [1, 1.06], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
   const activeSentence = sentenceAt(frame, sentenceStartFrames);
   const sentence = slide.sentences[activeSentence] ?? slide.headline;
   const sentenceStart = sentenceStartFrames[activeSentence] ?? 0;
@@ -31,51 +26,36 @@ export const ColdOpen: React.FC<{
 
   return (
     <AbsoluteFill style={{ backgroundColor: theme.paper }}>
-      <AbsoluteFill style={{ overflow: "hidden" }}>
-        <Img
-          src={staticFile(`assets/${photoSrc(slide)}`)}
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            transform: `scale(${kenBurns})`,
-          }}
-        />
-      </AbsoluteFill>
+      {slide.board && (
+        <Board board={slide.board} frame={frame} sentenceStartFrames={sentenceStartFrames} fps={30} seedBase={slide.id} />
+      )}
       <div
         style={{
+          fontFamily: theme.fontMono,
+          fontSize: 22,
+          fontWeight: 700,
+          letterSpacing: 4,
+          color: theme.accent,
+          textTransform: "uppercase",
           position: "absolute",
-          top: 0,
-          left: 0,
-          bottom: 0,
-          width: 640,
-          backgroundColor: theme.paper,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          padding: "0 56px",
+          top: 16,
+          left: 72,
+          right: 72,
         }}
       >
-        <div
-          style={{
-            fontFamily: theme.fontMono,
-            fontSize: 22,
-            fontWeight: 700,
-            letterSpacing: 4,
-            color: theme.accent,
-            textTransform: "uppercase",
-            marginBottom: 32,
-          }}
-        >
-          Not a Startup
-        </div>
+        Not a Startup
+      </div>
+      {/* Headline pinned to a fixed 60-150 band (overflow-hidden) so a long narration sentence
+          can never grow tall enough to invade the board's label elements, which the data rule
+          keeps at y >= 250 on this slide (comfortably clear of 150 either way). */}
+      <div style={{ position: "absolute", top: 60, left: 72, right: 72, height: 90, overflow: "hidden" }}>
         <div
           style={{
             fontFamily: theme.fontDisplay,
-            fontSize: 46,
-            lineHeight: 1.25,
+            fontSize: 36,
+            lineHeight: 1.2,
             color: theme.ink,
-            minHeight: 220,
+            maxWidth: 900,
           }}
         >
           {revealed}

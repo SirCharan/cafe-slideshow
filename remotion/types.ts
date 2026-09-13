@@ -4,9 +4,9 @@
 export const FPS = 30;
 export const WIDTH = 1920;
 export const HEIGHT = 1080;
-export const TRANSITION_FRAMES = 12; // overlap between consecutive slides
+export const TRANSITION_FRAMES = 14; // eraser-wipe overlap between consecutive slides
 export const DIVIDER_SECONDS = 2.5; // part divider card length
-export const SLIDE_TAIL_SECONDS = 0.6; // silence after the last sentence of a slide
+export const SLIDE_TAIL_SECONDS = 2.0; // silence after the last sentence of a slide
 
 export type ThemeName = "ledger" | "whiteboard";
 
@@ -62,6 +62,7 @@ export interface Slide {
   sentence_timings: SentenceTiming[];
   video_script?: VideoScript;
   visual?: Visual;
+  board?: import("./board/types").Board; // v2 whiteboard storyboard (drawn elements per sentence)
 }
 
 export interface Theme {

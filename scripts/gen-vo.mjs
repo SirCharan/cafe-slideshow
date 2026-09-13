@@ -44,7 +44,7 @@ import path from "node:path";
 const SLIDES_PATH = path.resolve("data/slides.json");
 const AUDIO_DIR = path.resolve("public/audio");
 const DIVIDER_SECONDS = 2.5;
-const SLIDE_TAIL_SECONDS = 0.6;
+const SLIDE_TAIL_SECONDS = 2.0; // keep in sync with remotion/types.ts SLIDE_TAIL_SECONDS
 const DEFAULT_PAUSE_S = 0.4;
 const VOICE = "Tara";
 const RATE = "138";

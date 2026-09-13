@@ -10,6 +10,8 @@ import { getTheme } from "@/remotion/theme";
 // work inside a registered Composition/Player; this preview renders them standalone, so
 // load client-only to avoid the SSR/prerender crash.
 const SlideVisual = dynamic(() => import("@/remotion/visuals").then((m) => m.SlideVisual), { ssr: false });
+// Same client-only rationale as SlideVisual: Board's element renderers use Remotion hooks.
+const Board = dynamic(() => import("@/remotion/board/Board").then((m) => m.Board), { ssr: false });
 import {
   Play,
   Pause,
@@ -137,20 +139,9 @@ export default function CafeSlideshow() {
   const [jsonText, setJsonText] = useState<string>("");
   const [activeTab, setActiveTab] = useState<"takeaways" | "script">("takeaways");
 
-  // Present-mode theme toggle
-  const [presentTheme, setPresentTheme] = useState<ThemeName>(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("cafe_slideshow_theme");
-      if (saved === "ledger" || saved === "whiteboard") return saved;
-    }
-    return "ledger";
-  });
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("cafe_slideshow_theme", presentTheme);
-    }
-  }, [presentTheme]);
+  // v2 is one whiteboard theme (getTheme ignores the name); the editor preview still passes
+  // a ThemeName since SlideVisual's signature takes one.
+  const presentTheme: ThemeName = "ledger";
 
   // Live visual preview (build animation loop + fit-to-container scale)
   const [previewFrame, setPreviewFrame] = useState<number>(0);
@@ -164,6 +155,10 @@ export default function CafeSlideshow() {
   const currentSlide = slides[currentIdx] || slides[0];
   const videoScript = currentSlide.video_script;
   const currentVisual = currentSlide.visual;
+  const boardSentenceStartFrames = (currentSlide.sentence_timings ?? [])
+    .slice()
+    .sort((a, b) => a.sentence_idx - b.sentence_idx)
+    .map((t) => Math.round(t.local_start * 30));
 
   // Persist edits to localStorage
   const saveSlides = (newSlides: Slide[]) => {
@@ -314,7 +309,7 @@ export default function CafeSlideshow() {
 
   // Drive the visual preview's build animation, looping while the slide with a visual is shown.
   useEffect(() => {
-    if (!currentVisual) return;
+    if (!currentVisual && !currentSlide.board) return;
     let frame = 0;
     const step = () => {
       frame = (frame + 1) % 900;
@@ -325,7 +320,7 @@ export default function CafeSlideshow() {
     return () => {
       if (previewRafRef.current !== null) cancelAnimationFrame(previewRafRef.current);
     };
-  }, [currentIdx, currentVisual]);
+  }, [currentIdx, currentVisual, currentSlide.board]);
 
   const handleTimeUpdate = () => {
     if (!audioRef.current) return;
@@ -569,30 +564,22 @@ Review this chapter as a world-class documentary director and financial scriptwr
 
         {/* Right Tools: Edit Mode & AI Export */}
         <div className="flex items-center gap-2.5">
-          {/* Present theme toggle */}
-          <div className="flex items-center gap-1 text-xs bg-white/5 border border-white/10 rounded-xl px-1 py-1">
-            {(["ledger", "whiteboard"] as ThemeName[]).map((t) => (
-              <button
-                key={t}
-                onClick={() => setPresentTheme(t)}
-                className={`px-2 py-1 rounded-md text-[11px] font-semibold capitalize transition ${
-                  presentTheme === t
-                    ? "bg-white/20 text-orange-400"
-                    : "text-slate-400 hover:text-white"
-                }`}
-              >
-                {t}
-              </button>
-            ))}
-          </div>
-
           <button
-            onClick={() => window.open(`/present?theme=${presentTheme}&slide=${currentIdx}`, "_blank")}
+            onClick={() => window.open(`/present?slide=${currentIdx}`, "_blank")}
             className="px-3 py-1.5 rounded-lg text-xs font-semibold border border-white/15 hover:bg-white/10 text-slate-200 flex items-center gap-1.5 transition"
             title="Open live Remotion present mode in a new tab"
           >
             <MonitorPlay className="w-3.5 h-3.5" />
             <span>Present</span>
+          </button>
+
+          <button
+            onClick={() => window.open(`/present?mode=manual&slide=${currentIdx}`, "_blank")}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold border border-white/15 hover:bg-white/10 text-slate-200 flex items-center gap-1.5 transition"
+            title="Open present mode with manual, click-through advance (muted)"
+          >
+            <MonitorPlay className="w-3.5 h-3.5" />
+            <span>Present (manual)</span>
           </button>
 
           <button
@@ -645,6 +632,20 @@ Review this chapter as a world-class documentary director and financial scriptwr
           >
             <Code className="w-4 h-4" />
           </button>
+
+          {isEditMode && (
+            <button
+              onClick={() => {
+                setJsonText(JSON.stringify(currentSlide, null, 2));
+                setShowJsonModal(true);
+              }}
+              className="px-3 py-1.5 rounded-lg text-xs font-semibold border border-white/15 hover:bg-white/10 text-slate-200 flex items-center gap-1.5 transition"
+              title="Edit this slide's whiteboard storyboard (opens the same slide JSON editor)"
+            >
+              <Code className="w-3.5 h-3.5" />
+              <span>Edit board JSON</span>
+            </button>
+          )}
 
           <button
             onClick={() => setShowOverviewGrid(prev => !prev)}
@@ -904,10 +905,32 @@ Review this chapter as a world-class documentary director and financial scriptwr
                 <div
                   ref={visualContainerRef}
                   className={`relative w-full rounded overflow-hidden bg-slate-950 flex items-center justify-center ${
-                    currentVisual ? "aspect-[5/4]" : "aspect-square"
+                    currentSlide.board ? "aspect-video" : currentVisual ? "aspect-[5/4]" : "aspect-square"
                   }`}
                 >
-                  {currentVisual ? (
+                  {currentSlide.board ? (
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: 1920,
+                        height: 1080,
+                        // Same fit-to-container technique as the 800x640 SlideVisual preview,
+                        // rescaled: visualScale is measured against an 800px-wide reference box.
+                        transform: `scale(${(visualScale * 800) / 1920})`,
+                        transformOrigin: "top left",
+                      }}
+                    >
+                      <Board
+                        board={currentSlide.board}
+                        frame={previewFrame}
+                        sentenceStartFrames={boardSentenceStartFrames}
+                        fps={30}
+                        seedBase={currentSlide.id}
+                      />
+                    </div>
+                  ) : currentVisual ? (
                     <div
                       style={{
                         position: "absolute",
