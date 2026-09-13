@@ -118,5 +118,75 @@
     "subject": "a hole-in-the-wall café counter",
     "prompt": "black marker sketch of a hole-in-the-wall café counter, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
     "file": "assets/sketch/tiny-cafe.png"
+  },
+  {
+    "name": "mid-cafe",
+    "subject": "a medium-sized café interior with six tables",
+    "prompt": "black marker sketch of a medium-sized café interior with six tables, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/mid-cafe.png",
+    "source": "svg-hand"
+  },
+  {
+    "name": "glass-cafe",
+    "subject": "a glass-front high-street café",
+    "prompt": "black marker sketch of a glass-front high-street café, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/glass-cafe.png",
+    "source": "svg-hand"
+  },
+  {
+    "name": "chain-logo-board",
+    "subject": "a café chain menu board, blank",
+    "prompt": "black marker sketch of a café chain menu board, blank, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/chain-logo-board.png",
+    "source": "svg-hand"
+  },
+  {
+    "name": "calendar",
+    "subject": "a wall calendar",
+    "prompt": "black marker sketch of a wall calendar, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/calendar.png",
+    "source": "svg-hand"
+  },
+  {
+    "name": "gauge-dial",
+    "subject": "a round gauge with a needle",
+    "prompt": "black marker sketch of a round gauge with a needle, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/gauge-dial.png",
+    "source": "svg-hand"
+  },
+  {
+    "name": "bangalore-skyline",
+    "subject": "a simple Bangalore skyline with the Vidhana Soudha dome",
+    "prompt": "black marker sketch of a simple Bangalore skyline with the Vidhana Soudha dome, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/bangalore-skyline.png",
+    "source": "svg-hand"
+  },
+  {
+    "name": "shop-shutter",
+    "subject": "a closed shop shutter",
+    "prompt": "black marker sketch of a closed shop shutter, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/shop-shutter.png",
+    "source": "svg-hand"
+  },
+  {
+    "name": "cheque",
+    "subject": "a bank cheque",
+    "prompt": "black marker sketch of a bank cheque, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/cheque.png",
+    "source": "svg-hand"
+  },
+  {
+    "name": "barista-pouring",
+    "subject": "a barista pouring a latte",
+    "prompt": "black marker sketch of a barista pouring a latte, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/barista-pouring.png",
+    "source": "svg-hand"
+  },
+  {
+    "name": "coffee-grinder",
+    "subject": "a coffee grinder",
+    "prompt": "black marker sketch of a coffee grinder, whiteboard explainer illustration, simple clean line art, thick marker strokes, white background, no shading, no color, no text, no letters, centered, single object",
+    "file": "assets/sketch/coffee-grinder.png",
+    "source": "svg-hand"
   }
 ]
