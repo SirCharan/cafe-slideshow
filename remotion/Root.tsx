@@ -6,12 +6,34 @@ import { FPS, HEIGHT, WIDTH } from "./types";
 import type { EpisodeProps } from "./types";
 import { ComponentsSmoke } from "./components/ComponentsSmoke";
 import { BoardSmoke } from "./board/elements/BoardSmoke";
+import { SceneEngine } from "./scenes/SceneEngine";
+import { ScenePGEngine } from "./scenes/ScenePGEngine";
 
 const defaultProps: EpisodeProps & Record<string, unknown> = { theme: "ledger", captions: true, muted: false };
 
 export const Root: React.FC = () => {
   return (
     <>
+      {/* EPISODE 02: The Economics of Bangalore PG Hostels (Paisa Decode Style) */}
+      <Composition
+        id="PGEpisodeV1"
+        component={ScenePGEngine}
+        width={WIDTH}
+        height={HEIGHT}
+        fps={FPS}
+        durationInFrames={8451}
+        defaultProps={{ muted: false, captions: true }}
+      />
+      {/* V3: Paisa Decode Caliber 2.5D Animated Motion Explainer */}
+      <Composition
+        id="CafeEpisodeV3"
+        component={SceneEngine}
+        width={WIDTH}
+        height={HEIGHT}
+        fps={FPS}
+        durationInFrames={8790}
+        defaultProps={{ muted: false }}
+      />
       <Composition<AnyZodObject, EpisodeProps & Record<string, unknown>>
         id="CafeEpisode"
         component={Episode}
@@ -32,3 +54,4 @@ export const Root: React.FC = () => {
     </>
   );
 };
+
