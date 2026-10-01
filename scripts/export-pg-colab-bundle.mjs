@@ -17,8 +17,12 @@ const COLAB_DIR = path.join(ROOT, "colab");
 mkdirSync(BUNDLE_DIR, { recursive: true });
 mkdirSync(COLAB_DIR, { recursive: true });
 
-// 1. Read manifest
-const manifest = JSON.parse(readFileSync(MANIFEST_PATH, "utf8"));
+// 1. Read manifest and ensure both voice_ref and ref_audio fields exist
+const rawManifest = JSON.parse(readFileSync(MANIFEST_PATH, "utf8"));
+const manifest = rawManifest.map((item) => ({
+  ...item,
+  voice_ref: item.ref_audio || item.voice_ref || "ref_expressive_1",
+}));
 writeFileSync(path.join(BUNDLE_DIR, "manifest.json"), JSON.stringify(manifest, null, 2));
 console.log(`Copied manifest with ${manifest.length} sentences.`);
 
@@ -45,88 +49,80 @@ if torch.cuda.is_available():
 
 BUNDLE = "anurag-pg-bundle"
 lc = json.load(open(f"{BUNDLE}/lora_config.json"))["lora_config"]
-print("Loading VoxCPM2 model with LoRA weights...")
+print("Loading VoxCPM2 model with LoRA weights (step_0000326)...")
 t0 = time.time()
 model = VoxCPM.from_pretrained(
     hf_model_id="openbmb/VoxCPM2",
     load_denoiser=False,
     lora_weights_path=f"{BUNDLE}/lora_weights.safetensors",
-    lora_config=LoRAConfig(
-        rank=lc["r"],
-        scale=lc["alpha"] / lc["r"],
-        targets=lc["target_modules"],
-    ),
+    lora_config=LoRAConfig(**lc)
 )
-print(f"Model loaded in {time.time() - t0:.2f}s")
+print(f"Model loaded in {time.time() - t0:.1f}s")
 
-manifest = json.load(open(f"{BUNDLE}/manifest.json"))
-print(f"Loaded manifest with {len(manifest)} lines")
+sr = model.tts_model.sample_rate
 
-OUT_DIR = "pg_audio_out"
-os.makedirs(OUT_DIR, exist_ok=True)
-
-# Cache reference audio
 refs = {
     "ref_expressive_1": {
         "wav": f"{BUNDLE}/ref_expressive_1.wav",
-        "txt": open(f"{BUNDLE}/ref_expressive_1.txt", "r").read().strip(),
+        "txt": open(f"{BUNDLE}/ref_expressive_1.txt").read().strip(),
     },
     "ref4": {
         "wav": f"{BUNDLE}/ref4.wav",
-        "txt": open(f"{BUNDLE}/ref4.txt", "r").read().strip(),
+        "txt": open(f"{BUNDLE}/ref4.txt").read().strip(),
     }
 }
 
-total = len(manifest)
-print(f"\\nStarting generation of {total} sentences for Episode 02 (The Economics of Bangalore PG Hostels)...")
-t_start = time.time()
+manifest = json.load(open(f"{BUNDLE}/manifest.json"))
+OUT_DIR = "audio_out"
+os.makedirs(OUT_DIR, exist_ok=True)
 
-for i, item in enumerate(manifest, 1):
-    out_wav = os.path.join(OUT_DIR, item["filename"])
-    if os.path.exists(out_wav) and os.path.getsize(out_wav) > 1000:
-        print(f"[{i}/{total}] Skipping existing: {item['filename']}")
-        continue
+print(f"Starting batch synthesis for {len(manifest)} sentences for Episode 02 (PG Hostels)...")
+start_all = time.time()
 
+for i, item in enumerate(manifest):
+    t_start = time.time()
     text = item.get("tts_text") or item["text"]
-    ref_name = item.get("ref_audio", "ref_expressive_1")
-    ref = refs.get(ref_name, refs["ref_expressive_1"])
+    out_file = os.path.join(OUT_DIR, item["filename"])
+
+    ref_key = item.get("voice_ref") or item.get("ref_audio") or "ref_expressive_1"
+    ref_info = refs.get(ref_key, refs["ref_expressive_1"])
     cfg = float(item.get("cfg", 1.8))
 
-    print(f"[{i}/{total}] ({ref_name}, CFG={cfg}) {item['filename']} -> \\"{text[:60]}...\\"")
-    t_gen = time.time()
-    try:
-        wav = model.generate(
-            target_text=text,
-            prompt_wav_path=ref["wav"],
-            prompt_text=ref["txt"],
-            temperature=0.7,
+    wav = np.asarray(
+        model.generate(
+            text=text,
+            prompt_wav_path=ref_info["wav"],
+            prompt_text=ref_info["txt"],
             cfg_value=cfg,
-        )
-        # Apply smooth 15ms cosine anti-click fade in and out
-        fade_samples = int(44100 * 0.015)
-        if len(wav) > 2 * fade_samples:
-            fade_in = np.sin(np.linspace(0, np.pi/2, fade_samples)) ** 2
-            fade_out = np.sin(np.linspace(np.pi/2, 0, fade_samples)) ** 2
-            wav[:fade_samples] *= fade_in
-            wav[-fade_samples:] *= fade_out
+            inference_timesteps=20
+        ),
+        dtype=np.float32
+    )
 
-        sf.write(out_wav, wav, 44100)
-        dur = len(wav) / 44100.0
-        print(f"    Done: {dur:.2f}s audio in {time.time() - t_gen:.2f}s")
-    except Exception as e:
-        print(f"    ERROR on {item['filename']}: {e}")
+    # Gentle 15ms anti-click cosine fade in & out
+    fade_len = int(sr * 0.015)
+    if len(wav) > 2 * fade_len:
+        fade_in = np.sin(np.linspace(0, np.pi / 2, fade_len)) ** 2
+        fade_out = np.sin(np.linspace(np.pi / 2, 0, fade_len)) ** 2
+        wav[:fade_len] *= fade_in
+        wav[-fade_len:] *= fade_out
 
-print(f"\\nAll lines generated in {time.time() - t_start:.2f}s")
+    sf.write(out_file, wav, sr, format="WAV", subtype="PCM_16")
+    dur = len(wav) / sr
+    elapsed = time.time() - t_start
+    print(f"[{i+1}/{len(manifest)}] {item['filename']} ({dur:.2f}s audio in {elapsed:.2f}s, {ref_key} @ CFG {cfg}) -> {text[:40]}...")
 
-# Package into zip
+total_dur = time.time() - start_all
+print(f"All {len(manifest)} files generated in {total_dur:.1f}s ({total_dur/60:.2f} min)")
+
 ZIP_OUT = "anurag_pg_audio.zip"
-print(f"Creating {ZIP_OUT}...")
+print(f"Zipping outputs to {ZIP_OUT}...")
 with zipfile.ZipFile(ZIP_OUT, "w", zipfile.ZIP_DEFLATED) as z:
     for f in sorted(os.listdir(OUT_DIR)):
         if f.endswith(".wav"):
             z.write(os.path.join(OUT_DIR, f), f)
 
-print(f"Created {ZIP_OUT} ({os.path.getsize(ZIP_OUT) / (1024*1024):.2f} MB)")
+print(f"Done! {ZIP_OUT} created with {len(os.listdir(OUT_DIR))} files.")
 `;
 
 writeFileSync(path.join(BUNDLE_DIR, "render_pg_colab.py"), renderPy);
@@ -147,7 +143,7 @@ if (!tokenMatch) {
 }
 const token = tokenMatch[1];
 
-const uploadCmd = `curl -s -X PUT "https://blob.vercel-storage.com/anurag-pg/bundle.zip" \\
+const uploadCmd = `curl -s -X PUT "https://blob.vercel-storage.com/anurag-pg/bundle-v2.zip" \\
   -H "authorization: Bearer ${token}" \\
   -H "x-api-version: 7" \\
   -H "x-content-type: application/zip" \\
@@ -185,12 +181,14 @@ const notebook = {
         "# Anurag VoxCPM2 LoRA PG Hostels Voice Synthesis (Episode 02)\n",
         "\n",
         "Generates all 24 sentence WAVs for **Episode 02: The Economics of Bangalore PG Hostels** (4.8 min episode).\n",
+        "- **Narrative Hooks, Street Drama & Midnight Skips:** `ref_expressive_1` @ CFG 1.8\n",
+        "- **Master Leases, Capex & ₹11,000 Bed Breakdown:** `ref4` @ CFG 1.7\n",
         "\n",
         "### Instructions:\n",
         "1. Ensure Runtime is set to **GPU (T4)**: `Runtime` → `Change runtime type` → `T4 GPU`.\n",
         "2. Click `Runtime` → **Run all** (takes ~2 minutes total for 24 sentences).\n",
         "3. At the end, `anurag_pg_audio.zip` will download automatically.\n",
-        "4. Move `anurag_pg_audio.zip` to `~/Downloads/` and run `npm run vo:pg:ingest` locally."
+        "4. Move `anurag_pg_audio.zip` to `~/Downloads/` on your Mac."
       ]
     },
     {
