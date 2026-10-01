@@ -13,9 +13,11 @@ import { PartTransitionCard } from "./PartTransitionCard";
 import { ChapterBar } from "./ChapterBar";
 import { ChapterHeader } from "./ChapterHeader";
 import { SceneTransition } from "./SceneTransition";
+import { SubtitlePill } from "./SubtitlePill";
 
 export interface SceneEngineProps {
   muted?: boolean;
+  captions?: boolean;
 }
 
 interface SceneDef {
@@ -31,9 +33,14 @@ interface SceneDef {
   env: "street" | "counter" | "seating" | "lease" | "breakeven";
   overlayLine0: KineticOverlayProps;
   overlayLine1: KineticOverlayProps;
+  subLine0: { text: string; highlights: string[] };
+  subLine1: { text: string; highlights: string[] };
 }
 
-export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
+export const SceneEngine: React.FC<SceneEngineProps> = ({
+  muted = false,
+  captions = true,
+}) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
@@ -68,6 +75,14 @@ export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
         left: 80,
         bottom: 240,
       },
+      subLine0: {
+        text: "Everyone who moves to Bangalore eventually sits in a specialty café on 100 Feet Road, watching a barista steam whole milk for a ₹280 flat white, and thinks: I could do this.",
+        highlights: ["100", "Feet", "Road", "₹280", "flat", "white"],
+      },
+      subLine1: {
+        text: "The room is packed, the air smells like roasted Ethiopian beans, and every single chair has a paying customer.",
+        highlights: ["packed", "roasted", "Ethiopian", "paying", "customer"],
+      },
     },
     {
       id: "scene_02",
@@ -96,6 +111,14 @@ export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
         bottom: 380,
         align: "right",
       },
+      subLine0: {
+        text: "You do the napkin math on your phone before the foam even settles.",
+        highlights: ["napkin", "math", "phone"],
+      },
+      subLine1: {
+        text: "Three hundred cups a day at ₹280 is eighty-four thousand rupees every single morning; that's twenty-five lakh rupees a month in gross revenue. On paper, it looks like an absolute money printer.",
+        highlights: ["Three", "hundred", "cups", "₹280", "eighty-four", "thousand", "twenty-five", "lakh", "money", "printer"],
+      },
     },
     {
       id: "scene_03",
@@ -121,6 +144,14 @@ export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
         highlightMetric: { value: "3X POWER", label: "HVAC ELECTRICITY SPIKE", color: "#E74C3C" },
         left: 80,
         bottom: 240,
+      },
+      subLine0: {
+        text: "So you start looking for commercial spaces, and you make the classic first-timer mistake: you think bigger is safer.",
+        highlights: ["commercial", "spaces", "first-timer", "bigger", "safer"],
+      },
+      subLine1: {
+        text: "Two thousand square feet feels impressive, but every extra square foot in Bangalore is double the rent, triple the air conditioning, and a massive capex hole you have to dig yourself out of.",
+        highlights: ["Two", "thousand", "square", "feet", "double", "rent", "triple", "air", "conditioning", "capex"],
       },
     },
     {
@@ -151,6 +182,14 @@ export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
         left: 80,
         bottom: 360,
       },
+      subLine0: {
+        text: "Then you sit down across from a commercial landlord on 100 Feet Road or 12th Main, and you get introduced to the Bangalore 10-month lockup.",
+        highlights: ["commercial", "landlord", "100", "Feet", "Road", "10-month", "lockup"],
+      },
+      subLine1: {
+        text: "Twenty-five lakh rupees of your hard-earned capital disappears into the landlord's bank account on day one—earning zero percent interest—before you even purchase a single espresso machine.",
+        highlights: ["Twenty-five", "lakh", "landlord", "zero", "percent", "interest", "espresso"],
+      },
     },
     {
       id: "scene_05",
@@ -176,6 +215,14 @@ export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
         highlightMetric: { value: "4 HOURS", label: "PER SINGLE AMERICANO", color: "#3498DB" },
         left: 80,
         bottom: 320,
+      },
+      subLine0: {
+        text: "And that's when Tuesday at 3:15 PM arrives.",
+        highlights: ["Tuesday", "3:15", "PM"],
+      },
+      subLine1: {
+        text: "A heavy monsoon drizzle hits Indiranagar, footfall vanishes, and you look around: two customers, one cold brew, and they've been camping on your high-speed Wi-Fi for four straight hours while your BESCOM meter spins.",
+        highlights: ["monsoon", "drizzle", "two", "customers", "four", "hours", "Wi-Fi", "BESCOM", "meter"],
       },
     },
     {
@@ -204,6 +251,14 @@ export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
         right: 80,
         bottom: 380,
         align: "right",
+      },
+      subLine0: {
+        text: "By month two, your original ten-lakh fitout budget has exploded past twenty-eight lakhs.",
+        highlights: ["original", "ten-lakh", "budget", "twenty-eight", "lakhs"],
+      },
+      subLine1: {
+        text: "The commercial espresso machine alone was eight lakhs, HVAC ducting took another five, and you haven't even factored in staff uniforms, grease traps, or three-phase electrical sanction fees.",
+        highlights: ["espresso", "machine", "eight", "lakhs", "HVAC", "five", "three-phase"],
       },
     },
     {
@@ -234,6 +289,14 @@ export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
         left: 80,
         top: 140,
       },
+      subLine0: {
+        text: "Let's actually dissect that two hundred and eighty rupee flat white you fell in love with on Sunday.",
+        highlights: ["dissect", "two", "hundred", "eighty", "rupee", "flat", "white", "Sunday"],
+      },
+      subLine1: {
+        text: "Thirty-five rupees goes to specialty beans and milk, forty-two rupees to barista staff, forty-two rupees to the landlord, thirty-five to power and taxes—leaving you with barely fifty-five rupees of true net margin per cup.",
+        highlights: ["Thirty-five", "specialty", "beans", "forty-two", "staff", "landlord", "fifty-five", "rupees", "net", "margin"],
+      },
     },
     {
       id: "scene_08",
@@ -262,6 +325,14 @@ export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
         bottom: 380,
         align: "right",
       },
+      subLine0: {
+        text: "So you think: I'll just plug into Swiggy and Zomato to drive delivery volume.",
+        highlights: ["Swiggy", "Zomato", "delivery", "volume"],
+      },
+      subLine1: {
+        text: "Except aggregators take a ruthless twenty-eight percent commission cut, plus spill-proof packaging eats another eighteen rupees. On delivery, you are literally brewing coffee at zero profit.",
+        highlights: ["aggregators", "twenty-eight", "percent", "commission", "zero", "profit"],
+      },
     },
     {
       id: "scene_09",
@@ -287,6 +358,14 @@ export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
         highlightMetric: { value: "₹4,800", label: "FIXED BURN BEFORE 1ST SALE", color: "#E74C3C" },
         left: 80,
         bottom: 320,
+      },
+      subLine0: {
+        text: "Every morning before your front shutter opens, your fixed-cost clock is already ticking.",
+        highlights: ["front", "shutter", "fixed-cost", "clock", "ticking"],
+      },
+      subLine1: {
+        text: "Rent, salaries, and utility overhead mean you burn forty-eight hundred rupees a day just turning the lights on. Your first eighteen cups every morning don't make you rich—they just pay the landlord.",
+        highlights: ["forty-eight", "hundred", "rupees", "day", "eighteen", "cups", "landlord"],
       },
     },
     {
@@ -319,6 +398,14 @@ export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
         bottom: 380,
         align: "right",
       },
+      subLine0: {
+        text: "So how do the surviving fifteen percent of Bangalore specialty cafés actually stay alive?",
+        highlights: ["surviving", "fifteen", "percent", "stay", "alive"],
+      },
+      subLine1: {
+        text: "They understand the golden rule of F&B: coffee brings the footfall, but fresh food delivers the margin. Blue Tokai and Subko don't survive on pour-overs; forty percent of their revenue comes from sourdough, croissants, and hot kitchen items at sixty-eight percent gross margin.",
+        highlights: ["coffee", "footfall", "fresh", "food", "margin", "forty", "percent", "sixty-eight", "percent"],
+      },
     },
     {
       id: "scene_11",
@@ -344,6 +431,14 @@ export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
         highlightMetric: { value: "≤ 15%", label: "MAXIMUM SUSTAINABLE RENT RATIO", color: "#2ECC71" },
         left: 80,
         bottom: 240,
+      },
+      subLine0: {
+        text: "Second: they refuse vanity main-road locations.",
+        highlights: ["refuse", "vanity", "main-road", "locations"],
+      },
+      subLine1: {
+        text: "They tuck into leafy residential lanes in HSR Layout, Koramangala 4th Block, or Indiranagar 6th Main where rent stays strictly under fifteen percent of gross revenue—the mathematical ceiling for café survival.",
+        highlights: ["HSR", "Layout", "Koramangala", "under", "fifteen", "percent", "mathematical", "ceiling"],
       },
     },
     {
@@ -372,6 +467,14 @@ export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
         right: 80,
         bottom: 380,
         align: "right",
+      },
+      subLine0: {
+        text: "If you want to build a café in this city, don't romanticize the espresso machine.",
+        highlights: ["don't", "romanticize", "espresso", "machine"],
+      },
+      subLine1: {
+        text: "Master the unit economics, negotiate your lease terms like your life depends on it, and keep twelve months of working capital liquid in the bank. Because the rent will never wait for your passion.",
+        highlights: ["Master", "unit", "economics", "twelve", "months", "working", "capital", "rent", "never", "waits"],
       },
     },
   ];
@@ -491,6 +594,24 @@ export const SceneEngine: React.FC<SceneEngineProps> = ({ muted = false }) => {
                   top={scene.overlayLine1.top}
                 />
               </Sequence>
+
+              {/* Dynamic Spoken Narration Subtitles */}
+              {captions && (
+                <>
+                  <Sequence from={line0Start} durationInFrames={Math.max(1, line1Start - line0Start)}>
+                    <SubtitlePill
+                      text={scene.subLine0.text}
+                      highlightWords={scene.subLine0.highlights}
+                    />
+                  </Sequence>
+                  <Sequence from={line1Start}>
+                    <SubtitlePill
+                      text={scene.subLine1.text}
+                      highlightWords={scene.subLine1.highlights}
+                    />
+                  </Sequence>
+                </>
+              )}
 
               {/* Part Transition Card (1.5s visual card at the start of new parts) */}
               {scene.isPartStart && (

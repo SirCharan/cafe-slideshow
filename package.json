@@ -17,6 +17,7 @@
     "vo:bundle:v3": "node scripts/export-v3-voice-bundle.mjs",
     "vo:ingest:v3": "node scripts/ingest-v3-voice.mjs",
     "render:v3": "remotion render remotion/index.ts CafeEpisodeV3 out/cafe-blr-001-v3.mp4 --codec=h264 --audio-codec=aac",
+    "pipeline:v3": "node scripts/watch-and-render.mjs",
     "gates": "bash scripts/check-gates.sh"
   },
   "dependencies": {
