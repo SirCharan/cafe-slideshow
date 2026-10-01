@@ -5,15 +5,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
+    "start": "remotion studio remotion/index.ts",
     "studio": "remotion studio remotion/index.ts",
     "render:ledger": "remotion render remotion/index.ts CafeEpisode out/cafe-blr-001-ledger.mp4 --props=\"{\\\"theme\\\":\\\"ledger\\\",\\\"captions\\\":true}\" --codec=h264 --audio-codec=aac",
     "render:whiteboard": "remotion render remotion/index.ts CafeEpisode out/cafe-blr-001-whiteboard.mp4 --props=\"{\\\"theme\\\":\\\"whiteboard\\\",\\\"captions\\\":true}\" --codec=h264 --audio-codec=aac",
     "vo": "node scripts/gen-vo.mjs",
+    "vo:ingest": "node scripts/gen-vo.mjs --ingest",
+    "bundle": "node scripts/export-colab-bundle.mjs",
     "sketches": "node scripts/gen-sketches.mjs",
     "sfx": "node scripts/gen-sfx.mjs",
-    "script": "node scripts/export-script.mjs",
+    "vo:bundle:v3": "node scripts/export-v3-voice-bundle.mjs",
+    "vo:ingest:v3": "node scripts/ingest-v3-voice.mjs",
+    "render:v3": "remotion render remotion/index.ts CafeEpisodeV3 out/cafe-blr-001-v3.mp4 --codec=h264 --audio-codec=aac",
     "gates": "bash scripts/check-gates.sh"
   },
   "dependencies": {
@@ -31,6 +34,7 @@
     "roughjs": "^4.6.6"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/postcss": "^4",
     "@types/canvas-confetti": "^1.9.0",
     "@types/node": "^20",
