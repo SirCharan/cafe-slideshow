@@ -33,7 +33,8 @@
           "luxury",
           "villa",
           "ambition"
-        ]
+        ],
+        "durationSec": 12.18
       },
       {
         "idx": 1,
@@ -63,9 +64,14 @@
           "bed",
           "Peak",
           "Fifteen"
-        ]
+        ],
+        "durationSec": 13.09
       }
-    ]
+    ],
+    "line0Dur": 12.18,
+    "line1Dur": 13.09,
+    "pause": 1.1,
+    "durationSec": 26.77
   },
   {
     "id": "scene_02",
@@ -107,7 +113,8 @@
           "thousand",
           "gross",
           "revenue"
-        ]
+        ],
+        "durationSec": 10.83
       },
       {
         "idx": 1,
@@ -136,9 +143,14 @@
           "bank",
           "balance",
           "operator"
-        ]
+        ],
+        "durationSec": 9.82
       }
-    ]
+    ],
+    "line0Dur": 10.83,
+    "line1Dur": 9.82,
+    "pause": 1.1,
+    "durationSec": 22.15
   },
   {
     "id": "scene_03",
@@ -175,7 +187,8 @@
           "Silicon",
           "Valley",
           "ashram"
-        ]
+        ],
+        "durationSec": 11.72
       },
       {
         "idx": 1,
@@ -203,9 +216,14 @@
           "software",
           "venture",
           "round"
-        ]
+        ],
+        "durationSec": 9.1
       }
-    ]
+    ],
+    "line0Dur": 11.72,
+    "line1Dur": 9.1,
+    "pause": 1.1,
+    "durationSec": 22.32
   },
   {
     "id": "scene_04",
@@ -242,7 +260,8 @@
           "landlord",
           "tech",
           "money"
-        ]
+        ],
+        "durationSec": 12.08
       },
       {
         "idx": 1,
@@ -273,9 +292,14 @@
           "lakh",
           "cash",
           "deposit"
-        ]
+        ],
+        "durationSec": 10.55
       }
-    ]
+    ],
+    "line0Dur": 12.08,
+    "line1Dur": 10.55,
+    "pause": 1.1,
+    "durationSec": 24.13
   },
   {
     "id": "scene_05",
@@ -318,7 +342,8 @@
           "electricity",
           "thirty-five",
           "thousand"
-        ]
+        ],
+        "durationSec": 13.43
       },
       {
         "idx": 1,
@@ -343,9 +368,14 @@
           "killing",
           "million-dollar",
           "valuation"
-        ]
+        ],
+        "durationSec": 11.13
       }
-    ]
+    ],
+    "line0Dur": 13.43,
+    "line1Dur": 11.13,
+    "pause": 1.1,
+    "durationSec": 26.06
   },
   {
     "id": "scene_06",
@@ -387,7 +417,8 @@
           "thousand",
           "rupees",
           "cash"
-        ]
+        ],
+        "durationSec": 11.19
       },
       {
         "idx": 1,
@@ -412,9 +443,14 @@
           "cold",
           "sambar",
           "showers"
-        ]
+        ],
+        "durationSec": 10.34
       }
-    ]
+    ],
+    "line0Dur": 11.19,
+    "line1Dur": 10.34,
+    "pause": 1.1,
+    "durationSec": 23.03
   },
   {
     "id": "scene_07",
@@ -452,7 +488,8 @@
           "slip",
           "rent",
           "day"
-        ]
+        ],
+        "durationSec": 11.37
       },
       {
         "idx": 1,
@@ -481,9 +518,14 @@
           "forty-thousand-rupee",
           "default",
           "buffer"
-        ]
+        ],
+        "durationSec": 11.15
       }
-    ]
+    ],
+    "line0Dur": 11.37,
+    "line1Dur": 11.15,
+    "pause": 1.1,
+    "durationSec": 24.02
   },
   {
     "id": "scene_08",
@@ -522,7 +564,8 @@
           "smoking",
           "commercial",
           "zoning"
-        ]
+        ],
+        "durationSec": 12.39
       },
       {
         "idx": 1,
@@ -552,9 +595,14 @@
           "liaison",
           "legal",
           "retainers"
-        ]
+        ],
+        "durationSec": 10.91
       }
-    ]
+    ],
+    "line0Dur": 12.39,
+    "line1Dur": 10.91,
+    "pause": 1.1,
+    "durationSec": 24.8
   },
   {
     "id": "scene_09",
@@ -596,7 +644,8 @@
           "capacitors",
           "trashed",
           "furniture"
-        ]
+        ],
+        "durationSec": 11.52
       },
       {
         "idx": 1,
@@ -619,9 +668,14 @@
           "entropy",
           "wins",
           "argument"
-        ]
+        ],
+        "durationSec": 8.65
       }
-    ]
+    ],
+    "line0Dur": 11.52,
+    "line1Dur": 8.65,
+    "pause": 1.1,
+    "durationSec": 21.67
   },
   {
     "id": "scene_10",
@@ -667,7 +721,8 @@
           "thousand",
           "forty",
           "thousand"
-        ]
+        ],
+        "durationSec": 11.15
       },
       {
         "idx": 1,
@@ -700,9 +755,14 @@
           "two",
           "beds",
           "empty"
-        ]
+        ],
+        "durationSec": 10.96
       }
-    ]
+    ],
+    "line0Dur": 11.15,
+    "line1Dur": 10.96,
+    "pause": 1.1,
+    "durationSec": 23.61
   },
   {
     "id": "scene_11",
@@ -745,7 +805,8 @@
           "equity",
           "disputes",
           "co-founders"
-        ]
+        ],
+        "durationSec": 11.76
       },
       {
         "idx": 1,
@@ -769,9 +830,14 @@
           "unscalable",
           "residential",
           "hospitality"
-        ]
+        ],
+        "durationSec": 7.01
       }
-    ]
+    ],
+    "line0Dur": 11.76,
+    "line1Dur": 7.01,
+    "pause": 1.1,
+    "durationSec": 20.27
   },
   {
     "id": "scene_12",
@@ -817,7 +883,8 @@
           "lakhs",
           "zero",
           "friction"
-        ]
+        ],
+        "durationSec": 11.29
       },
       {
         "idx": 1,
@@ -841,8 +908,13 @@
           "month",
           "landlord",
           "cut"
-        ]
+        ],
+        "durationSec": 9.52
       }
-    ]
+    ],
+    "line0Dur": 11.29,
+    "line1Dur": 9.52,
+    "pause": 1.1,
+    "durationSec": 22.31
   }
 ]

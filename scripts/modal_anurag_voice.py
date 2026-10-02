@@ -106,7 +106,6 @@ try:
     @app.local_entrypoint()
     def main(manifest_path: str = "data/pg_manifest.json", out_dir: str = "public/audio/pg"):
         import json
-        import path
 
         print(f"Reading manifest from {manifest_path}...")
         with open(manifest_path, "r") as f:

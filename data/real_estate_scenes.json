@@ -34,7 +34,8 @@
           "two-bedroom",
           "apartment",
           "mud"
-        ]
+        ],
+        "durationSec": 13.79
       },
       {
         "idx": 1,
@@ -64,9 +65,14 @@
           "Outer",
           "Ring",
           "Road"
-        ]
+        ],
+        "durationSec": 11.1
       }
-    ]
+    ],
+    "line0Dur": 13.79,
+    "line1Dur": 11.1,
+    "pause": 1.1,
+    "durationSec": 26.39
   },
   {
     "id": "scene_02",
@@ -112,7 +118,8 @@
           "twelve",
           "hundred",
           "fifty"
-        ]
+        ],
+        "durationSec": 11.03
       },
       {
         "idx": 1,
@@ -144,9 +151,14 @@
           "staff",
           "engineer",
           "Microsoft"
-        ]
+        ],
+        "durationSec": 10.72
       }
-    ]
+    ],
+    "line0Dur": 11.03,
+    "line1Dur": 10.72,
+    "pause": 1.1,
+    "durationSec": 23.25
   },
   {
     "id": "scene_03",
@@ -189,7 +201,8 @@
           "paper",
           "appreciation",
           "launch"
-        ]
+        ],
+        "durationSec": 11.56
       },
       {
         "idx": 1,
@@ -215,9 +228,14 @@
           "land",
           "acquisition",
           "debt"
-        ]
+        ],
+        "durationSec": 10.27
       }
-    ]
+    ],
+    "line0Dur": 11.56,
+    "line1Dur": 10.27,
+    "pause": 1.1,
+    "durationSec": 23.33
   },
   {
     "id": "scene_04",
@@ -254,7 +272,8 @@
           "surcharge",
           "machinery",
           "action"
-        ]
+        ],
+        "durationSec": 8.32
       },
       {
         "idx": 1,
@@ -285,9 +304,14 @@
           "infrastructure",
           "eight",
           "lakh"
-        ]
+        ],
+        "durationSec": 13.28
       }
-    ]
+    ],
+    "line0Dur": 8.32,
+    "line1Dur": 13.28,
+    "pause": 1.1,
+    "durationSec": 23.1
   },
   {
     "id": "scene_05",
@@ -334,7 +358,8 @@
           "twelve",
           "lakh",
           "cash"
-        ]
+        ],
+        "durationSec": 14.36
       },
       {
         "idx": 1,
@@ -360,9 +385,14 @@
           "unpaved",
           "arterial",
           "craters"
-        ]
+        ],
+        "durationSec": 10.59
       }
-    ]
+    ],
+    "line0Dur": 14.36,
+    "line1Dur": 10.59,
+    "pause": 1.1,
+    "durationSec": 26.45
   },
   {
     "id": "scene_06",
@@ -409,7 +439,8 @@
           "point",
           "four",
           "six"
-        ]
+        ],
+        "durationSec": 12.09
       },
       {
         "idx": 1,
@@ -440,9 +471,14 @@
           "glossy",
           "brochure",
           "forgot"
-        ]
+        ],
+        "durationSec": 9.69
       }
-    ]
+    ],
+    "line0Dur": 12.09,
+    "line1Dur": 9.69,
+    "pause": 1.1,
+    "durationSec": 23.28
   },
   {
     "id": "scene_07",
@@ -480,7 +516,8 @@
           "lifelong",
           "annuity",
           "banking"
-        ]
+        ],
+        "durationSec": 10.86
       },
       {
         "idx": 1,
@@ -515,9 +552,14 @@
           "three",
           "eight",
           "two"
-        ]
+        ],
+        "durationSec": 12.34
       }
-    ]
+    ],
+    "line0Dur": 10.86,
+    "line1Dur": 12.34,
+    "pause": 1.1,
+    "durationSec": 24.7
   },
   {
     "id": "scene_08",
@@ -563,7 +605,8 @@
           "apartment",
           "borrowing",
           "money"
-        ]
+        ],
+        "durationSec": 11.14
       },
       {
         "idx": 1,
@@ -589,9 +632,14 @@
           "servicing",
           "compound",
           "interest"
-        ]
+        ],
+        "durationSec": 10.02
       }
-    ]
+    ],
+    "line0Dur": 11.14,
+    "line1Dur": 10.02,
+    "pause": 1.1,
+    "durationSec": 22.66
   },
   {
     "id": "scene_09",
@@ -635,7 +683,8 @@
           "six",
           "percent",
           "outlay"
-        ]
+        ],
+        "durationSec": 13.55
       },
       {
         "idx": 1,
@@ -667,9 +716,14 @@
           "rupees",
           "pocket",
           "month"
-        ]
+        ],
+        "durationSec": 10.65
       }
-    ]
+    ],
+    "line0Dur": 13.55,
+    "line1Dur": 10.65,
+    "pause": 1.1,
+    "durationSec": 25.7
   },
   {
     "id": "scene_10",
@@ -712,7 +766,8 @@
           "construction",
           "six",
           "years"
-        ]
+        ],
+        "durationSec": 10.18
       },
       {
         "idx": 1,
@@ -743,9 +798,14 @@
           "forty",
           "rent",
           "flat"
-        ]
+        ],
+        "durationSec": 10.53
       }
-    ]
+    ],
+    "line0Dur": 10.18,
+    "line1Dur": 10.53,
+    "pause": 1.1,
+    "durationSec": 22.21
   },
   {
     "id": "scene_11",
@@ -788,7 +848,8 @@
           "evaporates",
           "foot",
           "home"
-        ]
+        ],
+        "durationSec": 10.58
       },
       {
         "idx": 1,
@@ -813,9 +874,14 @@
           "fund",
           "land",
           "parcel"
-        ]
+        ],
+        "durationSec": 10.75
       }
-    ]
+    ],
+    "line0Dur": 10.58,
+    "line1Dur": 10.75,
+    "pause": 1.1,
+    "durationSec": 22.83
   },
   {
     "id": "scene_12",
@@ -860,7 +926,8 @@
           "bank",
           "balance",
           "sheets"
-        ]
+        ],
+        "durationSec": 10.84
       },
       {
         "idx": 1,
@@ -888,8 +955,13 @@
           "concrete",
           "compound",
           "interest"
-        ]
+        ],
+        "durationSec": 10.97
       }
-    ]
+    ],
+    "line0Dur": 10.84,
+    "line1Dur": 10.97,
+    "pause": 1.1,
+    "durationSec": 23.31
   }
 ]

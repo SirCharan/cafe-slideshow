@@ -37,26 +37,28 @@
 // to a different voice or silently continues.
 
 import { spawnSync } from "node:child_process";
-import { readFileSync, writeFileSync, unlinkSync, existsSync, readdirSync, mkdtempSync, rmSync } from "node:fs";
+import { readFileSync, writeFileSync, unlinkSync, existsSync, readdirSync, mkdtempSync, rmSync, copyFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 
 const SLIDES_PATH = path.resolve("data/slides.json");
 const AUDIO_DIR = path.resolve("public/audio");
 const DIVIDER_SECONDS = 2.5;
-const SLIDE_TAIL_SECONDS = 2.0; // keep in sync with remotion/types.ts SLIDE_TAIL_SECONDS
-const DEFAULT_PAUSE_S = 0.4;
+const SLIDE_TAIL_SECONDS = 0.8; // keep in sync with remotion/types.ts SLIDE_TAIL_SECONDS
+const DEFAULT_PAUSE_S = 0.25;
 const VOICE = "Tara";
 const RATE = "138";
 
 function parseArgs(argv) {
-  const args = { only: null, dryRun: false };
+  const args = { only: null, dryRun: false, ingest: null };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--only") {
       args.only = (argv[++i] || "").split(",").map((s) => s.trim()).filter(Boolean);
     } else if (a === "--dry-run") {
       args.dryRun = true;
+    } else if (a === "--ingest") {
+      args.ingest = argv[++i];
     }
   }
   return args;
@@ -131,6 +133,20 @@ function synthesizeSentence(id, i, text, dryRun) {
   }
 }
 
+function ingestSentence(id, i, ingestDir, dryRun) {
+  const srcWav = path.join(ingestDir, `${id}_s${i}.wav`);
+  if (!existsSync(srcWav)) throw new Error(`Missing audio clip: ${srcWav}`);
+  const wavPath = path.join(AUDIO_DIR, `${id}_s${i}.wav`);
+  if (dryRun) {
+    console.log(`  [dry-run] ingest ${srcWav} -> ${wavPath}`);
+    return { wavPath, duration: 0 };
+  }
+  copyFileSync(srcWav, wavPath);
+  trimSilence(wavPath);
+  const duration = ffprobeDuration(wavPath);
+  return { wavPath, duration };
+}
+
 function buildPreviewMp3(id, sentenceCount, pauses, dryRun) {
   const outPath = path.join(AUDIO_DIR, `${id}.mp3`);
   if (dryRun) {
@@ -190,10 +206,27 @@ function main() {
 
   const targetIds = args.only ? new Set(args.only) : null;
 
+  let ingestDir = null;
+  let tmpUnzipDir = null;
+  if (args.ingest) {
+    if (!existsSync(args.ingest)) {
+      throw new Error(`Ingest path not found: ${args.ingest}`);
+    }
+    if (args.ingest.endsWith(".zip")) {
+      tmpUnzipDir = mkdtempSync(path.join(tmpdir(), "anurag-unzip-"));
+      run("unzip", ["-q", "-o", args.ingest, "-d", tmpUnzipDir]);
+      ingestDir = tmpUnzipDir;
+    } else {
+      ingestDir = path.resolve(args.ingest);
+    }
+    console.log(`Ingesting rendered audio from: ${ingestDir}`);
+  }
+
   // Running episode offset across the array in order, +DIVIDER_SECONDS per part change.
   let episodeOffset = 0;
   let prevPart = null;
 
+  try {
   for (const slide of slides) {
     const isTarget = !targetIds || targetIds.has(slide.id);
 
@@ -222,7 +255,9 @@ function main() {
       const pause = scriptLines[i]?.pause_s ?? DEFAULT_PAUSE_S;
       pauses.push(pause);
 
-      const { duration } = synthesizeSentence(slide.id, i, text, args.dryRun);
+      const { duration } = ingestDir
+        ? ingestSentence(slide.id, i, ingestDir, args.dryRun)
+        : synthesizeSentence(slide.id, i, text, args.dryRun);
       durations.push(duration);
 
       timings.push({
@@ -266,6 +301,11 @@ function main() {
 
   writeFileSync(SLIDES_PATH, JSON.stringify(slides, null, 2) + "\n");
   console.log(`Wrote ${SLIDES_PATH}`);
+  } finally {
+    if (tmpUnzipDir) {
+      rmSync(tmpUnzipDir, { recursive: true, force: true });
+    }
+  }
 }
 
 main();

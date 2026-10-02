@@ -35,7 +35,8 @@
           "tech",
           "avocado",
           "sourdough"
-        ]
+        ],
+        "durationSec": 13.13
       },
       {
         "idx": 1,
@@ -64,9 +65,14 @@
           "sanctuary",
           "license",
           "money"
-        ]
+        ],
+        "durationSec": 11.39
       }
-    ]
+    ],
+    "line0Dur": 13.13,
+    "line1Dur": 11.39,
+    "pause": 1.1,
+    "durationSec": 26.02
   },
   {
     "id": "scene_02",
@@ -111,7 +117,8 @@
           "lakh",
           "fifty",
           "thousand"
-        ]
+        ],
+        "durationSec": 12.1
       },
       {
         "idx": 1,
@@ -140,9 +147,14 @@
           "investment",
           "eighteen",
           "months"
-        ]
+        ],
+        "durationSec": 9.17
       }
-    ]
+    ],
+    "line0Dur": 12.1,
+    "line1Dur": 9.17,
+    "pause": 1.1,
+    "durationSec": 22.77
   },
   {
     "id": "scene_03",
@@ -186,7 +198,8 @@
           "Scandinavian",
           "architectural",
           "gallery"
-        ]
+        ],
+        "durationSec": 12.0
       },
       {
         "idx": 1,
@@ -217,9 +230,14 @@
           "forty-five",
           "lakhs",
           "deposit"
-        ]
+        ],
+        "durationSec": 12.01
       }
-    ]
+    ],
+    "line0Dur": 12.0,
+    "line1Dur": 12.01,
+    "pause": 1.1,
+    "durationSec": 25.51
   },
   {
     "id": "scene_04",
@@ -257,7 +275,8 @@
           "landlord",
           "commercial",
           "rates"
-        ]
+        ],
+        "durationSec": 11.53
       },
       {
         "idx": 1,
@@ -289,9 +308,14 @@
           "rains",
           "footfall",
           "collapses"
-        ]
+        ],
+        "durationSec": 8.68
       }
-    ]
+    ],
+    "line0Dur": 11.53,
+    "line1Dur": 8.68,
+    "pause": 1.1,
+    "durationSec": 21.71
   },
   {
     "id": "scene_05",
@@ -338,7 +362,8 @@
           "lakh",
           "eighty",
           "thousand"
-        ]
+        ],
+        "durationSec": 12.89
       },
       {
         "idx": 1,
@@ -364,9 +389,14 @@
           "sockets",
           "Google",
           "rating"
-        ]
+        ],
+        "durationSec": 10.43
       }
-    ]
+    ],
+    "line0Dur": 12.89,
+    "line1Dur": 10.43,
+    "pause": 1.1,
+    "durationSec": 24.82
   },
   {
     "id": "scene_06",
@@ -412,7 +442,8 @@
           "lakh",
           "fifty",
           "thousand"
-        ]
+        ],
+        "durationSec": 12.25
       },
       {
         "idx": 1,
@@ -442,9 +473,14 @@
           "assembly",
           "line",
           "velocity"
-        ]
+        ],
+        "durationSec": 9.86
       }
-    ]
+    ],
+    "line0Dur": 12.25,
+    "line1Dur": 9.86,
+    "pause": 1.1,
+    "durationSec": 23.61
   },
   {
     "id": "scene_07",
@@ -488,7 +524,8 @@
           "brew",
           "five",
           "hours"
-        ]
+        ],
+        "durationSec": 12.47
       },
       {
         "idx": 1,
@@ -521,9 +558,14 @@
           "estate",
           "subsidized",
           "co-working"
-        ]
+        ],
+        "durationSec": 10.59
       }
-    ]
+    ],
+    "line0Dur": 12.47,
+    "line1Dur": 10.59,
+    "pause": 1.1,
+    "durationSec": 24.56
   },
   {
     "id": "scene_08",
@@ -563,7 +605,8 @@
           "developers",
           "debugging",
           "Python"
-        ]
+        ],
+        "durationSec": 10.03
       },
       {
         "idx": 1,
@@ -593,9 +636,14 @@
           "food",
           "sales",
           "afternoon"
-        ]
+        ],
+        "durationSec": 7.11
       }
-    ]
+    ],
+    "line0Dur": 10.03,
+    "line1Dur": 7.11,
+    "pause": 1.1,
+    "durationSec": 18.64
   },
   {
     "id": "scene_09",
@@ -639,7 +687,8 @@
           "percent",
           "weekend",
           "footfall"
-        ]
+        ],
+        "durationSec": 11.71
       },
       {
         "idx": 1,
@@ -664,9 +713,14 @@
           "migrate",
           "fresher",
           "microcement"
-        ]
+        ],
+        "durationSec": 10.12
       }
-    ]
+    ],
+    "line0Dur": 11.71,
+    "line1Dur": 10.12,
+    "pause": 1.1,
+    "durationSec": 23.33
   },
   {
     "id": "scene_10",
@@ -710,7 +764,8 @@
           "lakh",
           "eighty",
           "thousand"
-        ]
+        ],
+        "durationSec": 12.86
       },
       {
         "idx": 1,
@@ -742,9 +797,14 @@
           "longer",
           "founders",
           "investors"
-        ]
+        ],
+        "durationSec": 11.11
       }
-    ]
+    ],
+    "line0Dur": 12.86,
+    "line1Dur": 11.11,
+    "pause": 1.1,
+    "durationSec": 25.47
   },
   {
     "id": "scene_11",
@@ -785,7 +845,8 @@
           "thirty-lakh",
           "renovation",
           "relevant"
-        ]
+        ],
+        "durationSec": 11.73
       },
       {
         "idx": 1,
@@ -810,9 +871,14 @@
           "capital-devouring",
           "hospitality",
           "treadmill"
-        ]
+        ],
+        "durationSec": 10.31
       }
-    ]
+    ],
+    "line0Dur": 11.73,
+    "line1Dur": 10.31,
+    "pause": 1.1,
+    "durationSec": 23.54
   },
   {
     "id": "scene_12",
@@ -857,7 +923,8 @@
           "commercial",
           "landlords",
           "electricity"
-        ]
+        ],
+        "durationSec": 9.91
       },
       {
         "idx": 1,
@@ -882,8 +949,13 @@
           "interior",
           "decorator",
           "landlord"
-        ]
+        ],
+        "durationSec": 10.78
       }
-    ]
+    ],
+    "line0Dur": 9.91,
+    "line1Dur": 10.78,
+    "pause": 1.1,
+    "durationSec": 22.19
   }
 ]

@@ -2,7 +2,7 @@
   {
     "id": "scene_01",
     "name": "The Bangalore PG Illusion",
-    "part": "PART 1 \u00b7 THE CASH MACHINE ILLUSION",
+    "part": "PART 1 · THE CASH MACHINE ILLUSION",
     "isPartStart": true,
     "partTitle": "THE CASH MACHINE ILLUSION",
     "partSub": "Why every techie in Bangalore thinks PG owners print effortless cash",
@@ -19,10 +19,10 @@
         "pause_s": 0.5,
         "ref_audio": "ref_expressive_1",
         "cfg": 1.8,
-        "badge": "MARATHAHALLI \u00b7 BTM \u00b7 HSR",
+        "badge": "MARATHAHALLI · BTM · HSR",
         "badgeColor": "#E74C3C",
         "title": "THE BANGALORE PG ILLUSION",
-        "subtitle": "4 floors \u00b7 20 rooms \u00b7 Vinyl flex banners on every corner",
+        "subtitle": "4 floors · 20 rooms · Vinyl flex banners on every corner",
         "highlights": [
           "Marathahalli",
           "BTM",
@@ -32,7 +32,7 @@
           "banners",
           "luxury"
         ],
-        "durationSec": 13.78
+        "durationSec": 12.96
       },
       {
         "idx": 1,
@@ -46,7 +46,7 @@
         "title": "THE PLASTIC CHAIR CASH MACHINE",
         "subtitle": "Every techie thinks the PG owner prints effortless millions",
         "highlightMetric": {
-          "value": "\u20b912,000 / BED",
+          "value": "₹12,000 / BED",
           "label": "MONTHLY INMATE RENT",
           "color": "#F39C12"
         },
@@ -61,22 +61,22 @@
           "pure",
           "cash"
         ],
-        "durationSec": 11.29
+        "durationSec": 10.88
       }
     ],
     "lineDurs": [
-      13.78,
-      11.29
+      12.96,
+      10.88
     ],
-    "durationSec": 28.9,
-    "line0Dur": 13.78,
-    "line1Dur": 11.29,
+    "durationSec": 27.6,
+    "line0Dur": 12.96,
+    "line1Dur": 10.88,
     "pause": 0.5
   },
   {
     "id": "scene_02",
     "name": "The 60-Bed Napkin Math",
-    "part": "PART 1 \u00b7 THE CASH MACHINE ILLUSION",
+    "part": "PART 1 · THE CASH MACHINE ILLUSION",
     "env": "lobby",
     "characterIdentity": "techie_tenant",
     "characterPose": "carry_bag",
@@ -92,7 +92,7 @@
         "cfg": 1.8,
         "badge": "THE SEDUCTIVE SPREADSHEET",
         "badgeColor": "#3498DB",
-        "title": "60 BEDS \u00d7 \u20b911,000 / MONTH",
+        "title": "60 BEDS × ₹11,000 / MONTH",
         "subtitle": "Calculated before factoring in building lease or groceries",
         "highlights": [
           "napkin",
@@ -100,7 +100,7 @@
           "embarrassingly",
           "seductive"
         ],
-        "durationSec": 2.55
+        "durationSec": 2.88
       },
       {
         "idx": 1,
@@ -111,10 +111,10 @@
         "cfg": 1.8,
         "badge": "GROSS REVENUE RUN RATE",
         "badgeColor": "#2ECC71",
-        "title": "\u20b96,60,000 / MONTH CASHFLOW",
-        "subtitle": "Over \u20b979 Lakhs a year in gross tenant collections",
+        "title": "₹6,60,000 / MONTH CASHFLOW",
+        "subtitle": "Over ₹79 Lakhs a year in gross tenant collections",
         "highlightMetric": {
-          "value": "\u20b96,60,000",
+          "value": "₹6,60,000",
           "label": "GROSS MONTHLY COLLECTIONS",
           "color": "#2ECC71"
         },
@@ -130,22 +130,22 @@
           "sixty",
           "thousand"
         ],
-        "durationSec": 12.1
+        "durationSec": 9.92
       }
     ],
     "lineDurs": [
-      2.55,
-      12.1
+      2.88,
+      9.92
     ],
-    "durationSec": 17.6,
-    "line0Dur": 2.55,
-    "line1Dur": 12.1,
+    "durationSec": 15.8,
+    "line0Dur": 2.88,
+    "line1Dur": 9.92,
     "pause": 0.4
   },
   {
     "id": "scene_03",
     "name": "The Master-Lease Lockup",
-    "part": "PART 1 \u00b7 THE CASH MACHINE ILLUSION",
+    "part": "PART 1 · THE CASH MACHINE ILLUSION",
     "env": "lobby",
     "characterIdentity": "master_landlord",
     "characterPose": "hold_lease",
@@ -173,7 +173,7 @@
           "own",
           "building"
         ],
-        "durationSec": 6.46
+        "durationSec": 5.6
       },
       {
         "idx": 1,
@@ -184,10 +184,10 @@
         "cfg": 1.7,
         "badge": "UPFRONT CAPITAL DRAIN",
         "badgeColor": "#E74C3C",
-        "title": "\u20b928,00,000 SECURITY DEPOSIT",
-        "subtitle": "10 months upfront dead cash + \u20b92.8L monthly rent check",
+        "title": "₹28,00,000 SECURITY DEPOSIT",
+        "subtitle": "10 months upfront dead cash + ₹2.8L monthly rent check",
         "highlightMetric": {
-          "value": "\u20b928,00,000",
+          "value": "₹28,00,000",
           "label": "FROZEN DEPOSIT (0% INTEREST)",
           "color": "#E74C3C"
         },
@@ -203,22 +203,22 @@
           "lakh",
           "deposit"
         ],
-        "durationSec": 12.18
+        "durationSec": 12.16
       }
     ],
     "lineDurs": [
-      6.46,
-      12.18
+      5.6,
+      12.16
     ],
-    "durationSec": 21.7,
-    "line0Dur": 6.46,
-    "line1Dur": 12.18,
+    "durationSec": 20.9,
+    "line0Dur": 5.6,
+    "line1Dur": 12.16,
     "pause": 0.5
   },
   {
     "id": "scene_04",
-    "name": "The \u20b918 Lakh Fitout Capex",
-    "part": "PART 2 \u00b7 THE 8:00 AM RUSH & THE BURN",
+    "name": "The ₹18 Lakh Fitout Capex",
+    "part": "PART 2 · THE 8:00 AM RUSH & THE BURN",
     "isPartStart": true,
     "partTitle": "THE 8:00 AM RUSH & THE BURN",
     "partSub": "Where fixed costs, commercial utility bills, and food factories eat margins",
@@ -237,7 +237,7 @@
         "cfg": 1.7,
         "badge": "FITOUT EXPENDITURE",
         "badgeColor": "#E67E22",
-        "title": "\u20b918,50,000 MINIMUM CAPEX",
+        "title": "₹18,50,000 MINIMUM CAPEX",
         "subtitle": "Bunk beds, foam mattresses, wardrobes, wiring & plumbing",
         "highlights": [
           "empty",
@@ -249,7 +249,7 @@
           "furniture",
           "capex"
         ],
-        "durationSec": 7.63
+        "durationSec": 7.52
       },
       {
         "idx": 1,
@@ -263,7 +263,7 @@
         "title": "20 GEYSERS + 5 WASHING MACHINES",
         "subtitle": "Biometric attendance, CCTV, and industrial kitchen setup",
         "highlightMetric": {
-          "value": "\u20b918.5 LAKHS",
+          "value": "₹18.5 LAKHS",
           "label": "UNRECOVERABLE FITOUT CAPEX",
           "color": "#C0392B"
         },
@@ -279,22 +279,22 @@
           "biometric",
           "CCTV"
         ],
-        "durationSec": 11.43
+        "durationSec": 10.24
       }
     ],
     "lineDurs": [
-      7.63,
-      11.43
+      7.52,
+      10.24
     ],
-    "durationSec": 22.9,
-    "line0Dur": 7.63,
-    "line1Dur": 11.43,
+    "durationSec": 21.6,
+    "line0Dur": 7.52,
+    "line1Dur": 10.24,
     "pause": 0.4
   },
   {
     "id": "scene_05",
     "name": "The 8:00 AM BESCOM Power Surge",
-    "part": "PART 2 \u00b7 THE 8:00 AM RUSH & THE BURN",
+    "part": "PART 2 · THE 8:00 AM RUSH & THE BURN",
     "env": "room",
     "characterIdentity": "techie_tenant",
     "characterPose": "scold_phone",
@@ -322,7 +322,7 @@
           "company",
           "shuttles"
         ],
-        "durationSec": 7.39
+        "durationSec": 7.84
       },
       {
         "idx": 1,
@@ -333,10 +333,10 @@
         "cfg": 1.8,
         "badge": "COMMERCIAL TARIFF TRAP",
         "badgeColor": "#E74C3C",
-        "title": "\u20b945,00,00 / MONTH BESCOM BILL",
-        "subtitle": "LT-3 commercial rate at \u20b99.80/unit on 3-phase industrial line",
+        "title": "₹45,00,00 / MONTH BESCOM BILL",
+        "subtitle": "LT-3 commercial rate at ₹9.80/unit on 3-phase industrial line",
         "highlightMetric": {
-          "value": "\u20b945,000",
+          "value": "₹45,000",
           "label": "MONTHLY BESCOM ELECTRICITY",
           "color": "#E74C3C"
         },
@@ -352,22 +352,22 @@
           "thousand",
           "bill"
         ],
-        "durationSec": 13.21
+        "durationSec": 12.16
       }
     ],
     "lineDurs": [
-      7.39,
-      13.21
+      7.84,
+      12.16
     ],
-    "durationSec": 23.7,
-    "line0Dur": 7.39,
-    "line1Dur": 13.21,
+    "durationSec": 23.1,
+    "line0Dur": 7.84,
+    "line1Dur": 12.16,
     "pause": 0.5
   },
   {
     "id": "scene_06",
     "name": "The Cabbage & Watery Sambar Math",
-    "part": "PART 2 \u00b7 THE 8:00 AM RUSH & THE BURN",
+    "part": "PART 2 · THE 8:00 AM RUSH & THE BURN",
     "env": "kitchen",
     "characterIdentity": "kitchen_cook",
     "characterPose": "stir_pot",
@@ -396,7 +396,7 @@
           "daily",
           "migraine"
         ],
-        "durationSec": 6.85
+        "durationSec": 6.72
       },
       {
         "idx": 1,
@@ -407,10 +407,10 @@
         "cfg": 1.8,
         "badge": "CABBAGE ECONOMICS",
         "badgeColor": "#D35400",
-        "title": "BUDGET: STRICTLY \u20b990 / DAY / HEAD",
-        "subtitle": "\u20b955K cook wages + \u20b91.1L wholesale vegetables and bulk grain",
+        "title": "BUDGET: STRICTLY ₹90 / DAY / HEAD",
+        "subtitle": "₹55K cook wages + ₹1.1L wholesale vegetables and bulk grain",
         "highlightMetric": {
-          "value": "\u20b990 / DAY",
+          "value": "₹90 / DAY",
           "label": "PER HEAD FOOD BUDGET",
           "color": "#D35400"
         },
@@ -427,22 +427,22 @@
           "watery",
           "sambar"
         ],
-        "durationSec": 15.89
+        "durationSec": 14.24
       }
     ],
     "lineDurs": [
-      6.85,
-      15.89
+      6.72,
+      14.24
     ],
-    "durationSec": 25.8,
-    "line0Dur": 6.85,
-    "line1Dur": 15.89,
+    "durationSec": 24.1,
+    "line0Dur": 6.72,
+    "line1Dur": 14.24,
     "pause": 0.5
   },
   {
     "id": "scene_07",
     "name": "The Summer Water Tanker Crisis",
-    "part": "PART 3 \u00b7 CHURN & DEFAULT FRICTION",
+    "part": "PART 3 · CHURN & DEFAULT FRICTION",
     "isPartStart": true,
     "partTitle": "CHURN & DEFAULT FRICTION",
     "partSub": "When dry borewells, midnight skips, and holiday vacancies crush cashflow",
@@ -471,7 +471,7 @@
           "bone",
           "dry"
         ],
-        "durationSec": 3.97
+        "durationSec": 3.68
       },
       {
         "idx": 1,
@@ -482,10 +482,10 @@
         "cfg": 1.7,
         "badge": "PRIVATE TANKER BLEED",
         "badgeColor": "#2980B9",
-        "title": "\u20b940,000 / MONTH IN WATER BILLS",
-        "subtitle": "\u20b92,000 per 6,000L tanker during peak Bangalore summer",
+        "title": "₹40,000 / MONTH IN WATER BILLS",
+        "subtitle": "₹2,000 per 6,000L tanker during peak Bangalore summer",
         "highlightMetric": {
-          "value": "\u20b940,000",
+          "value": "₹40,000",
           "label": "MONTHLY PRIVATE TANKER DRAIN",
           "color": "#3498DB"
         },
@@ -501,22 +501,22 @@
           "forty",
           "thousand"
         ],
-        "durationSec": 11.69
+        "durationSec": 11.52
       }
     ],
     "lineDurs": [
-      3.97,
-      11.69
+      3.68,
+      11.52
     ],
-    "durationSec": 19.5,
-    "line0Dur": 3.97,
-    "line1Dur": 11.69,
+    "durationSec": 19,
+    "line0Dur": 3.68,
+    "line1Dur": 11.52,
     "pause": 0.4
   },
   {
     "id": "scene_08",
     "name": "The Midnight Runaway Tenant",
-    "part": "PART 3 \u00b7 CHURN & DEFAULT FRICTION",
+    "part": "PART 3 · CHURN & DEFAULT FRICTION",
     "env": "lobby",
     "characterIdentity": "techie_tenant",
     "characterPose": "carry_bag",
@@ -540,7 +540,7 @@
           "midnight",
           "skips"
         ],
-        "durationSec": 2.95
+        "durationSec": 3.04
       },
       {
         "idx": 1,
@@ -570,22 +570,22 @@
           "deposit",
           "broken"
         ],
-        "durationSec": 12.67
+        "durationSec": 12.16
       }
     ],
     "lineDurs": [
-      2.95,
-      12.67
+      3.04,
+      12.16
     ],
-    "durationSec": 18.6,
-    "line0Dur": 2.95,
-    "line1Dur": 12.67,
+    "durationSec": 18.2,
+    "line0Dur": 3.04,
+    "line1Dur": 12.16,
     "pause": 0.4
   },
   {
     "id": "scene_09",
     "name": "The 68% Break-Even Floor",
-    "part": "PART 3 \u00b7 CHURN & DEFAULT FRICTION",
+    "part": "PART 3 · CHURN & DEFAULT FRICTION",
     "env": "room",
     "characterIdentity": "pg_uncle",
     "characterPose": "count_cash",
@@ -601,10 +601,10 @@
         "cfg": 1.7,
         "badge": "FIXED MONTHLY BURN",
         "badgeColor": "#8E44AD",
-        "title": "\u20b95,60,000 OPERATING EXPENSE",
+        "title": "₹5,60,000 OPERATING EXPENSE",
         "subtitle": "Building rent + cook/groceries + BESCOM + water tankers",
         "highlightMetric": {
-          "value": "\u20b95.6L BURN",
+          "value": "₹5.6L BURN",
           "label": "FIXED MONTHLY OVERHEAD",
           "color": "#8E44AD"
         },
@@ -620,12 +620,12 @@
           "thousand",
           "housekeeping"
         ],
-        "durationSec": 9.29
+        "durationSec": 8.32
       },
       {
         "idx": 1,
-        "text": "Your fixed monthly burn is five lakh sixty thousand rupees. You need forty-one out of sixty beds occupied\u2014sixty-eight percent occupancy\u2014just to break exactly even.",
-        "tts_text": "Your fixed monthly burn is five lakh sixty thousand rupees. You need forty-one out of sixty beds occupied\u2014sixty-eight percent occupancy\u2014just to break exactly even.",
+        "text": "Your fixed monthly burn is five lakh sixty thousand rupees. You need forty-one out of sixty beds occupied—sixty-eight percent occupancy—just to break exactly even.",
+        "tts_text": "Your fixed monthly burn is five lakh sixty thousand rupees. You need forty-one out of sixty beds occupied—sixty-eight percent occupancy—just to break exactly even.",
         "pause_s": 0.6,
         "ref_audio": "ref4",
         "cfg": 1.7,
@@ -649,22 +649,22 @@
           "break",
           "even"
         ],
-        "durationSec": 11.2
+        "durationSec": 10.88
       }
     ],
     "lineDurs": [
-      9.29,
-      11.2
+      8.32,
+      10.88
     ],
-    "durationSec": 23.6,
-    "line0Dur": 9.29,
-    "line1Dur": 11.2,
+    "durationSec": 22.3,
+    "line0Dur": 8.32,
+    "line1Dur": 10.88,
     "pause": 0.5
   },
   {
     "id": "scene_10",
-    "name": "Dissecting the \u20b911,000 Bed",
-    "part": "PART 4 \u00b7 THE OPERATOR'S SURVIVOR PLAYBOOK",
+    "name": "Dissecting the ₹11,000 Bed",
+    "part": "PART 4 · THE OPERATOR'S SURVIVOR PLAYBOOK",
     "isPartStart": true,
     "partTitle": "THE OPERATOR'S SURVIVOR PLAYBOOK",
     "partSub": "Unit economics, sub-metering rules, and the 100-bed cluster scale",
@@ -683,7 +683,7 @@
         "cfg": 1.7,
         "badge": "UNIT BED ECONOMICS",
         "badgeColor": "#2ECC71",
-        "title": "DISSECTING THE \u20b911,000 BED",
+        "title": "DISSECTING THE ₹11,000 BED",
         "subtitle": "Where does a single inmate's monthly fee actually go?",
         "highlights": [
           "eleven",
@@ -695,7 +695,7 @@
           "actually",
           "go"
         ],
-        "durationSec": 7.19
+        "durationSec": 6.24
       },
       {
         "idx": 1,
@@ -706,10 +706,10 @@
         "cfg": 1.7,
         "badge": "TRUE OPERATING MARGIN",
         "badgeColor": "#2ECC71",
-        "title": "TRUE NET PROFIT: ONLY \u20b91,600 / BED",
-        "subtitle": "Building Lease (\u20b94.7K) \u00b7 Food (\u20b92.7K) \u00b7 Power/Water (\u20b91.1K) \u00b7 Ops (\u20b9900)",
+        "title": "TRUE NET PROFIT: ONLY ₹1,600 / BED",
+        "subtitle": "Building Lease (₹4.7K) · Food (₹2.7K) · Power/Water (₹1.1K) · Ops (₹900)",
         "highlightMetric": {
-          "value": "\u20b91,600",
+          "value": "₹1,600",
           "label": "NET PROFIT / BED (14.5%)",
           "color": "#2ECC71"
         },
@@ -724,22 +724,22 @@
           "net",
           "profit"
         ],
-        "durationSec": 16.34
+        "durationSec": 14.4
       }
     ],
     "lineDurs": [
-      7.19,
-      16.34
+      6.24,
+      14.4
     ],
-    "durationSec": 27.4,
-    "line0Dur": 7.19,
-    "line1Dur": 16.34,
+    "durationSec": 24.5,
+    "line0Dur": 6.24,
+    "line1Dur": 14.4,
     "pause": 0.5
   },
   {
     "id": "scene_11",
     "name": "The Sub-Metering & Premium Yield Secret",
-    "part": "PART 4 \u00b7 THE OPERATOR'S SURVIVOR PLAYBOOK",
+    "part": "PART 4 · THE OPERATOR'S SURVIVOR PLAYBOOK",
     "env": "room",
     "characterIdentity": "pg_uncle",
     "characterPose": "point_keys",
@@ -766,7 +766,7 @@
           "things",
           "differently"
         ],
-        "durationSec": 4.48
+        "durationSec": 4.64
       },
       {
         "idx": 1,
@@ -778,7 +778,7 @@
         "badge": "YIELD MULTIPLIER",
         "badgeColor": "#27AE60",
         "title": "DIGITAL SUB-METERS + SINGLE SUITES",
-        "subtitle": "Charge power at \u20b912/unit + Single AC rooms command \u20b920,000",
+        "subtitle": "Charge power at ₹12/unit + Single AC rooms command ₹20,000",
         "highlightMetric": {
           "value": "2X YIELD",
           "label": "PER SQUARE FOOT REVENUE",
@@ -795,22 +795,22 @@
           "doubling",
           "yield"
         ],
-        "durationSec": 17.98
+        "durationSec": 15.84
       }
     ],
     "lineDurs": [
-      4.48,
-      17.98
+      4.64,
+      15.84
     ],
-    "durationSec": 25.5,
-    "line0Dur": 4.48,
-    "line1Dur": 17.98,
+    "durationSec": 23.5,
+    "line0Dur": 4.64,
+    "line1Dur": 15.84,
     "pause": 0.4
   },
   {
     "id": "scene_12",
     "name": "Scale or Perish (The 100-Bed Cluster Rule)",
-    "part": "PART 4 \u00b7 THE OPERATOR'S SURVIVOR PLAYBOOK",
+    "part": "PART 4 · THE OPERATOR'S SURVIVOR PLAYBOOK",
     "env": "street",
     "characterIdentity": "pg_uncle",
     "characterPose": "point_keys",
@@ -826,7 +826,7 @@
         "cfg": 1.8,
         "badge": "THE CLUSTER SCALE LAW",
         "badgeColor": "#E74C3C",
-        "title": "MINIMUM 80\u2013100 BEDS FOR REAL PROFIT",
+        "title": "MINIMUM 80–100 BEDS FOR REAL PROFIT",
         "subtitle": "Single standalone 30-bed PGs bleed out on kitchen overhead",
         "highlights": [
           "Single",
@@ -839,7 +839,7 @@
           "two",
           "buildings"
         ],
-        "durationSec": 9.12
+        "durationSec": 8.16
       },
       {
         "idx": 1,
@@ -851,9 +851,9 @@
         "badge": "EPISODE 02 CONCLUSION",
         "badgeColor": "#2ECC71",
         "title": "SCALE IS YOUR ONLY SHIELD",
-        "subtitle": "Central kitchen amortizes cook wages; net profit hits \u20b92L+/month",
+        "subtitle": "Central kitchen amortizes cook wages; net profit hits ₹2L+/month",
         "highlightMetric": {
-          "value": "\u2265 80 BEDS",
+          "value": "≥ 80 BEDS",
           "label": "MINIMUM VIABLE SCALE",
           "color": "#2ECC71"
         },
@@ -869,16 +869,16 @@
           "only",
           "shield"
         ],
-        "durationSec": 14.15
+        "durationSec": 12.32
       }
     ],
     "lineDurs": [
-      9.12,
-      14.15
+      8.16,
+      12.32
     ],
-    "durationSec": 26.5,
-    "line0Dur": 9.12,
-    "line1Dur": 14.15,
+    "durationSec": 23.7,
+    "line0Dur": 8.16,
+    "line1Dur": 12.32,
     "pause": 0.5
   }
 ]

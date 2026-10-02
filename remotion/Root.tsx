@@ -8,12 +8,56 @@ import { ComponentsSmoke } from "./components/ComponentsSmoke";
 import { BoardSmoke } from "./board/elements/BoardSmoke";
 import { SceneEngine } from "./scenes/SceneEngine";
 import { ScenePGEngine } from "./scenes/ScenePGEngine";
+import { SceneCloudKitchenEngine } from "./scenes/SceneCloudKitchenEngine";
+import { SceneCloudKitchenShort } from "./scenes/SceneCloudKitchenShort";
+import { SceneFounderHouseEngine } from "./scenes/SceneFounderHouseEngine";
+import { SceneFounderHouseShort } from "./scenes/SceneFounderHouseShort";
 
 const defaultProps: EpisodeProps & Record<string, unknown> = { theme: "ledger", captions: true, muted: false };
 
 export const Root: React.FC = () => {
   return (
     <>
+      {/* EPISODE 04 SHORT: 9:16 Viral Vertical Cutdown (The ₹35,000 Bed Trap) */}
+      <Composition
+        id="FounderHouseShort"
+        component={SceneFounderHouseShort}
+        width={1080}
+        height={1920}
+        fps={FPS}
+        durationInFrames={700}
+        defaultProps={{ muted: false }}
+      />
+      {/* EPISODE 04: The Economics of Bangalore Founder Houses (Paisa Decode Style) */}
+      <Composition
+        id="FounderHouseEpisodeV1"
+        component={SceneFounderHouseEngine}
+        width={WIDTH}
+        height={HEIGHT}
+        fps={FPS}
+        durationInFrames={8433}
+        defaultProps={{ muted: false, captions: true }}
+      />
+      {/* EPISODE 03 SHORT: 9:16 Viral Vertical Cutdown (The ₹350 Biryani Squeeze) */}
+      <Composition
+        id="CloudKitchenShort"
+        component={SceneCloudKitchenShort}
+        width={1080}
+        height={1920}
+        fps={FPS}
+        durationInFrames={860}
+        defaultProps={{ muted: false }}
+      />
+      {/* EPISODE 03: The Brutal Economics of Bangalore Cloud Kitchens (Paisa Decode Style) */}
+      <Composition
+        id="CloudKitchenEpisodeV1"
+        component={SceneCloudKitchenEngine}
+        width={WIDTH}
+        height={HEIGHT}
+        fps={FPS}
+        durationInFrames={9741}
+        defaultProps={{ muted: false, captions: true }}
+      />
       {/* EPISODE 02: The Economics of Bangalore PG Hostels (Paisa Decode Style) */}
       <Composition
         id="PGEpisodeV1"
@@ -21,7 +65,7 @@ export const Root: React.FC = () => {
         width={WIDTH}
         height={HEIGHT}
         fps={FPS}
-        durationInFrames={8451}
+        durationInFrames={7929}
         defaultProps={{ muted: false, captions: true }}
       />
       {/* V3: Paisa Decode Caliber 2.5D Animated Motion Explainer */}

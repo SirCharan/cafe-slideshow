@@ -1,0 +1,804 @@
+[
+  {
+    "id": "scene_01",
+    "name": "The Koramangala Shutter Mirage",
+    "part": "PART 1 \u00b7 THE VIRTUAL RESTAURANT ILLUSION",
+    "isPartStart": true,
+    "partTitle": "THE VIRTUAL RESTAURANT ILLUSION",
+    "partSub": "Why techies think cloud kitchens are low-overhead cash printers",
+    "env": "shutter_alley",
+    "characterIdentity": "kitchen_founder",
+    "characterPose": "point_tablet",
+    "characterEmotion": "confident",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "If you walk down an alleyway behind the buzzing main roads of Koramangala, Indiranagar, or HSR Layout, you will not see fancy glass facades or valet parking. Just a grease-stained rolling shutter with five commercial exhaust pipes venting into the night sky.",
+        "tts_text": "If you walk down an alleyway behind the buzzing main roads of Koramangala, Indiranagar, or HSR Layout, you will not see fancy glass facades or valet parking. Just a grease-stained rolling shutter with five commercial exhaust pipes venting into the night sky.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "KORAMANGALA \u00b7 INDIRANAGAR \u00b7 HSR",
+        "badgeColor": "#E74C3C",
+        "title": "THE BACK-ALLEY FOOD FACTORY",
+        "subtitle": "No dining hall \u00b7 No waiters \u00b7 5 exhaust pipes venting into the dark",
+        "highlights": [
+          "alleyway",
+          "Koramangala",
+          "Indiranagar",
+          "HSR",
+          "rolling",
+          "shutter",
+          "exhaust"
+        ],
+        "durationSec": 16.11
+      },
+      {
+        "idx": 1,
+        "text": "Behind that single shutter, one kitchen is running four completely different restaurants on Swiggy and Zomato. To anyone looking from the outside, this looks like the ultimate low-overhead startup with zero waiters and twenty-four-seven delivery demand.",
+        "tts_text": "Behind that single shutter, one kitchen is running four completely different restaurants on Swiggy and Zomato. To anyone looking from the outside, this looks like the ultimate low-overhead startup with zero waiters and twenty-four-seven delivery demand.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "VIRTUAL MULTI-BRAND",
+        "badgeColor": "#F39C12",
+        "title": "4 BRANDS \u00b7 1 ROOM \u00b7 250 SQFT",
+        "subtitle": "Biryani Darbar, Green Bowl, Midnight Burgers & Rolls of Punjab",
+        "highlightMetric": {
+          "value": "4 BRANDS",
+          "label": "UNDER ONE SHUTTER",
+          "color": "#F39C12"
+        },
+        "highlights": [
+          "four",
+          "restaurants",
+          "Swiggy",
+          "Zomato",
+          "low-overhead",
+          "zero",
+          "waiters",
+          "twenty-four-seven"
+        ],
+        "durationSec": 15.46
+      }
+    ],
+    "line0Dur": 16.11,
+    "line1Dur": 15.46,
+    "pause": 1.0,
+    "durationSec": 32.97
+  },
+  {
+    "id": "scene_02",
+    "name": "The Seductive Napkin Math",
+    "part": "PART 1 \u00b7 THE VIRTUAL RESTAURANT ILLUSION",
+    "env": "kitchen_office",
+    "characterIdentity": "kitchen_founder",
+    "characterPose": "point_tablet",
+    "characterEmotion": "thinking",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "The spreadsheet math is embarrassingly seductive. At an average ticket size of three hundred and fifty rupees, doing thirty orders per brand across four virtual menus is a hundred and twenty orders a day.",
+        "tts_text": "The spreadsheet math is embarrassingly seductive. At an average ticket size of three hundred and fifty rupees, doing thirty orders per brand across four virtual menus is a hundred and twenty orders a day.",
+        "pause_s": 0.4,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "THE NAPKIN CALCULATION",
+        "badgeColor": "#3498DB",
+        "title": "120 ORDERS / DAY @ \u20b9350 AOV",
+        "subtitle": "Calculated before commissions, PPC ads, or spoiled chicken",
+        "highlights": [
+          "spreadsheet",
+          "three",
+          "hundred",
+          "fifty",
+          "hundred",
+          "twenty",
+          "orders"
+        ],
+        "durationSec": 12.3
+      },
+      {
+        "idx": 1,
+        "text": "That is twelve lakh sixty thousand rupees in gross customer payments hitting your kitchen every single month. On paper, it looks like an effortless money printer.",
+        "tts_text": "That is twelve lakh sixty thousand rupees in gross customer payments hitting your kitchen every single month. On paper, it looks like an effortless money printer.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "MONTHLY GROSS RUN RATE",
+        "badgeColor": "#2ECC71",
+        "title": "\u20b912,60,000 / MONTH GROSS",
+        "subtitle": "42,000 rupees a day in gross customer food orders",
+        "highlightMetric": {
+          "value": "\u20b912.6 LAKH",
+          "label": "MONTHLY GROSS REVENUE",
+          "color": "#2ECC71"
+        },
+        "highlights": [
+          "twelve",
+          "lakh",
+          "sixty",
+          "thousand",
+          "gross",
+          "effortless",
+          "money",
+          "printer"
+        ],
+        "durationSec": 9.97
+      }
+    ],
+    "line0Dur": 12.3,
+    "line1Dur": 9.97,
+    "pause": 0.9,
+    "durationSec": 23.57
+  },
+  {
+    "id": "scene_03",
+    "name": "The \u20b914.5 Lakh Sunk Fitout Capex",
+    "part": "PART 1 \u00b7 THE VIRTUAL RESTAURANT ILLUSION",
+    "env": "kitchen_floor",
+    "characterIdentity": "chef_murugan",
+    "characterPose": "holding_ladle",
+    "characterEmotion": "stressed",
+    "characterSide": "right",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "What nobody mentions on social media is the brutal day-zero setup capital. Commercial stainless steel counters, heavy-gauge exhaust hoods, walk-in deep freezers, and a ten-month commercial security deposit.",
+        "tts_text": "What nobody mentions on social media is the brutal day-zero setup capital. Commercial stainless steel counters, heavy-gauge exhaust hoods, walk-in deep freezers, and a ten-month commercial security deposit.",
+        "pause_s": 0.5,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "DAY-ZERO CAPEX",
+        "badgeColor": "#E67E22",
+        "title": "COMMERCIAL KITCHEN SETUP",
+        "subtitle": "Stainless steel counters \u00b7 Combi ovens \u00b7 Heavy exhaust hoods",
+        "highlights": [
+          "day-zero",
+          "setup",
+          "stainless",
+          "exhaust",
+          "freezers",
+          "ten-month",
+          "deposit"
+        ],
+        "durationSec": 13.04
+      },
+      {
+        "idx": 1,
+        "text": "Before the first grain of basmati rice touches hot oil, you have locked fourteen and a half lakh rupees into a shutter you do not own, with equipment that loses half its resale value the moment it gets greasy.",
+        "tts_text": "Before the first grain of basmati rice touches hot oil, you have locked fourteen and a half lakh rupees into a shutter you do not own, with equipment that loses half its resale value the moment it gets greasy.",
+        "pause_s": 0.5,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "UNRECOVERABLE SUNK CAPITAL",
+        "badgeColor": "#C0392B",
+        "title": "\u20b914,50,000 FROZEN CAPEX",
+        "subtitle": "50% depreciation on Day 1 \u00b7 Zero residual lease recovery",
+        "highlightMetric": {
+          "value": "\u20b914.5 LAKH",
+          "label": "FROZEN DAY-0 CAPITAL",
+          "color": "#C0392B"
+        },
+        "highlights": [
+          "basmati",
+          "fourteen",
+          "half",
+          "lakh",
+          "shutter",
+          "resale",
+          "value",
+          "greasy"
+        ],
+        "durationSec": 12.65
+      }
+    ],
+    "line0Dur": 13.04,
+    "line1Dur": 12.65,
+    "pause": 1.0,
+    "durationSec": 27.09
+  },
+  {
+    "id": "scene_04",
+    "name": "The 30% Aggregator Toll Gate",
+    "part": "PART 2 \u00b7 THE AGGREGATOR TOLL GATE",
+    "isPartStart": true,
+    "partTitle": "THE AGGREGATOR TOLL GATE",
+    "partSub": "Why you don't own your customers \u2014 Swiggy & Zomato do",
+    "env": "portal_dashboard",
+    "characterIdentity": "kitchen_founder",
+    "characterPose": "point_tablet",
+    "characterEmotion": "shocked",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Then comes the gatekeeper. In a cloud kitchen, you do not own the customer; Swiggy and Zomato do. And their toll gate is absolute.",
+        "tts_text": "Then comes the gatekeeper. In a cloud kitchen, you do not own the customer; Swiggy and Zomato do. And their toll gate is absolute.",
+        "pause_s": 0.4,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "CUSTOMER OWNERSHIP ZERO",
+        "badgeColor": "#E74C3C",
+        "title": "THE PLATFORM MONOPOLY",
+        "subtitle": "No customer phone numbers \u00b7 No email list \u00b7 100% app lock-in",
+        "highlights": [
+          "gatekeeper",
+          "customer",
+          "Swiggy",
+          "Zomato",
+          "toll",
+          "gate",
+          "absolute"
+        ],
+        "durationSec": 8.6
+      },
+      {
+        "idx": 1,
+        "text": "Between base commission, payment gateway processing, and platform service fees, the aggregators take twenty-eight to thirty-two percent straight off the top line. On a three hundred and fifty rupee biryani, over one hundred rupees never even enters your bank account.",
+        "tts_text": "Between base commission, payment gateway processing, and platform service fees, the aggregators take twenty-eight to thirty-two percent straight off the top line. On a three hundred and fifty rupee biryani, over one hundred rupees never even enters your bank account.",
+        "pause_s": 0.6,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "30% AGGREGATOR TOLL",
+        "badgeColor": "#9B59B6",
+        "title": "\u20b9105 COMMISSIONS PER ORDER",
+        "subtitle": "Base commission (25%) + GST on commission + Gateway fees (2%)",
+        "highlightMetric": {
+          "value": "\u20b9105 / ORDER",
+          "label": "TAKEN BY AGGREGATORS",
+          "color": "#9B59B6"
+        },
+        "highlights": [
+          "commission",
+          "twenty-eight",
+          "thirty-two",
+          "three",
+          "hundred",
+          "fifty",
+          "one",
+          "hundred"
+        ],
+        "durationSec": 16.76
+      }
+    ],
+    "line0Dur": 8.6,
+    "line1Dur": 16.76,
+    "pause": 1.0,
+    "durationSec": 26.76
+  },
+  {
+    "id": "scene_05",
+    "name": "The In-App PPC Bidding War",
+    "part": "PART 2 \u00b7 THE AGGREGATOR TOLL GATE",
+    "env": "ad_bidding_screen",
+    "characterIdentity": "kitchen_founder",
+    "characterPose": "point_tablet",
+    "characterEmotion": "stressed",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Listing your kitchen on the app is free, but being seen is brutally expensive. If you do not pay for sponsored carousel placement, your virtual brand sinks to page nine beneath national food chains.",
+        "tts_text": "Listing your kitchen on the app is free, but being seen is brutally expensive. If you do not pay for sponsored carousel placement, your virtual brand sinks to page nine beneath national food chains.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "THE DISCOVERY TRAP",
+        "badgeColor": "#E67E22",
+        "title": "SPONSORED CAROUSEL AUCTION",
+        "subtitle": "Organic visibility is zero \u00b7 Pay per click or vanish to page 9",
+        "highlights": [
+          "free",
+          "brutally",
+          "expensive",
+          "sponsored",
+          "carousel",
+          "sinks",
+          "page",
+          "nine"
+        ],
+        "durationSec": 12.56
+      },
+      {
+        "idx": 1,
+        "text": "To keep the order counter ticking, cloud kitchens spend forty-five thousand rupees every month on cost-per-click ads inside the delivery apps, effectively paying the aggregator twice just to stay visible.",
+        "tts_text": "To keep the order counter ticking, cloud kitchens spend forty-five thousand rupees every month on cost-per-click ads inside the delivery apps, effectively paying the aggregator twice just to stay visible.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "MONTHLY AD BURN",
+        "badgeColor": "#C0392B",
+        "title": "\u20b945,000 / MONTH IN-APP ADS",
+        "subtitle": "Paying \u20b91,500 every single day just for customer impressions",
+        "highlightMetric": {
+          "value": "\u20b945,000 / MO",
+          "label": "IN-APP PPC AD SPEND",
+          "color": "#C0392B"
+        },
+        "highlights": [
+          "forty-five",
+          "thousand",
+          "cost-per-click",
+          "ads",
+          "paying",
+          "aggregator",
+          "twice"
+        ],
+        "durationSec": 12.26
+      }
+    ],
+    "line0Dur": 12.56,
+    "line1Dur": 12.26,
+    "pause": 1.0,
+    "durationSec": 26.22
+  },
+  {
+    "id": "scene_06",
+    "name": "The Mandatory Discount Trap",
+    "part": "PART 2 \u00b7 THE AGGREGATOR TOLL GATE",
+    "env": "customer_phone_deal",
+    "characterIdentity": "chef_murugan",
+    "characterPose": "holding_ladle",
+    "characterEmotion": "shocked",
+    "characterSide": "right",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Then there is the consumer addiction to discounts. When customers see a shiny banner screaming fifty percent off, they think the delivery app is funding their cheap lunch.",
+        "tts_text": "Then there is the consumer addiction to discounts. When customers see a shiny banner screaming fifty percent off, they think the delivery app is funding their cheap lunch.",
+        "pause_s": 0.4,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "CONSUMER ILLUSION",
+        "badgeColor": "#F1C40F",
+        "title": "FLAT 50% OFF PROMOS",
+        "subtitle": "Customers expect \u20b9350 meals for \u20b9220",
+        "highlights": [
+          "discounts",
+          "fifty",
+          "percent",
+          "delivery",
+          "app",
+          "funding"
+        ],
+        "durationSec": 10.18
+      },
+      {
+        "idx": 1,
+        "text": "In reality, that discount is funded entirely out of the kitchen\u2019s pocket. You take all the risk, buy the meat, pay the gas bill, and deliver food at slashed margins while the app collects its full commission on the gross bill.",
+        "tts_text": "In reality, that discount is funded entirely out of the kitchen\u2019s pocket. You take all the risk, buy the meat, pay the gas bill, and deliver food at slashed margins while the app collects its full commission on the gross bill.",
+        "pause_s": 0.6,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "100% KITCHEN FUNDED",
+        "badgeColor": "#E74C3C",
+        "title": "THE MARGIN SLAUGHTER",
+        "subtitle": "You take all the risk while the platform collects full commission",
+        "highlightMetric": {
+          "value": "100%",
+          "label": "DISCOUNT FUNDED BY YOU",
+          "color": "#E74C3C"
+        },
+        "highlights": [
+          "discount",
+          "funded",
+          "kitchen",
+          "risk",
+          "slashed",
+          "margins",
+          "full",
+          "commission"
+        ],
+        "durationSec": 13.81
+      }
+    ],
+    "line0Dur": 10.18,
+    "line1Dur": 13.81,
+    "pause": 1.0,
+    "durationSec": 25.39
+  },
+  {
+    "id": "scene_07",
+    "name": "The 8:30 PM Weekend Avalanche",
+    "part": "PART 3 \u00b7 RUSH-HOUR FRICTION & HIDDEN BLEED",
+    "isPartStart": true,
+    "partTitle": "RUSH-HOUR FRICTION & HIDDEN BLEED",
+    "partSub": "Algorithmic delay penalties and the chaotic dispatch bottleneck",
+    "env": "dispatch_bottleneck",
+    "characterIdentity": "delivery_rider",
+    "characterPose": "holding_order",
+    "characterEmotion": "impatient",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "At eight-thirty on a rainy Saturday night, all four brands explode simultaneously. Fifteen delivery riders are crammed into the back alley, shouting order numbers through the pickup window.",
+        "tts_text": "At eight-thirty on a rainy Saturday night, all four brands explode simultaneously. Fifteen delivery riders are crammed into the back alley, shouting order numbers through the pickup window.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "PEAK-HOUR CRUSH",
+        "badgeColor": "#E67E22",
+        "title": "8:30 PM WEEKEND AVALANCHE",
+        "subtitle": "15 delivery riders shouting order tokens simultaneously",
+        "highlights": [
+          "eight-thirty",
+          "Saturday",
+          "Fifteen",
+          "delivery",
+          "riders",
+          "crammed",
+          "shouting"
+        ],
+        "durationSec": 11.39
+      },
+      {
+        "idx": 1,
+        "text": "Every minute of food prep delay triggers algorithmic penalties from the app, dropping your kitchen's rating and throttling future orders. When riders wait more than seven minutes, your restaurant drops off the feed.",
+        "tts_text": "Every minute of food prep delay triggers algorithmic penalties from the app, dropping your kitchen's rating and throttling future orders. When riders wait more than seven minutes, your restaurant drops off the feed.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "ALGORITHMIC PENALTY",
+        "badgeColor": "#C0392B",
+        "title": "THE 7-MINUTE THRESHOLD",
+        "subtitle": "Prep delay > 7 mins = Automatic feed throttling by the algorithm",
+        "highlightMetric": {
+          "value": ">7 MINS",
+          "label": "DELAY THROTTLES LISTING",
+          "color": "#C0392B"
+        },
+        "highlights": [
+          "algorithmic",
+          "penalties",
+          "rating",
+          "throttling",
+          "seven",
+          "minutes",
+          "drops"
+        ],
+        "durationSec": 12.7
+      }
+    ],
+    "line0Dur": 11.39,
+    "line1Dur": 12.7,
+    "pause": 1.0,
+    "durationSec": 25.49
+  },
+  {
+    "id": "scene_08",
+    "name": "The Premium Packaging Drain",
+    "part": "PART 3 \u00b7 RUSH-HOUR FRICTION & HIDDEN BLEED",
+    "env": "packing_station",
+    "characterIdentity": "kitchen_founder",
+    "characterPose": "point_tablet",
+    "characterEmotion": "thinking",
+    "characterSide": "right",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "In a cloud kitchen, packaging is your dining room. A flimsy plastic box that leaks oil during a bumpy scooter ride earns a one-star review that can permanently kill your listing.",
+        "tts_text": "In a cloud kitchen, packaging is your dining room. A flimsy plastic box that leaks oil during a bumpy scooter ride earns a one-star review that can permanently kill your listing.",
+        "pause_s": 0.5,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "THE UNSEEN REVENUE DRAIN",
+        "badgeColor": "#3498DB",
+        "title": "PACKAGING IS YOUR DINING ROOM",
+        "subtitle": "One spilled curry on a scooter ride = Permanent 1-star review",
+        "highlights": [
+          "packaging",
+          "dining",
+          "room",
+          "flimsy",
+          "leaks",
+          "one-star",
+          "kill"
+        ],
+        "durationSec": 10.95
+      },
+      {
+        "idx": 1,
+        "text": "Microwaveable plastic containers, heat-seal foil, tamper-proof stickers, and kraft paper carry bags cost twenty-two rupees per order. Across a hundred and twenty orders a day, packaging alone burns nearly eighty thousand rupees every single month.",
+        "tts_text": "Microwaveable plastic containers, heat-seal foil, tamper-proof stickers, and kraft paper carry bags cost twenty-two rupees per order. Across a hundred and twenty orders a day, packaging alone burns nearly eighty thousand rupees every single month.",
+        "pause_s": 0.6,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "PACKAGING LEDGER",
+        "badgeColor": "#2980B9",
+        "title": "\u20b922 / ORDER \u00b7 \u20b979,200 / MONTH",
+        "subtitle": "Virgin PP containers (\u20b99.50) + Kraft bag (\u20b96) + Foil (\u20b93) + Tape (\u20b91.50)",
+        "highlightMetric": {
+          "value": "\u20b979,200 / MO",
+          "label": "BURNT ON PACKAGING",
+          "color": "#2980B9"
+        },
+        "highlights": [
+          "Microwaveable",
+          "heat-seal",
+          "tamper-proof",
+          "kraft",
+          "twenty-two",
+          "eighty",
+          "thousand"
+        ],
+        "durationSec": 15.51
+      }
+    ],
+    "line0Dur": 10.95,
+    "line1Dur": 15.51,
+    "pause": 1.1,
+    "durationSec": 27.96
+  },
+  {
+    "id": "scene_09",
+    "name": "Food Wastage & Spoilage",
+    "part": "PART 3 \u00b7 RUSH-HOUR FRICTION & HIDDEN BLEED",
+    "env": "kitchen_chiller",
+    "characterIdentity": "chef_murugan",
+    "characterPose": "holding_ladle",
+    "characterEmotion": "stressed",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Unlike a dine-in restaurant where servers can push today's special, cloud kitchen demand is completely unpredictable. If rain stops or the algorithm hiccups, pre-marinated chicken and cooked basmati rice cannot be saved for tomorrow.",
+        "tts_text": "Unlike a dine-in restaurant where servers can push today's special, cloud kitchen demand is completely unpredictable. If rain stops or the algorithm hiccups, pre-marinated chicken and cooked basmati rice cannot be saved for tomorrow.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "INVENTORY SPOILAGE",
+        "badgeColor": "#7F8C8D",
+        "title": "THE 7% FOOD WASTAGE LOSS",
+        "subtitle": "Perishable chicken & cooked biryani gravies discarded daily",
+        "highlights": [
+          "unpredictable",
+          "marinated",
+          "chicken",
+          "basmati",
+          "saved",
+          "tomorrow"
+        ],
+        "durationSec": 14.63
+      },
+      {
+        "idx": 1,
+        "text": "Food spoilage, cooking shrinkage, and canceled deliveries consistently bleed seven percent of total revenue, silently eating away whatever profit was left on the table.",
+        "tts_text": "Food spoilage, cooking shrinkage, and canceled deliveries consistently bleed seven percent of total revenue, silently eating away whatever profit was left on the table.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "SILENT MARGIN BLEED",
+        "badgeColor": "#C0392B",
+        "title": "\u20b988,000 / MONTH IN SPOILAGE",
+        "subtitle": "Unsold raw poultry, gravies, and customer cancellations",
+        "highlightMetric": {
+          "value": "7% REVENUE",
+          "label": "LOST TO SPOILAGE",
+          "color": "#C0392B"
+        },
+        "highlights": [
+          "spoilage",
+          "shrinkage",
+          "canceled",
+          "seven",
+          "percent",
+          "silently",
+          "profit"
+        ],
+        "durationSec": 10.86
+      }
+    ],
+    "line0Dur": 14.63,
+    "line1Dur": 10.86,
+    "pause": 1.0,
+    "durationSec": 26.89
+  },
+  {
+    "id": "scene_10",
+    "name": "Dissecting the \u20b9350 Biryani",
+    "part": "PART 4 \u00b7 THE UNIT ECONOMICS TEARDOWN",
+    "isPartStart": true,
+    "partTitle": "THE UNIT ECONOMICS TEARDOWN",
+    "partSub": "Where every single rupee of your delivery bill actually goes",
+    "env": "biryani_unit_math",
+    "characterIdentity": "kitchen_founder",
+    "characterPose": "point_tablet",
+    "characterEmotion": "neutral",
+    "characterSide": "right",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "When you dissect an authentic three hundred and fifty rupee chicken biryani delivery, the reality is stark. One hundred and five rupees goes to the delivery app. Ninety-eight rupees covers raw chicken, premium basmati rice, and ghee. Staff wages take forty-five rupees.",
+        "tts_text": "When you dissect an authentic three hundred and fifty rupee chicken biryani delivery, the reality is stark. One hundred and five rupees goes to the delivery app. Ninety-eight rupees covers raw chicken, premium basmati rice, and ghee. Staff wages take forty-five rupees.",
+        "pause_s": 0.6,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "COST BREAKDOWN OF \u20b9350",
+        "badgeColor": "#3498DB",
+        "title": "DISSECTING THE \u20b9350 BIRYANI",
+        "subtitle": "Aggregator (\u20b9105) + Raw food (\u20b998) + Staff wages (\u20b945)",
+        "highlights": [
+          "three",
+          "hundred",
+          "fifty",
+          "One",
+          "hundred",
+          "five",
+          "Ninety-eight",
+          "forty-five"
+        ],
+        "durationSec": 17.57
+      },
+      {
+        "idx": 1,
+        "text": "After packaging, rent, commercial gas, and ad spend, the kitchen owner is left with just thirty-two rupees. A razor-thin net margin of nine percent.",
+        "tts_text": "After packaging, rent, commercial gas, and ad spend, the kitchen owner is left with just thirty-two rupees. A razor-thin net margin of nine percent.",
+        "pause_s": 0.5,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "THE TRUE NET MARGIN",
+        "badgeColor": "#2ECC71",
+        "title": "\u20b932 TRUE PROFIT (9.1%)",
+        "subtitle": "Packaging (\u20b922) \u00b7 Shutter & Gas (\u20b928) \u00b7 Ads (\u20b920) \u00b7 Net (\u20b932)",
+        "highlightMetric": {
+          "value": "\u20b932 / ORDER",
+          "label": "TRUE NET PROFIT",
+          "color": "#2ECC71"
+        },
+        "highlights": [
+          "packaging",
+          "rent",
+          "commercial",
+          "thirty-two",
+          "razor-thin",
+          "nine",
+          "percent"
+        ],
+        "durationSec": 9.92
+      }
+    ],
+    "line0Dur": 17.57,
+    "line1Dur": 9.92,
+    "pause": 1.1,
+    "durationSec": 28.99
+  },
+  {
+    "id": "scene_11",
+    "name": "The 85-Order Survival Threshold",
+    "part": "PART 4 \u00b7 THE UNIT ECONOMICS TEARDOWN",
+    "env": "breakeven_whiteboard",
+    "characterIdentity": "kitchen_founder",
+    "characterPose": "point_tablet",
+    "characterEmotion": "thinking",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "With fixed monthly expenses of nearly two lakh rupees in shutter rent, electricity, and chef salaries, a cloud kitchen must deliver eighty-five orders every single day just to break even.",
+        "tts_text": "With fixed monthly expenses of nearly two lakh rupees in shutter rent, electricity, and chef salaries, a cloud kitchen must deliver eighty-five orders every single day just to break even.",
+        "pause_s": 0.5,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "THE FIXED OVERHEAD FLOOR",
+        "badgeColor": "#E67E22",
+        "title": "85 ORDERS / DAY BREAK-EVEN",
+        "subtitle": "2,550 monthly orders required before making a single rupee of profit",
+        "highlights": [
+          "fixed",
+          "two",
+          "lakh",
+          "rent",
+          "salaries",
+          "eighty-five",
+          "break",
+          "even"
+        ],
+        "durationSec": 11.77
+      },
+      {
+        "idx": 1,
+        "text": "If rainy days or bad reviews drag daily volume down to sixty orders, the kitchen bleeds fifty thousand rupees in cold cash every thirty days.",
+        "tts_text": "If rainy days or bad reviews drag daily volume down to sixty orders, the kitchen bleeds fifty thousand rupees in cold cash every thirty days.",
+        "pause_s": 0.5,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "CASH BLEED DEFICIT",
+        "badgeColor": "#C0392B",
+        "title": "\u20b950,000 / MONTH BURN",
+        "subtitle": "At 60 orders/day, fixed costs devour your entire operating margin",
+        "highlightMetric": {
+          "value": "-\u20b950,000 / MO",
+          "label": "NET LOSS AT 60 ORDERS",
+          "color": "#C0392B"
+        },
+        "highlights": [
+          "bad",
+          "reviews",
+          "sixty",
+          "bleeds",
+          "fifty",
+          "thousand",
+          "cold",
+          "cash"
+        ],
+        "durationSec": 8.66
+      }
+    ],
+    "line0Dur": 11.77,
+    "line1Dur": 8.66,
+    "pause": 1.0,
+    "durationSec": 21.83
+  },
+  {
+    "id": "scene_12",
+    "name": "How the 1% Actually Survive",
+    "part": "PART 4 \u00b7 THE UNIT ECONOMICS TEARDOWN",
+    "env": "future_hub",
+    "characterIdentity": "kitchen_founder",
+    "characterPose": "point_tablet",
+    "characterEmotion": "confident",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "The only cloud kitchens that survive and build real wealth do two things differently: first, they build direct ordering channels via WhatsApp and their own website, passing part of the thirty percent commission back to loyal customers.",
+        "tts_text": "The only cloud kitchens that survive and build real wealth do two things differently: first, they build direct ordering channels via WhatsApp and their own website, passing part of the thirty percent commission back to loyal customers.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "DIRECT D2C PLAYBOOK",
+        "badgeColor": "#2ECC71",
+        "title": "DIRECT WHATSAPP ORDERING",
+        "subtitle": "Zero aggregator toll \u00b7 Offer \u20b960 discount and still make 2x more profit",
+        "highlights": [
+          "survive",
+          "wealth",
+          "direct",
+          "WhatsApp",
+          "website",
+          "thirty",
+          "percent",
+          "loyal"
+        ],
+        "durationSec": 14.28
+      },
+      {
+        "idx": 1,
+        "text": "And second, they operate in multi-brand cluster hubs where a single prep kitchen supplies five distinct brands, sharing cold storage and chef overhead across massive volume. In the delivery game, volume is survival, but dependency is death.",
+        "tts_text": "And second, they operate in multi-brand cluster hubs where a single prep kitchen supplies five distinct brands, sharing cold storage and chef overhead across massive volume. In the delivery game, volume is survival, but dependency is death.",
+        "pause_s": 0.6,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "THE CLUSTER RULE",
+        "badgeColor": "#3498DB",
+        "title": "VOLUME IS SURVIVAL \u00b7 DEPENDENCY IS DEATH",
+        "subtitle": "Shared central prep kitchens \u00b7 Amortizing cold storage across 5 brands",
+        "highlightMetric": {
+          "value": "5 BRANDS",
+          "label": "SHARED CENTRAL HUB",
+          "color": "#3498DB"
+        },
+        "highlights": [
+          "multi-brand",
+          "cluster",
+          "hubs",
+          "sharing",
+          "overhead",
+          "volume",
+          "survival",
+          "dependency",
+          "death"
+        ],
+        "durationSec": 15.76
+      }
+    ],
+    "line0Dur": 14.28,
+    "line1Dur": 15.76,
+    "pause": 1.1,
+    "durationSec": 31.54
+  }
+]
