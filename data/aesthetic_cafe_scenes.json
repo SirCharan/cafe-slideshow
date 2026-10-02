@@ -1,0 +1,889 @@
+[
+  {
+    "id": "scene_01",
+    "name": "The Indiranagar Corner Plot",
+    "part": "PART 1 \u00b7 THE \u20b91.5 CRORE CONCRETE SEDUCTION",
+    "isPartStart": true,
+    "partTitle": "THE \u20b91.5 CRORE CONCRETE SEDUCTION",
+    "partSub": "Brutalist microcement, fiddle-leaf figs, and the illusion of passive coffee cashflow",
+    "env": "indiranagar_cafe_exterior",
+    "characterIdentity": "cafe_founder_linen",
+    "characterPose": "holding_iced_latte",
+    "characterEmotion": "confident",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "On a prime corner plot off Indiranagar Hundred Feet Road sits a temple of polished microcement and fiddle-leaf figs, where Bangalore tech royalty pays four hundred and fifty rupees for smashed avocado on sourdough.",
+        "tts_text": "On a prime corner plot off Indiranagar Hundred Feet Road sits a temple of polished microcement and fiddle-leaf figs, where Bangalore tech royalty pays four hundred and fifty rupees for smashed avocado on sourdough.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "INDIRANAGAR 100FT ROAD",
+        "badgeColor": "#E74C3C",
+        "title": "THE BRUTALIST TEMPLE",
+        "subtitle": "4,000 sq ft corner sanctuary charging \u20b9450 for artisanal sourdough",
+        "highlights": [
+          "Indiranagar",
+          "Hundred",
+          "Feet",
+          "Road",
+          "microcement",
+          "fiddle-leaf",
+          "figs",
+          "Bangalore",
+          "tech",
+          "avocado",
+          "sourdough"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "To anyone waiting twenty minutes for a table on Sunday afternoon, this four-thousand-square-foot aesthetic sanctuary looks like a license to print effortless, Instagram-filtered money.",
+        "tts_text": "To anyone waiting twenty minutes for a table on Sunday afternoon, this four-thousand-square-foot aesthetic sanctuary looks like a license to print effortless, Instagram-filtered money.",
+        "pause_s": 0.6,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "THE SUNDAY ILLUSION",
+        "badgeColor": "#9B59B6",
+        "title": "THE 20-MINUTE QUEUE MIRAGE",
+        "subtitle": "Crowded patios masking high-fixed-cost economic realities",
+        "highlightMetric": {
+          "value": "20 MIN",
+          "label": "WEEKEND QUEUE",
+          "color": "#9B59B6"
+        },
+        "highlights": [
+          "twenty",
+          "minutes",
+          "table",
+          "Sunday",
+          "afternoon",
+          "four-thousand-square-foot",
+          "aesthetic",
+          "sanctuary",
+          "license",
+          "money"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_02",
+    "name": "The Seductive Top-Line Math",
+    "part": "PART 1 \u00b7 THE \u20b91.5 CRORE CONCRETE SEDUCTION",
+    "isPartStart": false,
+    "partTitle": "THE \u20b91.5 CRORE CONCRETE SEDUCTION",
+    "partSub": "Brutalist microcement, fiddle-leaf figs, and the illusion of passive coffee cashflow",
+    "env": "cafe_blueprint_pos",
+    "characterIdentity": "cafe_founder_linen",
+    "characterPose": "pointing_pos_screen",
+    "characterEmotion": "excited",
+    "characterSide": "right",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "The founder's pitch deck math is intoxicating: three hundred orders a day at an average ticket size of four hundred and fifty rupees produces forty lakh fifty thousand rupees in gross monthly inflows.",
+        "tts_text": "The founder's pitch deck math is intoxicating: three hundred orders a day at an average ticket size of four hundred and fifty rupees produces forty lakh fifty thousand rupees in gross monthly inflows.",
+        "pause_s": 0.5,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "PITCH DECK FANTASY",
+        "badgeColor": "#2ECC71",
+        "title": "THE \u20b940.5 LAKH TOP-LINE",
+        "subtitle": "300 daily orders @ \u20b9450 ticket = \u20b940,50,000 monthly gross",
+        "highlightMetric": {
+          "value": "\u20b940.5 L",
+          "label": "GROSS MONTHLY RUN-RATE",
+          "color": "#2ECC71"
+        },
+        "highlights": [
+          "pitch",
+          "deck",
+          "three",
+          "hundred",
+          "orders",
+          "four",
+          "hundred",
+          "fifty",
+          "rupees",
+          "forty",
+          "lakh",
+          "fifty",
+          "thousand"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "That is nearly five crore rupees a year flowing through U-P-I barcodes, promising a full payback of the initial investment in less than eighteen months.",
+        "tts_text": "That is nearly five crore rupees a year flowing through U-P-I barcodes, promising a full payback of the initial investment in less than eighteen months.",
+        "pause_s": 0.6,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "18-MONTH PAYBACK",
+        "badgeColor": "#27AE60",
+        "title": "\u20b94.86 CRORE ANNUAL INFLOW",
+        "subtitle": "Founders promising angel investors rapid 18-month capital recovery",
+        "highlightMetric": {
+          "value": "18 MOS",
+          "label": "PROJECTED PAYBACK",
+          "color": "#27AE60"
+        },
+        "highlights": [
+          "five",
+          "crore",
+          "rupees",
+          "year",
+          "U-P-I",
+          "barcodes",
+          "payback",
+          "investment",
+          "eighteen",
+          "months"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_03",
+    "name": "The Architecture of Vanity",
+    "part": "PART 1 \u00b7 THE \u20b91.5 CRORE CONCRETE SEDUCTION",
+    "isPartStart": false,
+    "partTitle": "THE \u20b91.5 CRORE CONCRETE SEDUCTION",
+    "partSub": "Brutalist microcement, fiddle-leaf figs, and the illusion of passive coffee cashflow",
+    "env": "espresso_bar_lamarzocco",
+    "characterIdentity": "barista_specialty",
+    "characterPose": "steaming_milk",
+    "characterEmotion": "serious",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Before pulling a single shot of single-origin espresso, the founders drop a staggering one point five crore rupees transforming an old residential plot into a Scandinavian architectural gallery.",
+        "tts_text": "Before pulling a single shot of single-origin espresso, the founders drop a staggering one point five crore rupees transforming an old residential plot into a Scandinavian architectural gallery.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "FITOUT CAPEX",
+        "badgeColor": "#E67E22",
+        "title": "\u20b91.5 CRORE SUNK COST",
+        "subtitle": "Microcement, custom fluted oak woodwork, and imported Scandinavian finishes",
+        "highlightMetric": {
+          "value": "\u20b91.50 CR",
+          "label": "FITOUT CAPEX",
+          "color": "#E67E22"
+        },
+        "highlights": [
+          "single-origin",
+          "espresso",
+          "founders",
+          "one",
+          "point",
+          "five",
+          "crore",
+          "rupees",
+          "residential",
+          "Scandinavian",
+          "architectural",
+          "gallery"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "Twenty-two lakhs for a custom La Marzocco and Mahlk\u00f6nig grinders, thirty-five lakhs for commercial extraction, and forty-five lakhs locked in a ten-month cash lease deposit before day one.",
+        "tts_text": "Twenty-two lakhs for a custom La Marzocco and Mahl-ker-nig grinders, thirty-five lakhs for commercial extraction, and forty-five lakhs locked in a ten-month cash lease deposit before day one.",
+        "pause_s": 0.6,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "EQUIPMENT & DEPOSIT",
+        "badgeColor": "#D35400",
+        "title": "\u20b91.02 CR IN HARD ASSETS & DEPOSIT",
+        "subtitle": "La Marzocco (\u20b922L) + Rational kitchen (\u20b935L) + Security deposit (\u20b945L)",
+        "highlightMetric": {
+          "value": "\u20b945 L",
+          "label": "LOCKED LEASE DEPOSIT",
+          "color": "#D35400"
+        },
+        "highlights": [
+          "Twenty-two",
+          "lakhs",
+          "La",
+          "Marzocco",
+          "grinders",
+          "thirty-five",
+          "lakhs",
+          "commercial",
+          "extraction",
+          "forty-five",
+          "lakhs",
+          "deposit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_04",
+    "name": "The 100-Foot Road Landlord",
+    "part": "PART 2 \u00b7 THE BANGALORE REAL ESTATE & UTILITY STRANGLEHOLD",
+    "isPartStart": true,
+    "partTitle": "THE BANGALORE REAL ESTATE & UTILITY STRANGLEHOLD",
+    "partSub": "Fixed lease bleed, non-negotiable security deposits, and commercial tariff shocks",
+    "env": "indiranagar_bungalow_office",
+    "characterIdentity": "landlord_kurta",
+    "characterPose": "signing_lease",
+    "characterEmotion": "stern",
+    "characterSide": "right",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "The first casualty of opening a high-street aesthetic cafe is your working capital, captured by an Indiranagar landlord who charges commercial rates while offering residential infrastructure.",
+        "tts_text": "The first casualty of opening a high-street aesthetic cafe is your working capital, captured by an Indiranagar landlord who charges commercial rates while offering residential infrastructure.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "LANDLORD LEVERAGE",
+        "badgeColor": "#C0392B",
+        "title": "COMMERCIAL RENT EXTRACTION",
+        "subtitle": "Charging prime commercial tariffs for converted residential plots",
+        "highlights": [
+          "casualty",
+          "opening",
+          "high-street",
+          "aesthetic",
+          "cafe",
+          "working",
+          "capital",
+          "Indiranagar",
+          "landlord",
+          "commercial",
+          "rates"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "The fixed master lease bleeds four lakh fifty thousand rupees every thirty days, entirely disconnected from whether it rains or footfall collapses.",
+        "tts_text": "The fixed master lease bleeds four lakh fifty thousand rupees every thirty days, entirely disconnected from whether it rains or footfall collapses.",
+        "pause_s": 0.6,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "FIXED LEASE",
+        "badgeColor": "#E74C3C",
+        "title": "\u20b94,50,000 / MONTH FIXED RENT",
+        "subtitle": "Zero risk for the landlord \u00b7 100% operational risk for the cafe operator",
+        "highlightMetric": {
+          "value": "-\u20b94.50 L",
+          "label": "MONTHLY LEASE RENT",
+          "color": "#E74C3C"
+        },
+        "highlights": [
+          "fixed",
+          "master",
+          "lease",
+          "four",
+          "lakh",
+          "fifty",
+          "thousand",
+          "rupees",
+          "thirty",
+          "days",
+          "rains",
+          "footfall",
+          "collapses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_05",
+    "name": "The Diesel Genset & Commercial BESCOM Bleed",
+    "part": "PART 2 \u00b7 THE BANGALORE REAL ESTATE & UTILITY STRANGLEHOLD",
+    "isPartStart": false,
+    "partTitle": "THE BANGALORE REAL ESTATE & UTILITY STRANGLEHOLD",
+    "partSub": "Fixed lease bleed, non-negotiable security deposits, and commercial tariff shocks",
+    "env": "diesel_genset_alley",
+    "characterIdentity": "cafe_founder_linen",
+    "characterPose": "holding_diesel_can",
+    "characterEmotion": "stressed",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Powering eight industrial air conditioners, display chillers, and continuous induction baking pushes commercial B-E-S-C-O-M tariffs and diesel backup to an eye-watering one lakh eighty thousand rupees every month.",
+        "tts_text": "Powering eight industrial air conditioners, display chillers, and continuous induction baking pushes commercial B-E-S-C-O-M tariffs and diesel backup to an eye-watering one lakh eighty thousand rupees every month.",
+        "pause_s": 0.5,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "ENERGY INFRASTRUCTURE",
+        "badgeColor": "#F39C12",
+        "title": "\u20b91,80,000 / MO POWER EXPENSE",
+        "subtitle": "Commercial BESCOM tier (\u20b91.2L) + 125 kVA diesel generator backup (\u20b960K)",
+        "highlightMetric": {
+          "value": "-\u20b91.80 L",
+          "label": "MONTHLY POWER & DIESEL",
+          "color": "#F39C12"
+        },
+        "highlights": [
+          "eight",
+          "industrial",
+          "air",
+          "conditioners",
+          "display",
+          "chillers",
+          "induction",
+          "commercial",
+          "B-E-S-C-O-M",
+          "tariffs",
+          "diesel",
+          "one",
+          "lakh",
+          "eighty",
+          "thousand"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "Because in Bangalore, when the summer power grid trips during peak brunch, fifty laptops screaming for charging sockets will burn your Google rating in fifteen minutes.",
+        "tts_text": "Because in Bangalore, when the summer power grid trips during peak brunch, fifty laptops screaming for charging sockets will burn your Google rating in fifteen minutes.",
+        "pause_s": 0.6,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "REPUTATION HAZARD",
+        "badgeColor": "#E67E22",
+        "title": "THE BRUNCH BLACKOUT PENALTY",
+        "subtitle": "Dropping WiFi and charging sockets destroys Google review ratings in minutes",
+        "highlights": [
+          "Bangalore",
+          "power",
+          "grid",
+          "trips",
+          "peak",
+          "brunch",
+          "fifty",
+          "laptops",
+          "charging",
+          "sockets",
+          "Google",
+          "rating"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_06",
+    "name": "The Artisanal Supply Chain Squeeze",
+    "part": "PART 2 \u00b7 THE BANGALORE REAL ESTATE & UTILITY STRANGLEHOLD",
+    "isPartStart": false,
+    "partTitle": "THE BANGALORE REAL ESTATE & UTILITY STRANGLEHOLD",
+    "partSub": "Fixed lease bleed, non-negotiable security deposits, and commercial tariff shocks",
+    "env": "bakery_kitchen_prep",
+    "characterIdentity": "head_chef",
+    "characterPose": "plating_avocado",
+    "characterEmotion": "intense",
+    "characterSide": "right",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Specialized sourdough bakers, certified latte-art baristas, imported oat milk, and organic avocado spoilage drain another nine lakh fifty thousand rupees in monthly operating burn.",
+        "tts_text": "Specialized sourdough bakers, certified latte-art baristas, imported oat milk, and organic avocado spoilage drain another nine lakh fifty thousand rupees in monthly operating burn.",
+        "pause_s": 0.5,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "HOSPITALITY PAYROLL",
+        "badgeColor": "#D35400",
+        "title": "STAFF & PERISHABLE SPOILAGE",
+        "subtitle": "Specialty bakery crew, latte-art maestros, and 10% avocado/berry spoilage",
+        "highlightMetric": {
+          "value": "-\u20b99.50 L",
+          "label": "STAFF, INGREDIENTS & SPOILAGE",
+          "color": "#D35400"
+        },
+        "highlights": [
+          "Specialized",
+          "sourdough",
+          "bakers",
+          "certified",
+          "baristas",
+          "imported",
+          "oat",
+          "milk",
+          "avocado",
+          "spoilage",
+          "nine",
+          "lakh",
+          "fifty",
+          "thousand"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "Unlike a Darshini churning two-minute idlis on steel plates, every artisanal plate requires an eight-minute manual assembly line that destroys kitchen velocity.",
+        "tts_text": "Unlike a Darshini churning two-minute idlis on steel plates, every artisanal plate requires an eight-minute manual assembly line that destroys kitchen velocity.",
+        "pause_s": 0.6,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "DARSHINI VS ARTISANAL",
+        "badgeColor": "#7F8C8D",
+        "title": "THE 8-MINUTE PLATING BOTTLENECK",
+        "subtitle": "Intricate tweezers and micro-greens destroying peak turnover velocity",
+        "highlightMetric": {
+          "value": "8 MIN",
+          "label": "PLATING TIME / ORDER",
+          "color": "#7F8C8D"
+        },
+        "highlights": [
+          "Darshini",
+          "churning",
+          "two-minute",
+          "idlis",
+          "steel",
+          "plates",
+          "artisanal",
+          "eight-minute",
+          "assembly",
+          "line",
+          "velocity"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_07",
+    "name": "The 'Remote Worker' Pathology",
+    "part": "PART 3 \u00b7 THE LAPTOP SQUATTER PATHOLOGY & INSTAGRAM DECAY",
+    "isPartStart": true,
+    "partTitle": "THE LAPTOP SQUATTER PATHOLOGY & INSTAGRAM DECAY",
+    "partSub": "5-hour cold brew squatters, table-turn collapse, and the 6-month aesthetic decay curve",
+    "env": "cafe_interior_laptop_sea",
+    "characterIdentity": "tech_worker_macbook",
+    "characterPose": "typing_airpods",
+    "characterEmotion": "unbothered",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Between eleven A-M and five P-M, sixty-five percent of your premium seating is hijacked by tech founders nursing a single two-hundred-and-twenty-rupee cold brew for five consecutive hours.",
+        "tts_text": "Between eleven A-M and five P-M, sixty-five percent of your premium seating is hijacked by tech founders nursing a single two-hundred-and-twenty-rupee cold brew for five consecutive hours.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "REMOTE WORKER TRAP",
+        "badgeColor": "#9B59B6",
+        "title": "THE 5-HOUR \u20b9220 COLD BREW",
+        "subtitle": "65% of tables occupied from 11 AM to 5 PM by solo founders on Google Meet",
+        "highlightMetric": {
+          "value": "65%",
+          "label": "TABLE OCCUPATION BY SQUATTERS",
+          "color": "#9B59B6"
+        },
+        "highlights": [
+          "eleven",
+          "five",
+          "sixty-five",
+          "percent",
+          "seating",
+          "hijacked",
+          "founders",
+          "two-hundred-and-twenty-rupee",
+          "cold",
+          "brew",
+          "five",
+          "hours"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "Table turnover drops from four turns a day to an abysmal zero point eight, turning two thousand square feet of prime commercial real estate into a subsidized co-working lounge.",
+        "tts_text": "Table turnover drops from four turns a day to an abysmal zero point eight, turning two thousand square feet of prime commercial real estate into a subsidized co-working lounge.",
+        "pause_s": 0.6,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "TURNOVER COLLAPSE",
+        "badgeColor": "#8E44AD",
+        "title": "TABLE TURNS CRASH TO 0.8X",
+        "subtitle": "Subsidizing free AC, high-speed WiFi, and electricity for solo coders",
+        "highlightMetric": {
+          "value": "0.8x",
+          "label": "AFTERNOON TABLE TURNS",
+          "color": "#8E44AD"
+        },
+        "highlights": [
+          "Table",
+          "turnover",
+          "drops",
+          "four",
+          "turns",
+          "abysmal",
+          "zero",
+          "point",
+          "eight",
+          "commercial",
+          "real",
+          "estate",
+          "subsidized",
+          "co-working"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_08",
+    "name": "The Turning Away of the High-Ticket Diners",
+    "part": "PART 3 \u00b7 THE LAPTOP SQUATTER PATHOLOGY & INSTAGRAM DECAY",
+    "isPartStart": false,
+    "partTitle": "THE LAPTOP SQUATTER PATHOLOGY & INSTAGRAM DECAY",
+    "partSub": "5-hour cold brew squatters, table-turn collapse, and the 6-month aesthetic decay curve",
+    "env": "cafe_entrance_host_stand",
+    "characterIdentity": "hostess_apron",
+    "characterPose": "apologetic_hands",
+    "characterEmotion": "embarrassed",
+    "characterSide": "right",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "High-spending walk-in groups ready to drop two thousand rupees on lunch turn around at the door because twenty tables are locked by solo developers debugging Python scripts.",
+        "tts_text": "High-spending walk-in groups ready to drop two thousand rupees on lunch turn around at the door because twenty tables are locked by solo developers debugging Python scripts.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "OPPORTUNITY BLEED",
+        "badgeColor": "#C0392B",
+        "title": "THE WALK-AWAY LUNCH CROWD",
+        "subtitle": "Groups ready to spend \u20b92,000 turned away by 20 solo coders taking Zoom calls",
+        "highlights": [
+          "High-spending",
+          "walk-in",
+          "groups",
+          "two",
+          "thousand",
+          "rupees",
+          "lunch",
+          "twenty",
+          "tables",
+          "locked",
+          "developers",
+          "debugging",
+          "Python"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "That dead zone burns an invisible twelve to fifteen thousand rupees of high-margin food sales every single afternoon.",
+        "tts_text": "That dead zone burns an invisible twelve to fifteen thousand rupees of high-margin food sales every single afternoon.",
+        "pause_s": 0.6,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "AFTERNOON DEFICIT",
+        "badgeColor": "#E74C3C",
+        "title": "-\u20b915,000 DAILY MARGIN LOSS",
+        "subtitle": "Invisible afternoon revenue leak totaling nearly \u20b94.5 Lakhs every month",
+        "highlightMetric": {
+          "value": "-\u20b915,000",
+          "label": "DAILY LUNCH REVENUE LOST",
+          "color": "#E74C3C"
+        },
+        "highlights": [
+          "dead",
+          "zone",
+          "burns",
+          "twelve",
+          "fifteen",
+          "thousand",
+          "rupees",
+          "high-margin",
+          "food",
+          "sales",
+          "afternoon"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_09",
+    "name": "The Brutal Instagram Decay Curve",
+    "part": "PART 3 \u00b7 THE LAPTOP SQUATTER PATHOLOGY & INSTAGRAM DECAY",
+    "isPartStart": false,
+    "partTitle": "THE LAPTOP SQUATTER PATHOLOGY & INSTAGRAM DECAY",
+    "partSub": "5-hour cold brew squatters, table-turn collapse, and the 6-month aesthetic decay curve",
+    "env": "influencer_vs_decay",
+    "characterIdentity": "cafe_founder_linen",
+    "characterPose": "checking_empty_patio",
+    "characterEmotion": "defeated",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "By month six, the aesthetic novelty evaporates as the next shiny concrete rival opens down the street, triggering a brutal thirty-five to forty percent drop in weekend footfall.",
+        "tts_text": "By month six, the aesthetic novelty evaporates as the next shiny concrete rival opens down the street, triggering a brutal thirty-five to forty percent drop in weekend footfall.",
+        "pause_s": 0.5,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "AESTHETIC DECAY",
+        "badgeColor": "#E67E22",
+        "title": "THE 40% SOCIAL MEDIA DROP",
+        "subtitle": "Novelty fades by Month 6 when the next brutalist competitor opens nearby",
+        "highlightMetric": {
+          "value": "-40%",
+          "label": "MONTH 6 FOOTFALL DROP",
+          "color": "#E67E22"
+        },
+        "highlights": [
+          "month",
+          "six",
+          "aesthetic",
+          "novelty",
+          "evaporates",
+          "concrete",
+          "rival",
+          "thirty-five",
+          "forty",
+          "percent",
+          "weekend",
+          "footfall"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "In the attention economy of Bangalore F-and-B, lifestyle influencers do not build brand loyalty\u2014they simply migrate to whoever poured fresher microcement.",
+        "tts_text": "In the attention economy of Bangalore F-and-B, lifestyle influencers do not build brand loyalty\u2014they simply migrate to whoever poured fresher microcement.",
+        "pause_s": 0.6,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "ZERO LOYALTY",
+        "badgeColor": "#D35400",
+        "title": "THE INFLUENCER MIGRATION",
+        "subtitle": "Aesthetic customers have zero retention \u00b7 They seek the next reel backdrop",
+        "highlights": [
+          "attention",
+          "economy",
+          "Bangalore",
+          "F-and-B",
+          "lifestyle",
+          "influencers",
+          "brand",
+          "loyalty",
+          "migrate",
+          "fresher",
+          "microcement"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_10",
+    "name": "The Forensic Margin Collapse",
+    "part": "PART 4 \u00b7 THE FORENSIC AUTOPSY & THE PAYBACK DELUSION",
+    "isPartStart": true,
+    "partTitle": "THE FORENSIC AUTOPSY & THE PAYBACK DELUSION",
+    "partSub": "52-month real payback, capital renovation treadmills, and the landlord's true profit",
+    "env": "dark_waterfall_ledger",
+    "characterIdentity": "forensic_analyst",
+    "characterPose": "pointing_waterfall",
+    "characterEmotion": "analytical",
+    "characterSide": "right",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "When post-hype revenues settle at twenty-eight lakh rupees, subtracting lease, payroll, utilities, and C-O-G-S leaves a razor-thin operating surplus of barely two lakh eighty thousand rupees.",
+        "tts_text": "When post-hype revenues settle at twenty-eight lakh rupees, subtracting lease, payroll, utilities, and C-O-G-S leaves a razor-thin operating surplus of barely two lakh eighty thousand rupees.",
+        "pause_s": 0.5,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "FORENSIC WATERFALL",
+        "badgeColor": "#E74C3C",
+        "title": "STEADY STATE: \u20b92.88L NET PROFIT",
+        "subtitle": "\u20b928.5L Gross - \u20b94.5L Rent - \u20b99.5L Staff/COGS - \u20b91.8L Power - General OpEx",
+        "highlightMetric": {
+          "value": "\u20b92.88 L",
+          "label": "MONTHLY NET SURPLUS",
+          "color": "#E74C3C"
+        },
+        "highlights": [
+          "twenty-eight",
+          "lakh",
+          "rupees",
+          "lease",
+          "payroll",
+          "utilities",
+          "C-O-G-S",
+          "razor-thin",
+          "two",
+          "lakh",
+          "eighty",
+          "thousand"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "At that pace, recovering your one point five crore capital expenditure will take fifty-two agonizing months\u2014four times longer than the founders promised their angel investors.",
+        "tts_text": "At that pace, recovering your one point five crore capital expenditure will take fifty-two agonizing months\u2014four times longer than the founders promised their angel investors.",
+        "pause_s": 0.6,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "PAYBACK REALITY",
+        "badgeColor": "#C0392B",
+        "title": "52-MONTH REAL PAYBACK",
+        "subtitle": "Projected at 18 months \u00b7 Actual survival timeline extends past 4.3 years",
+        "highlightMetric": {
+          "value": "52 MOS",
+          "label": "ACTUAL RECOVERY TIME",
+          "color": "#C0392B"
+        },
+        "highlights": [
+          "recovering",
+          "one",
+          "point",
+          "five",
+          "crore",
+          "capital",
+          "fifty-two",
+          "months",
+          "four",
+          "times",
+          "longer",
+          "founders",
+          "investors"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_11",
+    "name": "The Aesthetic Depreciation Treadmill",
+    "part": "PART 4 \u00b7 THE FORENSIC AUTOPSY & THE PAYBACK DELUSION",
+    "isPartStart": false,
+    "partTitle": "THE FORENSIC AUTOPSY & THE PAYBACK DELUSION",
+    "partSub": "52-month real payback, capital renovation treadmills, and the landlord's true profit",
+    "env": "night_cafe_wear_and_tear",
+    "characterIdentity": "cafe_founder_linen",
+    "characterPose": "inspecting_damaged_table",
+    "characterEmotion": "exhausted",
+    "characterSide": "left",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Long before month fifty-two arrives, your brutalist microcement will chip, your custom banquettes will fray, and the market will demand another thirty-lakh renovation just to stay relevant.",
+        "tts_text": "Long before month fifty-two arrives, your brutalist microcement will chip, your custom banquettes will fray, and the market will demand another thirty-lakh renovation just to stay relevant.",
+        "pause_s": 0.5,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "RENOVATION TREADMILL",
+        "badgeColor": "#F39C12",
+        "title": "THE YEAR-2 \u20b930L RENOVATION",
+        "subtitle": "Microcement chips, fabrics fray, and aesthetic relevance expires in 24 months",
+        "highlightMetric": {
+          "value": "\u20b930 L",
+          "label": "YEAR-2 REFRESH COST",
+          "color": "#F39C12"
+        },
+        "highlights": [
+          "fifty-two",
+          "brutalist",
+          "microcement",
+          "chip",
+          "banquettes",
+          "fray",
+          "thirty-lakh",
+          "renovation",
+          "relevant"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "The romantic illusion of owning an effortless lifestyle salon collides with the reality of running a low-margin, high-stress, capital-devouring hospitality treadmill.",
+        "tts_text": "The romantic illusion of owning an effortless lifestyle salon collides with the reality of running a low-margin, high-stress, capital-devouring hospitality treadmill.",
+        "pause_s": 0.6,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "THE REALITY CHECK",
+        "badgeColor": "#E67E22",
+        "title": "HOSPITALITY SINKHOLE",
+        "subtitle": "Trading corporate salaries for 16-hour days as a gloried facility manager",
+        "highlights": [
+          "romantic",
+          "illusion",
+          "lifestyle",
+          "salon",
+          "collides",
+          "reality",
+          "low-margin",
+          "high-stress",
+          "capital-devouring",
+          "hospitality",
+          "treadmill"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_12",
+    "name": "The Verdict: Coffee or Commercial Rent Arbitrage?",
+    "part": "PART 4 \u00b7 THE FORENSIC AUTOPSY & THE PAYBACK DELUSION",
+    "isPartStart": false,
+    "partTitle": "THE FORENSIC AUTOPSY & THE PAYBACK DELUSION",
+    "partSub": "52-month real payback, capital renovation treadmills, and the landlord's true profit",
+    "env": "indiranagar_skyline_dusk",
+    "characterIdentity": "landlord_kurta",
+    "characterPose": "holding_bank_sms",
+    "characterEmotion": "triumphant",
+    "characterSide": "right",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "The harsh truth of Bangalore's aesthetic cafe boom is that the coffee beans are just a decorative pretext to service commercial landlords and municipal electricity boards.",
+        "tts_text": "The harsh truth of Bangalore's aesthetic cafe boom is that the coffee beans are just a decorative pretext to service commercial landlords and municipal electricity boards.",
+        "pause_s": 0.5,
+        "ref_audio": "ref4",
+        "cfg": 1.7,
+        "badge": "THE REAL WINNER",
+        "badgeColor": "#2ECC71",
+        "title": "THE COMMERCIAL LANDLORD WINS",
+        "subtitle": "Coffee beans are merely decorative collateral for commercial property rents",
+        "highlightMetric": {
+          "value": "\u20b94,50,000",
+          "label": "GUARANTEED RENT CREDIT",
+          "color": "#2ECC71"
+        },
+        "highlights": [
+          "harsh",
+          "truth",
+          "Bangalore",
+          "aesthetic",
+          "cafe",
+          "boom",
+          "coffee",
+          "beans",
+          "decorative",
+          "pretext",
+          "commercial",
+          "landlords",
+          "electricity"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "Because in the Silicon Valley of India, building the prettiest cafe on the block does not make you a restaurateur\u2014it makes you an unpaid interior decorator for your landlord's building.",
+        "tts_text": "Because in the Silicon Valley of India, building the prettiest cafe on the block does not make you a restaurateur\u2014it makes you an unpaid interior decorator for your landlord's building.",
+        "pause_s": 0.6,
+        "ref_audio": "ref_expressive_1",
+        "cfg": 1.8,
+        "badge": "NOT A STARTUP",
+        "badgeColor": "#F1C40F",
+        "title": "THE UNPAID INTERIOR DECORATOR",
+        "subtitle": "Subscribe to Not a Startup \u00b7 Paisa Decode",
+        "highlights": [
+          "Silicon",
+          "Valley",
+          "India",
+          "building",
+          "prettiest",
+          "cafe",
+          "restaurateur",
+          "unpaid",
+          "interior",
+          "decorator",
+          "landlord"
+        ]
+      }
+    ]
+  }
+]
