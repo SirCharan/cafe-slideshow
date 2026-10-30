@@ -1,0 +1,634 @@
+[
+  {
+    "id": "scene_01",
+    "name": "The Cult Tech Dream",
+    "part": "ACT 1 \u00b7 THE TECH CONCERT GYM",
+    "isPartStart": true,
+    "partTitle": "THE TECH CONCERT GYM",
+    "partSub": "Dark rooms, neon rigs, and the 7:00 PM Bangalore rush",
+    "env": "cult_neon_studio",
+    "characterSide": "left",
+    "durationSec": 19.932000000000002,
+    "line0Dur": 11.368,
+    "line1Dur": 8.564,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Every evening at 7:00 PM in Bangalore, thousands of techies rush into dark, air-conditioned rooms with neon lighting, pulsing house beats, and charismatic trainers shouting encouragement.",
+        "pause_s": 0.45,
+        "durationSec": 11.368,
+        "badge": "7:00 PM BANGALORE RUSH",
+        "badgeColor": "#06B6D4",
+        "title": "THE NEON FITNESS TEMPLE",
+        "subtitle": "House beats, synchronized movements, and Bangalore techies",
+        "highlights": [
+          "Bangalore",
+          "techies",
+          "neon",
+          "lighting",
+          "house",
+          "beats"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "It looks less like a gym, and more like a high-energy tech concert. My name is Anurag Bansal, and welcome to Not a Startup.",
+        "pause_s": 0.5,
+        "durationSec": 8.564,
+        "badge": "THE FORENSIC DECODE",
+        "badgeColor": "#DC2626",
+        "title": "NOT A STARTUP EXCLUSIVE",
+        "subtitle": "My name is Anurag Bansal, let's decode the \u20b92.2 Crore balance sheet",
+        "highlights": [
+          "gym",
+          "concert",
+          "Anurag",
+          "Bansal",
+          "Not",
+          "Startup"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_02",
+    "name": "The Seduction",
+    "part": "ACT 1 \u00b7 THE TECH CONCERT GYM",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "cult_gamified_app",
+    "characterSide": "right",
+    "durationSec": 20.317999999999998,
+    "line0Dur": 12.642,
+    "line1Dur": 7.676,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Cult.fit revolutionized Indian fitness. No intimidating bodybuilders, no rusty iron weights. Just gamified app bookings, synchronized group workouts, and a massive brand halo.",
+        "pause_s": 0.45,
+        "durationSec": 12.642,
+        "badge": "THE APP ECOSYSTEM",
+        "badgeColor": "#3B82F6",
+        "title": "GAMIFIED FITNESS REVOLUTION",
+        "subtitle": "No rusty barbells\u2014just app streaks, energy meters, and brand halo",
+        "highlights": [
+          "Cult.fit",
+          "revolutionized",
+          "gamified",
+          "app",
+          "synchronized"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "And if you are an investor with two crores in capital, their franchise pitch deck looks like an absolute money machine.",
+        "pause_s": 0.5,
+        "durationSec": 7.676,
+        "badge": "FRANCHISE PITCH DECK",
+        "badgeColor": "#10B981",
+        "title": "THE \u20b92 CRORE PROMISE",
+        "subtitle": "Franchise pitch deck promises predictable automated cash flow",
+        "highlights": [
+          "investor",
+          "two",
+          "crores",
+          "franchise",
+          "money",
+          "machine"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_03",
+    "name": "The Seductive Math",
+    "part": "ACT 1 \u00b7 THE TECH CONCERT GYM",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "cult_revenue_dashboard",
+    "characterSide": "left",
+    "durationSec": 15.347999999999999,
+    "line0Dur": 9.446,
+    "line1Dur": 5.902,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "A 4,500 square-foot facility, 450 active subscribers, an average realization of \u20b91,800 per month.",
+        "pause_s": 0.45,
+        "durationSec": 9.446,
+        "badge": "UNIT ECONOMICS HOOK",
+        "badgeColor": "#F59E0B",
+        "title": "TOP-LINE SUBSCRIPTION MATH",
+        "subtitle": "4,500 sq ft \u00b7 450 active members \u00b7 \u20b91,800 monthly realization",
+        "highlights": [
+          "4,500",
+          "square-foot",
+          "450",
+          "subscribers",
+          "\u20b91,800"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "That is over eight lakh rupees every single month in automated subscription cash flow.",
+        "pause_s": 0.5,
+        "durationSec": 5.902,
+        "badge": "GROSS CASH INFLOW",
+        "badgeColor": "#10B981",
+        "title": "\u20b98.1 LAKHS MONTHLY REVENUE",
+        "subtitle": "Automated recurring UPI collections hitting the bank every month",
+        "highlights": [
+          "eight",
+          "lakh",
+          "rupees",
+          "automated",
+          "subscription",
+          "cash"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_04",
+    "name": "The Upfront Fitout",
+    "part": "ACT 2 \u00b7 THE \u20b92.2 CRORE SUNK COST",
+    "isPartStart": true,
+    "partTitle": "THE \u20b92.2 CRORE SUNK COST",
+    "partSub": "Acoustic flooring, neon lighting rigs, and non-refundable fees",
+    "env": "cult_construction_site",
+    "characterSide": "right",
+    "durationSec": 20.534,
+    "line0Dur": 6.068,
+    "line1Dur": 14.466,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "But before a single member laces up their sneakers, your bank account takes a massive hit.",
+        "pause_s": 0.45,
+        "durationSec": 6.068,
+        "badge": "CAPEX SHOCK",
+        "badgeColor": "#EF4444",
+        "title": "DAY ZERO CAPITAL DRAIN",
+        "subtitle": "Before a single sneaker laces up, your bank account enters ICU",
+        "highlights": [
+          "member",
+          "sneakers",
+          "bank",
+          "account",
+          "massive",
+          "hit"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "First, a \u20b920 Lakh non-refundable franchise fee. Then, the physical fitout: double-layered acoustic rubber flooring, soundproofed walls, high-lumen neon rig lighting, and locker rooms. That is \u20b985 Lakhs.",
+        "pause_s": 0.5,
+        "durationSec": 14.466,
+        "badge": "FITOUT INVOICE",
+        "badgeColor": "#DC2626",
+        "title": "\u20b91.05 CRORES UPFRONT FITOUT",
+        "subtitle": "\u20b920L franchise fee + \u20b985L acoustic flooring, neon rigs, and luxury showers",
+        "highlights": [
+          "\u20b920",
+          "Lakh",
+          "non-refundable",
+          "acoustic",
+          "flooring",
+          "\u20b985",
+          "Lakhs"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_05",
+    "name": "The Equipment Capex",
+    "part": "ACT 2 \u00b7 THE \u20b92.2 CRORE SUNK COST",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "cult_equipment_rig",
+    "characterSide": "left",
+    "durationSec": 18.756,
+    "line0Dur": 9.856,
+    "line1Dur": 8.9,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Next comes the gear: concept-2 rowers, assault air bikes, custom pull-up rigs, and calibrated urethane dumbbells. Another \u20b955 Lakhs.",
+        "pause_s": 0.45,
+        "durationSec": 9.856,
+        "badge": "HARDWARE INVENTORY",
+        "badgeColor": "#8B5CF6",
+        "title": "\u20b955 LAKH HARDWARE ARSENAL",
+        "subtitle": "Concept-2 rowers, assault bikes, urethane dumbbells, and custom rigs",
+        "highlights": [
+          "Concept-2",
+          "assault",
+          "bikes",
+          "pull-up",
+          "rigs",
+          "\u20b955",
+          "Lakhs"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "Factor in pre-operative marketing, security deposits, and working capital, and you have invested \u20b92.2 Crores before day one.",
+        "pause_s": 0.5,
+        "durationSec": 8.9,
+        "badge": "TOTAL SUNK CAPITAL",
+        "badgeColor": "#DC2626",
+        "title": "\u20b92.20 CRORES INVESTED",
+        "subtitle": "Pre-op marketing, security deposit, and equipment before Day 1",
+        "highlights": [
+          "pre-operative",
+          "security",
+          "deposits",
+          "\u20b92.2",
+          "Crores",
+          "day",
+          "one"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_06",
+    "name": "The High Street Rent Trap",
+    "part": "ACT 2 \u00b7 THE \u20b92.2 CRORE SUNK COST",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "cult_commercial_lease",
+    "characterSide": "right",
+    "durationSec": 24.759999999999998,
+    "line0Dur": 11.874,
+    "line1Dur": 12.886,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "To generate Cult-level footfalls, you cannot open in a quiet basement. You need a 4,500 square-foot floor plate on a high-street in Indiranagar, HSR Layout, or Whitefield.",
+        "pause_s": 0.45,
+        "durationSec": 11.874,
+        "badge": "COMMERCIAL REAL ESTATE",
+        "badgeColor": "#D97706",
+        "title": "THE HIGH STREET REQUIREMENT",
+        "subtitle": "No quiet basements: 4,500 sq ft floor plate on 100ft Road or HSR Layout",
+        "highlights": [
+          "4,500",
+          "square-foot",
+          "high-street",
+          "Indiranagar",
+          "HSR",
+          "Layout"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "At \u20b990 per square foot, your monthly rent is \u20b94,05,000. And unlike gym members who can pause their memberships, your landlord expects his cheque on the first of every month.",
+        "pause_s": 0.5,
+        "durationSec": 12.886,
+        "badge": "MONTHLY FIXED RENT",
+        "badgeColor": "#EF4444",
+        "title": "\u20b94,05,000 / MONTH LEASE",
+        "subtitle": "\u20b990/sq ft locked rent due on the 1st of every month without fail",
+        "highlights": [
+          "\u20b990",
+          "square",
+          "foot",
+          "\u20b94,05,000",
+          "landlord",
+          "first"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_07",
+    "name": "The Electricity Shock",
+    "part": "ACT 3 \u00b7 THE OPERATIONAL MEAT GRINDER",
+    "isPartStart": true,
+    "partTitle": "THE OPERATIONAL MEAT GRINDER",
+    "partSub": "Commercial BESCOM tariffs, trainer wars, and Curefit platform royalty",
+    "env": "cult_hvac_burn",
+    "characterSide": "left",
+    "durationSec": 17.988,
+    "line0Dur": 10.672,
+    "line1Dur": 7.316,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Cooling 4,500 square feet packed with forty sweaty athletes during an HRX session requires a 50-ton commercial HVAC system running sixteen hours a day.",
+        "pause_s": 0.45,
+        "durationSec": 10.672,
+        "badge": "50-TON COMMERCIAL HVAC",
+        "badgeColor": "#0284C7",
+        "title": "THE COOLING ARMAGEDDON",
+        "subtitle": "Cooling 40 sweaty techies during an HRX session 16 hours a day",
+        "highlights": [
+          "Cooling",
+          "4,500",
+          "forty",
+          "sweaty",
+          "50-ton",
+          "HVAC"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "On Karnataka's non-domestic commercial tariff, your monthly power bill routinely crosses \u20b91,40,000.",
+        "pause_s": 0.5,
+        "durationSec": 7.316,
+        "badge": "COMMERCIAL POWER BILL",
+        "badgeColor": "#EF4444",
+        "title": "\u20b91,40,000 / MONTH BESCOM",
+        "subtitle": "Karnataka commercial tariff eats 17% of total monthly cash flow",
+        "highlights": [
+          "Karnataka",
+          "commercial",
+          "tariff",
+          "bill",
+          "crosses",
+          "\u20b91,40,000"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_08",
+    "name": "The Trainer Talent War",
+    "part": "ACT 3 \u00b7 THE OPERATIONAL MEAT GRINDER",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "cult_trainer_stage",
+    "characterSide": "right",
+    "durationSec": 18.733999999999998,
+    "line0Dur": 7.194,
+    "line1Dur": 11.54,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Cult's secret weapon has always been its charismatic trainers. But star trainers do not come cheap.",
+        "pause_s": 0.45,
+        "durationSec": 7.194,
+        "badge": "TALENT DEPENDENCY",
+        "badgeColor": "#EC4899",
+        "title": "THE CHARISMATIC COACH TRAP",
+        "subtitle": "Cult's secret weapon is charismatic trainers\u2014and they don't come cheap",
+        "highlights": [
+          "secret",
+          "weapon",
+          "charismatic",
+          "trainers",
+          "cheap"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "Four certified Cult trainers and two support coaches will run you \u20b92,50,000 a month. And if your lead trainer quits, twenty of your members walk out the door with them.",
+        "pause_s": 0.5,
+        "durationSec": 11.54,
+        "badge": "PAYROLL & ATTRITION RISK",
+        "badgeColor": "#DC2626",
+        "title": "\u20b92,50,000 / MONTH PAYROLL",
+        "subtitle": "4 Cult trainers + 2 coaches; if the lead coach quits, 20 members walk",
+        "highlights": [
+          "Four",
+          "trainers",
+          "\u20b92,50,000",
+          "lead",
+          "trainer",
+          "twenty",
+          "members"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_09",
+    "name": "The Brand Squeeze",
+    "part": "ACT 3 \u00b7 THE OPERATIONAL MEAT GRINDER",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "cult_platform_tax",
+    "characterSide": "left",
+    "durationSec": 19.840000000000003,
+    "line0Dur": 10.194,
+    "line1Dur": 9.646,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Then comes the platform tax. Cult.fit charges a 12% royalty on total collections for managing the app, marketing, and workout programming.",
+        "pause_s": 0.45,
+        "durationSec": 10.194,
+        "badge": "PLATFORM ROYALTY",
+        "badgeColor": "#7C3AED",
+        "title": "THE 12% CUREFIT TAX",
+        "subtitle": "Cult.fit deducts 12% off top-line collections before you touch a rupee",
+        "highlights": [
+          "platform",
+          "tax",
+          "Cult.fit",
+          "12%",
+          "royalty",
+          "collections"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "Plus, when Cult runs aggressive promotional sales on Cult Pass Elite, your per-session payout shrinks, but your operating costs remain locked in stone.",
+        "pause_s": 0.5,
+        "durationSec": 9.646,
+        "badge": "DISCOUNT PROMO SQUEEZE",
+        "badgeColor": "#EF4444",
+        "title": "PER-SESSION PAYOUT DILUTION",
+        "subtitle": "Cult Pass Elite discount campaigns shrink your per-session payout",
+        "highlights": [
+          "promotional",
+          "sales",
+          "Cult",
+          "Pass",
+          "Elite",
+          "costs",
+          "locked"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_10",
+    "name": "The Annual Churn Collapse",
+    "part": "ACT 4 \u00b7 THE 60% CHURN & TRUE VERDICT",
+    "isPartStart": true,
+    "partTitle": "THE 60% CHURN & TRUE VERDICT",
+    "partSub": "The January illusion versus the brutal April ghost town",
+    "env": "cult_churn_graveyard",
+    "characterSide": "right",
+    "durationSec": 22.698,
+    "line0Dur": 10.316,
+    "line1Dur": 12.382,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Here is the dirty secret of Indian fitness: in January, your center is overflowing. By April, sixty percent of your members have stopped showing up.",
+        "pause_s": 0.45,
+        "durationSec": 10.316,
+        "badge": "CHURN METRICS",
+        "badgeColor": "#DC2626",
+        "title": "THE APRIL RESOLUTION CLIFF",
+        "subtitle": "Packed in January, but 60% of members vanish completely by April",
+        "highlights": [
+          "January",
+          "overflowing",
+          "April",
+          "sixty",
+          "percent",
+          "stopped"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "In a traditional gym, absentee members are pure profit. But in Cult's class-based model, if footfalls drop, your app utilization falls, and Curefit's algorithm begins deprioritizing your center.",
+        "pause_s": 0.5,
+        "durationSec": 12.382,
+        "badge": "ALGORITHMIC PENALTY",
+        "badgeColor": "#B91C1C",
+        "title": "THE UTILIZATION PUNISHMENT",
+        "subtitle": "Unlike traditional gyms, lower footfalls cause Curefit to deprioritize you",
+        "highlights": [
+          "traditional",
+          "gym",
+          "absentee",
+          "utilization",
+          "Curefit",
+          "deprioritizing"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_11",
+    "name": "The True Net Profit",
+    "part": "ACT 4 \u00b7 THE 60% CHURN & TRUE VERDICT",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "cult_pl_ledger",
+    "characterSide": "left",
+    "durationSec": 20.492,
+    "line0Dur": 12.6,
+    "line1Dur": 7.892,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "When you subtract rent, electricity, trainer payroll, equipment maintenance, and Curefit royalties from your eight lakhs in revenue, your true monthly net profit is just \u20b91,35,000.",
+        "pause_s": 0.45,
+        "durationSec": 12.6,
+        "badge": "MONTHLY FORENSIC P&L",
+        "badgeColor": "#D97706",
+        "title": "\u20b91,35,000 TRUE NET PROFIT",
+        "subtitle": "Subtract Rent (\u20b94.05L), BESCOM (\u20b91.4L), Payroll (\u20b92.5L), Royalty (\u20b997K)",
+        "highlights": [
+          "subtract",
+          "rent",
+          "electricity",
+          "trainer",
+          "net",
+          "profit",
+          "\u20b91,35,000"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "That is a 16% net margin for managing broken assault bikes, flooded shower rooms, and non-stop member complaints.",
+        "pause_s": 0.5,
+        "durationSec": 7.892,
+        "badge": "NET PROFIT MARGIN",
+        "badgeColor": "#DC2626",
+        "title": "A MEAGER 16% MARGIN",
+        "subtitle": "Managing broken assault bikes, flooded showers, and member anxiety",
+        "highlights": [
+          "16%",
+          "net",
+          "margin",
+          "broken",
+          "assault",
+          "bikes",
+          "complaints"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene_12",
+    "name": "The Final Payback Verdict",
+    "part": "ACT 4 \u00b7 THE 60% CHURN & TRUE VERDICT",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "cult_verdict_podium",
+    "characterSide": "right",
+    "durationSec": 29.448,
+    "line0Dur": 17.228,
+    "line1Dur": 12.22,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "At \u20b91.35 Lakhs a month, it will take you fifty-four months\u2014four and a half years\u2014just to recover your initial capital. If you had simply parked that \u20b92.2 Crores in senior debt or mutual funds, you would have made more money while sleeping through the night.",
+        "pause_s": 0.45,
+        "durationSec": 17.228,
+        "badge": "PAYBACK HORIZON",
+        "badgeColor": "#EF4444",
+        "title": "54-MONTH CAPITAL RECOVERY",
+        "subtitle": "Four and a half years just to break even; senior debt beats the return",
+        "highlights": [
+          "fifty-four",
+          "months",
+          "four",
+          "half",
+          "years",
+          "\u20b92.2",
+          "Crores",
+          "sleeping"
+        ]
+      },
+      {
+        "idx": 1,
+        "text": "Cult.fit built a world-class consumer brand. But as a franchisee, you are not disrupting fitness. You are financing Curefit's real estate footprint with your own capital.",
+        "pause_s": 0.5,
+        "durationSec": 12.22,
+        "badge": "THE FINAL VERDICT",
+        "badgeColor": "#DC2626",
+        "title": "WHO ACTUALLY WINS?",
+        "subtitle": "You are not disrupting fitness\u2014you are financing Curefit's real estate footprint",
+        "highlights": [
+          "Cult.fit",
+          "consumer",
+          "brand",
+          "franchisee",
+          "financing",
+          "Curefit",
+          "real",
+          "estate"
+        ]
+      }
+    ]
+  }
+]

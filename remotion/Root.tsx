@@ -13,12 +13,23 @@ import { SceneCloudKitchenShort } from "./scenes/SceneCloudKitchenShort";
 import { SceneFounderHouseEngine } from "./scenes/SceneFounderHouseEngine";
 import { SceneFounderHouseShort } from "./scenes/SceneFounderHouseShort";
 import { SceneBangaloreCafeV2Engine } from "./scenes/SceneBangaloreCafeV2Engine";
+import { SceneCultfitFranchiseEngine } from "./scenes/SceneCultfitFranchiseEngine";
 
 const defaultProps: EpisodeProps & Record<string, unknown> = { theme: "ledger", captions: true, muted: false };
 
 export const Root: React.FC = () => {
   return (
     <>
+      {/* EPISODE 07 MASTER: The Economics of Owning a Cult.fit Franchise (Paisa Decode & Mr. Economics Benchmark) */}
+      <Composition
+        id="CultfitFranchiseMaster"
+        component={SceneCultfitFranchiseEngine}
+        width={WIDTH}
+        height={HEIGHT}
+        fps={FPS}
+        durationInFrames={7465}
+        defaultProps={{ muted: false, captions: true }}
+      />
       {/* FLAGSHIP V2: The Economics of Owning a Bangalore Specialty Café (Mr. Economics Benchmark) */}
       <Composition
         id="BangaloreCafeV2Master"

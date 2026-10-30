@@ -1,0 +1,277 @@
+{
+  "project": "Episode 07: The Economics of Owning a Cult.fit Franchise",
+  "wpm_target": 155,
+  "loudness_target_lufs": -14.0,
+  "scenes": {
+    "scene_01": {
+      "title": "The Cult Tech Dream",
+      "act": 1,
+      "lines": [
+        {
+          "idx": 0,
+          "text": "Every evening at 7:00 PM in Bangalore, thousands of techies rush into dark, air-conditioned rooms with neon lighting, pulsing house beats, and charismatic trainers shouting encouragement.",
+          "file": "audio/cultfit/scene_01_s0.wav",
+          "duration_s": 11.368,
+          "duration_frames": 341
+        },
+        {
+          "idx": 1,
+          "text": "It looks less like a gym, and more like a high-energy tech concert. My name is Anurag Bansal, and welcome to Not a Startup.",
+          "file": "audio/cultfit/scene_01_s1.wav",
+          "duration_s": 8.564,
+          "duration_frames": 257
+        }
+      ],
+      "total_duration_s": 19.932000000000002,
+      "total_frames": 598
+    },
+    "scene_02": {
+      "title": "The Seduction",
+      "act": 1,
+      "lines": [
+        {
+          "idx": 0,
+          "text": "Cult.fit revolutionized Indian fitness. No intimidating bodybuilders, no rusty iron weights. Just gamified app bookings, synchronized group workouts, and a massive brand halo.",
+          "file": "audio/cultfit/scene_02_s0.wav",
+          "duration_s": 12.642,
+          "duration_frames": 379
+        },
+        {
+          "idx": 1,
+          "text": "And if you are an investor with two crores in capital, their franchise pitch deck looks like an absolute money machine.",
+          "file": "audio/cultfit/scene_02_s1.wav",
+          "duration_s": 7.676,
+          "duration_frames": 230
+        }
+      ],
+      "total_duration_s": 20.317999999999998,
+      "total_frames": 610
+    },
+    "scene_03": {
+      "title": "The Seductive Math",
+      "act": 1,
+      "lines": [
+        {
+          "idx": 0,
+          "text": "A 4,500 square-foot facility, 450 active subscribers, an average realization of \u20b91,800 per month.",
+          "file": "audio/cultfit/scene_03_s0.wav",
+          "duration_s": 9.446,
+          "duration_frames": 283
+        },
+        {
+          "idx": 1,
+          "text": "That is over eight lakh rupees every single month in automated subscription cash flow.",
+          "file": "audio/cultfit/scene_03_s1.wav",
+          "duration_s": 5.902,
+          "duration_frames": 177
+        }
+      ],
+      "total_duration_s": 15.347999999999999,
+      "total_frames": 460
+    },
+    "scene_04": {
+      "title": "The Upfront Fitout",
+      "act": 2,
+      "lines": [
+        {
+          "idx": 0,
+          "text": "But before a single member laces up their sneakers, your bank account takes a massive hit.",
+          "file": "audio/cultfit/scene_04_s0.wav",
+          "duration_s": 6.068,
+          "duration_frames": 182
+        },
+        {
+          "idx": 1,
+          "text": "First, a \u20b920 Lakh non-refundable franchise fee. Then, the physical fitout: double-layered acoustic rubber flooring, soundproofed walls, high-lumen neon rig lighting, and locker rooms. That is \u20b985 Lakhs.",
+          "file": "audio/cultfit/scene_04_s1.wav",
+          "duration_s": 14.466,
+          "duration_frames": 434
+        }
+      ],
+      "total_duration_s": 20.534,
+      "total_frames": 616
+    },
+    "scene_05": {
+      "title": "The Equipment Capex",
+      "act": 2,
+      "lines": [
+        {
+          "idx": 0,
+          "text": "Next comes the gear: concept-2 rowers, assault air bikes, custom pull-up rigs, and calibrated urethane dumbbells. Another \u20b955 Lakhs.",
+          "file": "audio/cultfit/scene_05_s0.wav",
+          "duration_s": 9.856,
+          "duration_frames": 296
+        },
+        {
+          "idx": 1,
+          "text": "Factor in pre-operative marketing, security deposits, and working capital, and you have invested \u20b92.2 Crores before day one.",
+          "file": "audio/cultfit/scene_05_s1.wav",
+          "duration_s": 8.9,
+          "duration_frames": 267
+        }
+      ],
+      "total_duration_s": 18.756,
+      "total_frames": 563
+    },
+    "scene_06": {
+      "title": "The High Street Rent Trap",
+      "act": 2,
+      "lines": [
+        {
+          "idx": 0,
+          "text": "To generate Cult-level footfalls, you cannot open in a quiet basement. You need a 4,500 square-foot floor plate on a high-street in Indiranagar, HSR Layout, or Whitefield.",
+          "file": "audio/cultfit/scene_06_s0.wav",
+          "duration_s": 11.874,
+          "duration_frames": 356
+        },
+        {
+          "idx": 1,
+          "text": "At \u20b990 per square foot, your monthly rent is \u20b94,05,000. And unlike gym members who can pause their memberships, your landlord expects his cheque on the first of every month.",
+          "file": "audio/cultfit/scene_06_s1.wav",
+          "duration_s": 12.886,
+          "duration_frames": 387
+        }
+      ],
+      "total_duration_s": 24.759999999999998,
+      "total_frames": 743
+    },
+    "scene_07": {
+      "title": "The Electricity Shock",
+      "act": 3,
+      "lines": [
+        {
+          "idx": 0,
+          "text": "Cooling 4,500 square feet packed with forty sweaty athletes during an HRX session requires a 50-ton commercial HVAC system running sixteen hours a day.",
+          "file": "audio/cultfit/scene_07_s0.wav",
+          "duration_s": 10.672,
+          "duration_frames": 320
+        },
+        {
+          "idx": 1,
+          "text": "On Karnataka's non-domestic commercial tariff, your monthly power bill routinely crosses \u20b91,40,000.",
+          "file": "audio/cultfit/scene_07_s1.wav",
+          "duration_s": 7.316,
+          "duration_frames": 219
+        }
+      ],
+      "total_duration_s": 17.988,
+      "total_frames": 540
+    },
+    "scene_08": {
+      "title": "The Trainer Talent War",
+      "act": 3,
+      "lines": [
+        {
+          "idx": 0,
+          "text": "Cult's secret weapon has always been its charismatic trainers. But star trainers do not come cheap.",
+          "file": "audio/cultfit/scene_08_s0.wav",
+          "duration_s": 7.194,
+          "duration_frames": 216
+        },
+        {
+          "idx": 1,
+          "text": "Four certified Cult trainers and two support coaches will run you \u20b92,50,000 a month. And if your lead trainer quits, twenty of your members walk out the door with them.",
+          "file": "audio/cultfit/scene_08_s1.wav",
+          "duration_s": 11.54,
+          "duration_frames": 346
+        }
+      ],
+      "total_duration_s": 18.733999999999998,
+      "total_frames": 562
+    },
+    "scene_09": {
+      "title": "The Brand Squeeze",
+      "act": 3,
+      "lines": [
+        {
+          "idx": 0,
+          "text": "Then comes the platform tax. Cult.fit charges a 12% royalty on total collections for managing the app, marketing, and workout programming.",
+          "file": "audio/cultfit/scene_09_s0.wav",
+          "duration_s": 10.194,
+          "duration_frames": 306
+        },
+        {
+          "idx": 1,
+          "text": "Plus, when Cult runs aggressive promotional sales on Cult Pass Elite, your per-session payout shrinks, but your operating costs remain locked in stone.",
+          "file": "audio/cultfit/scene_09_s1.wav",
+          "duration_s": 9.646,
+          "duration_frames": 289
+        }
+      ],
+      "total_duration_s": 19.840000000000003,
+      "total_frames": 595
+    },
+    "scene_10": {
+      "title": "The Annual Churn Collapse",
+      "act": 4,
+      "lines": [
+        {
+          "idx": 0,
+          "text": "Here is the dirty secret of Indian fitness: in January, your center is overflowing. By April, sixty percent of your members have stopped showing up.",
+          "file": "audio/cultfit/scene_10_s0.wav",
+          "duration_s": 10.316,
+          "duration_frames": 309
+        },
+        {
+          "idx": 1,
+          "text": "In a traditional gym, absentee members are pure profit. But in Cult's class-based model, if footfalls drop, your app utilization falls, and Curefit's algorithm begins deprioritizing your center.",
+          "file": "audio/cultfit/scene_10_s1.wav",
+          "duration_s": 12.382,
+          "duration_frames": 371
+        }
+      ],
+      "total_duration_s": 22.698,
+      "total_frames": 681
+    },
+    "scene_11": {
+      "title": "The True Net Profit",
+      "act": 4,
+      "lines": [
+        {
+          "idx": 0,
+          "text": "When you subtract rent, electricity, trainer payroll, equipment maintenance, and Curefit royalties from your eight lakhs in revenue, your true monthly net profit is just \u20b91,35,000.",
+          "file": "audio/cultfit/scene_11_s0.wav",
+          "duration_s": 12.6,
+          "duration_frames": 378
+        },
+        {
+          "idx": 1,
+          "text": "That is a 16% net margin for managing broken assault bikes, flooded shower rooms, and non-stop member complaints.",
+          "file": "audio/cultfit/scene_11_s1.wav",
+          "duration_s": 7.892,
+          "duration_frames": 237
+        }
+      ],
+      "total_duration_s": 20.492,
+      "total_frames": 615
+    },
+    "scene_12": {
+      "title": "The Final Payback Verdict",
+      "act": 4,
+      "lines": [
+        {
+          "idx": 0,
+          "text": "At \u20b91.35 Lakhs a month, it will take you fifty-four months\u2014four and a half years\u2014just to recover your initial capital. If you had simply parked that \u20b92.2 Crores in senior debt or mutual funds, you would have made more money while sleeping through the night.",
+          "file": "audio/cultfit/scene_12_s0.wav",
+          "duration_s": 17.228,
+          "duration_frames": 517
+        },
+        {
+          "idx": 1,
+          "text": "Cult.fit built a world-class consumer brand. But as a franchisee, you are not disrupting fitness. You are financing Curefit's real estate footprint with your own capital.",
+          "file": "audio/cultfit/scene_12_s1.wav",
+          "duration_s": 12.22,
+          "duration_frames": 367
+        }
+      ],
+      "total_duration_s": 29.448,
+      "total_frames": 883
+    }
+  },
+  "summary": {
+    "total_scenes": 12,
+    "total_duration_s": 248.84799999999998,
+    "total_minutes": 4.147466666666666,
+    "total_frames": 7465
+  }
+}
