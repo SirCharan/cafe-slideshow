@@ -1,0 +1,260 @@
+{
+  "scene_01": {
+    "title": "The Indie Coffee Illusion",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Every weekend in Indiranagar, thousands of young techies walk past glass storefronts filled with warm sunlight, smooth jazz, and the intoxicating aroma of freshly roasted Ethiopian beans.",
+        "file": "audio/cafe_v2/scene_01_s0.wav",
+        "duration_s": 11.442,
+        "duration_frames": 343
+      },
+      {
+        "idx": 1,
+        "text": "It feels peaceful, romantic, and effortlessly profitable. My name is Anurag Bansal, and welcome to Not a Startup.",
+        "file": "audio/cafe_v2/scene_01_s1.wav",
+        "duration_s": 8.348,
+        "duration_frames": 250
+      }
+    ],
+    "total_duration_s": 19.79,
+    "total_frames": 594
+  },
+  "scene_02": {
+    "title": "The Pitch Deck Fantasy",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "On paper, specialty coffee is an arithmetic dream. Roasted green beans cost sixty rupees. Oat milk costs thirty. You sell a cup for two hundred and forty.",
+        "file": "audio/cafe_v2/scene_02_s0.wav",
+        "duration_s": 11.444,
+        "duration_frames": 343
+      },
+      {
+        "idx": 1,
+        "text": "That is an unbelievable seventy-five percent gross margin. If you sell just one hundred and fifty cups a day, you should be pocketing three lakh rupees in monthly profit.",
+        "file": "audio/cafe_v2/scene_02_s1.wav",
+        "duration_s": 10.414,
+        "duration_frames": 312
+      }
+    ],
+    "total_duration_s": 21.858,
+    "total_frames": 656
+  },
+  "scene_03": {
+    "title": "The \u20b91.5 Crore Vanity Fitout",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Before you pour a single espresso, your bank account enters the ICU.",
+        "file": "audio/cafe_v2/scene_03_s0.wav",
+        "duration_s": 5.06,
+        "duration_frames": 152
+      },
+      {
+        "idx": 1,
+        "text": "Specialty coffee in Bangalore is a design arms race. You need a twelve-lakh La Marzocco machine, custom terrazzo counters, and curated Scandinavian chairs. That is one point two crores of sunk capital before opening day.",
+        "file": "audio/cafe_v2/scene_03_s1.wav",
+        "duration_s": 14.204,
+        "duration_frames": 426
+      }
+    ],
+    "total_duration_s": 19.264,
+    "total_frames": 578
+  },
+  "scene_04": {
+    "title": "The 100-Foot Road Master Lease",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Next comes your new best friend: the commercial landlord on 100-foot Road.",
+        "file": "audio/cafe_v2/scene_04_s0.wav",
+        "duration_s": 5.512,
+        "duration_frames": 165
+      },
+      {
+        "idx": 1,
+        "text": "He demands four lakh fifty thousand rupees a month, ten months of security deposit upfront in cash, and an automatic eight percent escalation every single year.",
+        "file": "audio/cafe_v2/scene_04_s1.wav",
+        "duration_s": 10.03,
+        "duration_frames": 301
+      }
+    ],
+    "total_duration_s": 15.541999999999998,
+    "total_frames": 466
+  },
+  "scene_05": {
+    "title": "The Laptop Squatter Paradox",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "In a regular restaurant, a table turns four times an afternoon. In a Bangalore specialty caf\u00e9, it turns zero point eight times.",
+        "file": "audio/cafe_v2/scene_05_s0.wav",
+        "duration_s": 8.876,
+        "duration_frames": 266
+      },
+      {
+        "idx": 1,
+        "text": "Because two senior engineers will buy one two-hundred-rupee cold brew, plug in two MacBooks, use your gigabit Wi-Fi, and conduct five Zoom sprints over six hours.",
+        "file": "audio/cafe_v2/scene_05_s1.wav",
+        "duration_s": 10.126,
+        "duration_frames": 304
+      }
+    ],
+    "total_duration_s": 19.002,
+    "total_frames": 570
+  },
+  "scene_06": {
+    "title": "The Physical Conveyor Belt of Spoilage",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Coffee beans last months. But artisan pastries and fresh milk do not.",
+        "file": "audio/cafe_v2/scene_06_s0.wav",
+        "duration_s": 5.826,
+        "duration_frames": 175
+      },
+      {
+        "idx": 1,
+        "text": "If you bake thirty sourdough sandwiches and sell twelve, the remaining eighteen go straight into the dumpster at 10:00 PM. That is an invisible thirty-thousand-rupee bleed every single month.",
+        "file": "audio/cafe_v2/scene_06_s1.wav",
+        "duration_s": 10.58,
+        "duration_frames": 317
+      }
+    ],
+    "total_duration_s": 16.406,
+    "total_frames": 492
+  },
+  "scene_07": {
+    "title": "The BESCOM & Genset Burn",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Cooling a fifty-seater glass greenhouse under the April Bangalore sun requires eight split air conditioners running continuously.",
+        "file": "audio/cafe_v2/scene_07_s0.wav",
+        "duration_s": 7.576,
+        "duration_frames": 227
+      },
+      {
+        "idx": 1,
+        "text": "Between Karnataka's commercial electricity tariff and sixty liters of diesel for your backup generator, power alone eats one lakh eighty thousand rupees a month.",
+        "file": "audio/cafe_v2/scene_07_s1.wav",
+        "duration_s": 9.91,
+        "duration_frames": 297
+      }
+    ],
+    "total_duration_s": 17.486,
+    "total_frames": 525
+  },
+  "scene_08": {
+    "title": "The Barista Talent War",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "A great caf\u00e9 lives and dies by its head barista. But in Bangalore, specialty baristas are scouted like IPL cricketers.",
+        "file": "audio/cafe_v2/scene_08_s0.wav",
+        "duration_s": 8.586,
+        "duration_frames": 258
+      },
+      {
+        "idx": 1,
+        "text": "The moment your barista masters swan latte art, the venture-funded chain across the street offers him a thirty percent raise, leaving you with burnt beans and untrained apprentices.",
+        "file": "audio/cafe_v2/scene_08_s1.wav",
+        "duration_s": 10.508,
+        "duration_frames": 315
+      }
+    ],
+    "total_duration_s": 19.094,
+    "total_frames": 573
+  },
+  "scene_09": {
+    "title": "The Whiteboard Cash-Flow Grinder",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "When you feed your daily customer revenue through the actual operational machine, the math completely collapses.",
+        "file": "audio/cafe_v2/scene_09_s0.wav",
+        "duration_s": 6.644,
+        "duration_frames": 199
+      },
+      {
+        "idx": 1,
+        "text": "Your four lakh fifty thousand rent, power, payroll, and spoilage chew up ninety percent of your incoming cash before you ever touch a single rupee.",
+        "file": "audio/cafe_v2/scene_09_s1.wav",
+        "duration_s": 9.238,
+        "duration_frames": 277
+      }
+    ],
+    "total_duration_s": 15.882,
+    "total_frames": 476
+  },
+  "scene_10": {
+    "title": "The True Monthly P&L",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "At four hundred cups a day with food, an Indiranagar caf\u00e9 generates ten lakh rupees in gross sales.",
+        "file": "audio/cafe_v2/scene_10_s0.wav",
+        "duration_s": 6.832,
+        "duration_frames": 205
+      },
+      {
+        "idx": 1,
+        "text": "After deducting fixed rent, utilities, raw materials, GST, and payroll, the operator walks away with forty thousand rupees. In a bad monsoon month, they lose eighty-five thousand.",
+        "file": "audio/cafe_v2/scene_10_s1.wav",
+        "duration_s": 11.95,
+        "duration_frames": 358
+      }
+    ],
+    "total_duration_s": 18.782,
+    "total_frames": 563
+  },
+  "scene_11": {
+    "title": "The Secret Real Winners",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "So who is actually making money in India's coffee boom?",
+        "file": "audio/cafe_v2/scene_11_s0.wav",
+        "duration_s": 4.2,
+        "duration_frames": 126
+      },
+      {
+        "idx": 1,
+        "text": "Not the caf\u00e9 owner. The real winners are the commercial property owners, and the B2B specialty roasters who sell thirty-ton pallets of beans to hundreds of hopeful entrepreneurs.",
+        "file": "audio/cafe_v2/scene_11_s1.wav",
+        "duration_s": 11.038,
+        "duration_frames": 331
+      }
+    ],
+    "total_duration_s": 15.238,
+    "total_frames": 457
+  },
+  "scene_12": {
+    "title": "The Final Executive Verdict",
+    "lines": [
+      {
+        "idx": 0,
+        "text": "If your dream is to sit in a beautiful sunlit room, drink specialty pour-overs, and curate indie playlists, do not open a caf\u00e9.",
+        "file": "audio/cafe_v2/scene_12_s0.wav",
+        "duration_s": 7.916,
+        "duration_frames": 237
+      },
+      {
+        "idx": 1,
+        "text": "Just buy a six-hundred-rupee bag of beans, brew it at home, and keep your one point five crores in a simple index fund. Because opening a caf\u00e9 in Bangalore does not make you a founder. It makes you an unpaid manager for your landlord's commercial property.",
+        "file": "audio/cafe_v2/scene_12_s1.wav",
+        "duration_s": 16.54,
+        "duration_frames": 496
+      }
+    ],
+    "total_duration_s": 24.456,
+    "total_frames": 734
+  },
+  "summary": {
+    "total_scenes": 12,
+    "total_duration_s": 222.8,
+    "total_minutes": 3.7133333333333334,
+    "total_frames": 6684
+  }
+}

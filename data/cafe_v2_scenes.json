@@ -1,0 +1,631 @@
+[
+  {
+    "id": "scene_01",
+    "name": "The Indie Coffee Illusion",
+    "part": "PART 1 \u00b7 THE INDIE CAFE SEDUCTION",
+    "isPartStart": true,
+    "partTitle": "THE INDIE CAFE SEDUCTION",
+    "partSub": "Sunlight, smooth jazz, and the myth of romantic hospitality",
+    "env": "indiranagar_street",
+    "characterSide": "left",
+    "durationSec": 19.79,
+    "line0Dur": 11.442,
+    "line1Dur": 8.348,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Every weekend in Indiranagar, thousands of young techies walk past glass storefronts filled with warm sunlight, smooth jazz, and the intoxicating aroma of freshly roasted Ethiopian beans.",
+        "pause_s": 0.45,
+        "badge": "INDIRANAGAR 100FT ROAD",
+        "badgeColor": "#D97706",
+        "title": "THE SUNLIT SPECIALTY OASIS",
+        "subtitle": "Glass storefronts, smooth jazz, and Ethiopian roast aroma",
+        "highlights": [
+          "Indiranagar",
+          "young",
+          "techies",
+          "sunlight",
+          "Ethiopian",
+          "beans"
+        ],
+        "durationSec": 11.442
+      },
+      {
+        "idx": 1,
+        "text": "It feels peaceful, romantic, and effortlessly profitable. My name is Anurag Bansal, and welcome to Not a Startup.",
+        "pause_s": 0.5,
+        "badge": "THE FORENSIC DECODE",
+        "badgeColor": "#DC2626",
+        "title": "NOT A STARTUP EXCLUSIVE",
+        "subtitle": "My name is Anurag Bansal, and let's decode the real balance sheet",
+        "highlights": [
+          "peaceful",
+          "romantic",
+          "profitable",
+          "Anurag",
+          "Bansal"
+        ],
+        "durationSec": 8.348
+      }
+    ]
+  },
+  {
+    "id": "scene_02",
+    "name": "The Pitch Deck Fantasy",
+    "part": "PART 1 \u00b7 THE INDIE CAFE SEDUCTION",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "arithmetic_dream",
+    "characterSide": "right",
+    "durationSec": 21.858,
+    "line0Dur": 11.444,
+    "line1Dur": 10.414,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "On paper, specialty coffee is an arithmetic dream. Roasted green beans cost sixty rupees. Oat milk costs thirty. You sell a cup for two hundred and forty.",
+        "pause_s": 0.45,
+        "badge": "75% GROSS MARGIN",
+        "badgeColor": "#059669",
+        "title": "THE ARITHMETIC DREAM",
+        "subtitle": "\u20b960 beans + \u20b930 oat milk sold for \u20b9240 a cup",
+        "highlights": [
+          "arithmetic",
+          "dream",
+          "sixty",
+          "rupees",
+          "seventy-five",
+          "margin"
+        ],
+        "durationSec": 11.444
+      },
+      {
+        "idx": 1,
+        "text": "That is an unbelievable seventy-five percent gross margin. If you sell just one hundred and fifty cups a day, you should be pocketing three lakh rupees in monthly profit.",
+        "pause_s": 0.5,
+        "badge": "\u20b93,00,000 / MO ILLUSION",
+        "badgeColor": "#B45309",
+        "title": "THE 150 CUPS/DAY PROJECTION",
+        "subtitle": "Automatic cash flow before operational reality hits",
+        "highlights": [
+          "one",
+          "hundred",
+          "fifty",
+          "three",
+          "lakh",
+          "profit"
+        ],
+        "durationSec": 10.414
+      }
+    ]
+  },
+  {
+    "id": "scene_03",
+    "name": "The \u20b91.5 Crore Vanity Fitout",
+    "part": "PART 2 \u00b7 THE SUNK CAPITAL TRAP",
+    "isPartStart": true,
+    "partTitle": "THE SUNK CAPITAL TRAP",
+    "partSub": "La Marzocco machines, microcement, and the Bangalore design arms race",
+    "env": "la_marzocco_counter",
+    "characterSide": "left",
+    "durationSec": 19.264,
+    "line0Dur": 5.06,
+    "line1Dur": 14.204,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Before you pour a single espresso, your bank account enters the ICU.",
+        "pause_s": 0.45,
+        "badge": "BANK ACCOUNT IN ICU",
+        "badgeColor": "#DC2626",
+        "title": "DAY ZERO REALITY",
+        "subtitle": "Before you pour a single espresso, your capital is trapped",
+        "highlights": [
+          "pour",
+          "single",
+          "espresso",
+          "bank",
+          "account",
+          "ICU"
+        ],
+        "durationSec": 5.06
+      },
+      {
+        "idx": 1,
+        "text": "Specialty coffee in Bangalore is a design arms race. You need a twelve-lakh La Marzocco machine, custom terrazzo counters, and curated Scandinavian chairs. That is one point two crores of sunk capital before opening day.",
+        "pause_s": 0.5,
+        "badge": "\u20b91.2 CR FITOUT CAPEX",
+        "badgeColor": "#DC2626",
+        "title": "THE DESIGN ARMS RACE",
+        "subtitle": "\u20b912L La Marzocco + terrazzo counters + curated Scandinavian chairs",
+        "highlights": [
+          "design",
+          "arms",
+          "race",
+          "twelve-lakh",
+          "La",
+          "Marzocco",
+          "Scandinavian"
+        ],
+        "durationSec": 14.204
+      }
+    ]
+  },
+  {
+    "id": "scene_04",
+    "name": "The 100-Foot Road Master Lease",
+    "part": "PART 2 \u00b7 THE SUNK CAPITAL TRAP",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "landlord_lease",
+    "characterSide": "right",
+    "durationSec": 15.541999999999998,
+    "line0Dur": 5.512,
+    "line1Dur": 10.03,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Next comes your new best friend: the commercial landlord on 100-foot Road.",
+        "pause_s": 0.45,
+        "badge": "THE COMMERCIAL LANDLORD",
+        "badgeColor": "#7C3AED",
+        "title": "YOUR NEW 50% PARTNER",
+        "subtitle": "Prime Indiranagar 100ft road commercial property deed",
+        "highlights": [
+          "commercial",
+          "landlord",
+          "100-foot",
+          "Road"
+        ],
+        "durationSec": 5.512
+      },
+      {
+        "idx": 1,
+        "text": "He demands four lakh fifty thousand rupees a month, ten months of security deposit upfront in cash, and an automatic eight percent escalation every single year.",
+        "pause_s": 0.5,
+        "badge": "\u20b94,50,000 / MONTH FIXED",
+        "badgeColor": "#DC2626",
+        "title": "10-MONTH SECURITY DEPOSIT",
+        "subtitle": "\u20b945 Lakhs locked in cash + guaranteed 8% annual escalation",
+        "highlights": [
+          "four",
+          "lakh",
+          "fifty",
+          "ten",
+          "months",
+          "deposit",
+          "escalation"
+        ],
+        "durationSec": 10.03
+      }
+    ]
+  },
+  {
+    "id": "scene_05",
+    "name": "The Laptop Squatter Paradox",
+    "part": "PART 3 \u00b7 THE OPERATIONAL MEAT GRINDER",
+    "isPartStart": true,
+    "partTitle": "THE OPERATIONAL MEAT GRINDER",
+    "partSub": "Laptop squatters, perishable pastries, and BESCOM power bills",
+    "env": "laptop_squatters",
+    "characterSide": "left",
+    "durationSec": 19.002,
+    "line0Dur": 8.876,
+    "line1Dur": 10.126,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "In a regular restaurant, a table turns four times an afternoon. In a Bangalore specialty caf\u00e9, it turns zero point eight times.",
+        "pause_s": 0.45,
+        "badge": "0.8X TABLE TURNOVER",
+        "badgeColor": "#DC2626",
+        "title": "TABLE COLLAPSE",
+        "subtitle": "Regular restaurants turn 4x; specialty cafes turn 0.8x",
+        "highlights": [
+          "table",
+          "turns",
+          "four",
+          "times",
+          "zero",
+          "point",
+          "eight"
+        ],
+        "durationSec": 8.876
+      },
+      {
+        "idx": 1,
+        "text": "Because two senior engineers will buy one two-hundred-rupee cold brew, plug in two MacBooks, use your gigabit Wi-Fi, and conduct five Zoom sprints over six hours.",
+        "pause_s": 0.5,
+        "badge": "6 HOURS \u00b7 1 COLD BREW",
+        "badgeColor": "#B45309",
+        "title": "THE SQUATTER EQUATION",
+        "subtitle": "Two senior techies consume 6 hours of Wi-Fi on a single \u20b9200 drink",
+        "highlights": [
+          "two",
+          "senior",
+          "engineers",
+          "MacBooks",
+          "Wi-Fi",
+          "Zoom",
+          "sprints"
+        ],
+        "durationSec": 10.126
+      }
+    ]
+  },
+  {
+    "id": "scene_06",
+    "name": "The Physical Conveyor Belt of Spoilage",
+    "part": "PART 3 \u00b7 THE OPERATIONAL MEAT GRINDER",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "conveyor_dumpster",
+    "characterSide": "right",
+    "durationSec": 16.406,
+    "line0Dur": 5.826,
+    "line1Dur": 10.58,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Coffee beans last months. But artisan pastries and fresh milk do not.",
+        "pause_s": 0.45,
+        "badge": "PERISHABLE EXPIRY",
+        "badgeColor": "#DC2626",
+        "title": "THE 24-HOUR CLOCK",
+        "subtitle": "Coffee beans last months; fresh pastries expire daily",
+        "highlights": [
+          "beans",
+          "months",
+          "artisan",
+          "pastries",
+          "milk"
+        ],
+        "durationSec": 5.826
+      },
+      {
+        "idx": 1,
+        "text": "If you bake thirty sourdough sandwiches and sell twelve, the remaining eighteen go straight into the dumpster at 10:00 PM. That is an invisible thirty-thousand-rupee bleed every single month.",
+        "pause_s": 0.5,
+        "badge": "\u20b930,000 / MO DUMPSTER LOSS",
+        "badgeColor": "#DC2626",
+        "title": "THE INVISIBLE FOOD BLEED",
+        "subtitle": "Bake 30, sell 12... 18 artisanal sandwiches go to the dumpster at 10 PM",
+        "highlights": [
+          "thirty",
+          "sandwiches",
+          "dumpster",
+          "thirty-thousand",
+          "bleed"
+        ],
+        "durationSec": 10.58
+      }
+    ]
+  },
+  {
+    "id": "scene_07",
+    "name": "The BESCOM & Genset Burn",
+    "part": "PART 3 \u00b7 THE OPERATIONAL MEAT GRINDER",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "bescom_genset",
+    "characterSide": "left",
+    "durationSec": 17.486,
+    "line0Dur": 7.576,
+    "line1Dur": 9.91,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "Cooling a fifty-seater glass greenhouse under the April Bangalore sun requires eight split air conditioners running continuously.",
+        "pause_s": 0.45,
+        "badge": "8 SPLIT AIR CONDITIONERS",
+        "badgeColor": "#0284C7",
+        "title": "COOLING THE GREENHOUSE",
+        "subtitle": "50-seater glass facade under brutal 36\u00b0C summer heat",
+        "highlights": [
+          "fifty-seater",
+          "glass",
+          "greenhouse",
+          "split",
+          "air",
+          "conditioners"
+        ],
+        "durationSec": 7.576
+      },
+      {
+        "idx": 1,
+        "text": "Between Karnataka's commercial electricity tariff and sixty liters of diesel for your backup generator, power alone eats one lakh eighty thousand rupees a month.",
+        "pause_s": 0.5,
+        "badge": "\u20b91,80,000 / MONTH POWER",
+        "badgeColor": "#DC2626",
+        "title": "NON-DOMESTIC TARIFF + DIESEL",
+        "subtitle": "Commercial power slab plus 60L diesel for backup generator",
+        "highlights": [
+          "commercial",
+          "tariff",
+          "diesel",
+          "generator",
+          "one",
+          "lakh",
+          "eighty"
+        ],
+        "durationSec": 9.91
+      }
+    ]
+  },
+  {
+    "id": "scene_08",
+    "name": "The Barista Talent War",
+    "part": "PART 3 \u00b7 THE OPERATIONAL MEAT GRINDER",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "barista_poach",
+    "characterSide": "right",
+    "durationSec": 19.094,
+    "line0Dur": 8.586,
+    "line1Dur": 10.508,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "A great caf\u00e9 lives and dies by its head barista. But in Bangalore, specialty baristas are scouted like IPL cricketers.",
+        "pause_s": 0.45,
+        "badge": "THE HEAD BARISTA",
+        "badgeColor": "#D97706",
+        "title": "THE CRITICAL ASSET",
+        "subtitle": "Specialty baristas scouted like IPL cricketers across Bangalore",
+        "highlights": [
+          "caf\u00e9",
+          "head",
+          "barista",
+          "scouted",
+          "IPL",
+          "cricketers"
+        ],
+        "durationSec": 8.586
+      },
+      {
+        "idx": 1,
+        "text": "The moment your barista masters swan latte art, the venture-funded chain across the street offers him a thirty percent raise, leaving you with burnt beans and untrained apprentices.",
+        "pause_s": 0.5,
+        "badge": "30% POACHING HIKE",
+        "badgeColor": "#DC2626",
+        "title": "THE SPECIALTY TALENT SQUEEZE",
+        "subtitle": "The venture-backed chain across 100ft road poaches your trained talent",
+        "highlights": [
+          "swan",
+          "latte",
+          "art",
+          "venture-funded",
+          "thirty",
+          "percent",
+          "raise"
+        ],
+        "durationSec": 10.508
+      }
+    ]
+  },
+  {
+    "id": "scene_09",
+    "name": "The Whiteboard Cash-Flow Grinder",
+    "part": "PART 4 \u00b7 THE TRUE BALANCE SHEET & VERDICT",
+    "isPartStart": true,
+    "partTitle": "THE TRUE BALANCE SHEET & VERDICT",
+    "partSub": "The mechanical cash grinder, true unit economics, and the final verdict",
+    "env": "whiteboard_grinder",
+    "characterSide": "left",
+    "durationSec": 15.882,
+    "line0Dur": 6.644,
+    "line1Dur": 9.238,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "When you feed your daily customer revenue through the actual operational machine, the math completely collapses.",
+        "pause_s": 0.45,
+        "badge": "THE MECHANICAL GRINDER",
+        "badgeColor": "#DC2626",
+        "title": "REVENUE MEETS REALITY",
+        "subtitle": "When customer cash enters the operational gear system",
+        "highlights": [
+          "customer",
+          "revenue",
+          "operational",
+          "machine",
+          "math",
+          "collapses"
+        ],
+        "durationSec": 6.644
+      },
+      {
+        "idx": 1,
+        "text": "Your four lakh fifty thousand rent, power, payroll, and spoilage chew up ninety percent of your incoming cash before you ever touch a single rupee.",
+        "pause_s": 0.5,
+        "badge": "90% CASH CRUSHED",
+        "badgeColor": "#DC2626",
+        "title": "THE LINE-ITEM EXECUTION",
+        "subtitle": "Rent, BESCOM, payroll, and spoilage swallow every single note",
+        "highlights": [
+          "four",
+          "fifty",
+          "rent",
+          "power",
+          "payroll",
+          "ninety",
+          "percent"
+        ],
+        "durationSec": 9.238
+      }
+    ]
+  },
+  {
+    "id": "scene_10",
+    "name": "The True Monthly P&L",
+    "part": "PART 4 \u00b7 THE TRUE BALANCE SHEET & VERDICT",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "true_pnl_clipboard",
+    "characterSide": "right",
+    "durationSec": 18.782,
+    "line0Dur": 6.832,
+    "line1Dur": 11.95,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "At four hundred cups a day with food, an Indiranagar caf\u00e9 generates ten lakh rupees in gross sales.",
+        "pause_s": 0.45,
+        "badge": "\u20b910,00,000 GROSS SALES",
+        "badgeColor": "#059669",
+        "title": "THE 400 CUPS/DAY CEILING",
+        "subtitle": "Packed weekends and full food orders on high street",
+        "highlights": [
+          "four",
+          "hundred",
+          "cups",
+          "ten",
+          "lakh",
+          "gross",
+          "sales"
+        ],
+        "durationSec": 6.832
+      },
+      {
+        "idx": 1,
+        "text": "After deducting fixed rent, utilities, raw materials, GST, and payroll, the operator walks away with forty thousand rupees. In a bad monsoon month, they lose eighty-five thousand.",
+        "pause_s": 0.5,
+        "badge": "\u20b940,000 TRUE NET PROFIT",
+        "badgeColor": "#DC2626",
+        "title": "THE 4% OWNER RESIDUAL",
+        "subtitle": "In good months: \u20b940K profit. In monsoon months: -\u20b985K loss",
+        "highlights": [
+          "deducting",
+          "rent",
+          "forty",
+          "thousand",
+          "monsoon",
+          "eighty-five"
+        ],
+        "durationSec": 11.95
+      }
+    ]
+  },
+  {
+    "id": "scene_11",
+    "name": "The Secret Real Winners",
+    "part": "PART 4 \u00b7 THE TRUE BALANCE SHEET & VERDICT",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "b2b_roasters",
+    "characterSide": "left",
+    "durationSec": 15.238,
+    "line0Dur": 4.2,
+    "line1Dur": 11.038,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "So who is actually making money in India's coffee boom?",
+        "pause_s": 0.45,
+        "badge": "WHO ACTUALLY WINS?",
+        "badgeColor": "#7C3AED",
+        "title": "THE COFFEE BOOM PYRAMID",
+        "subtitle": "Follow the capital to the actual extraction point",
+        "highlights": [
+          "making",
+          "money",
+          "India's",
+          "coffee",
+          "boom"
+        ],
+        "durationSec": 4.2
+      },
+      {
+        "idx": 1,
+        "text": "Not the caf\u00e9 owner. The real winners are the commercial property owners, and the B2B specialty roasters who sell thirty-ton pallets of beans to hundreds of hopeful entrepreneurs.",
+        "pause_s": 0.5,
+        "badge": "LANDLORDS & B2B ROASTERS",
+        "badgeColor": "#059669",
+        "title": "THE PICK & SHOVEL WINNERS",
+        "subtitle": "Selling 30-ton wholesale bean pallets to 500 hopeful entrepreneurs",
+        "highlights": [
+          "commercial",
+          "property",
+          "B2B",
+          "specialty",
+          "roasters",
+          "pallets"
+        ],
+        "durationSec": 11.038
+      }
+    ]
+  },
+  {
+    "id": "scene_12",
+    "name": "The Final Executive Verdict",
+    "part": "PART 4 \u00b7 THE TRUE BALANCE SHEET & VERDICT",
+    "isPartStart": false,
+    "partTitle": "",
+    "partSub": "",
+    "env": "anurag_verdict",
+    "characterSide": "right",
+    "durationSec": 24.456,
+    "line0Dur": 7.916,
+    "line1Dur": 16.54,
+    "pause": 0.5,
+    "lines": [
+      {
+        "idx": 0,
+        "text": "If your dream is to sit in a beautiful sunlit room, drink specialty pour-overs, and curate indie playlists, do not open a caf\u00e9.",
+        "pause_s": 0.45,
+        "badge": "THE FOUNDER'S ADVICE",
+        "badgeColor": "#059669",
+        "title": "SAVE YOUR CAPITAL",
+        "subtitle": "If you want indie pour-overs and playlists... do not open a cafe",
+        "highlights": [
+          "dream",
+          "sunlit",
+          "pour-overs",
+          "playlists",
+          "do",
+          "not",
+          "open"
+        ],
+        "durationSec": 7.916
+      },
+      {
+        "idx": 1,
+        "text": "Just buy a six-hundred-rupee bag of beans, brew it at home, and keep your one point five crores in a simple index fund. Because opening a caf\u00e9 in Bangalore does not make you a founder. It makes you an unpaid manager for your landlord's commercial property.",
+        "pause_s": 0.5,
+        "badge": "UNPAID PROPERTY MANAGERS",
+        "badgeColor": "#DC2626",
+        "title": "THE COLD REALITY",
+        "subtitle": "You didn't become a founder. You became an unpaid manager for your landlord",
+        "highlights": [
+          "six-hundred",
+          "beans",
+          "one",
+          "point",
+          "five",
+          "crores",
+          "unpaid",
+          "manager"
+        ],
+        "durationSec": 16.54
+      }
+    ]
+  }
+]

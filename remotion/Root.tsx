@@ -12,12 +12,23 @@ import { SceneCloudKitchenEngine } from "./scenes/SceneCloudKitchenEngine";
 import { SceneCloudKitchenShort } from "./scenes/SceneCloudKitchenShort";
 import { SceneFounderHouseEngine } from "./scenes/SceneFounderHouseEngine";
 import { SceneFounderHouseShort } from "./scenes/SceneFounderHouseShort";
+import { SceneBangaloreCafeV2Engine } from "./scenes/SceneBangaloreCafeV2Engine";
 
 const defaultProps: EpisodeProps & Record<string, unknown> = { theme: "ledger", captions: true, muted: false };
 
 export const Root: React.FC = () => {
   return (
     <>
+      {/* FLAGSHIP V2: The Economics of Owning a Bangalore Specialty Café (Mr. Economics Benchmark) */}
+      <Composition
+        id="BangaloreCafeV2Master"
+        component={SceneBangaloreCafeV2Engine}
+        width={WIDTH}
+        height={HEIGHT}
+        fps={FPS}
+        durationInFrames={6684}
+        defaultProps={{ muted: false, captions: true }}
+      />
       {/* EPISODE 04 SHORT: 9:16 Viral Vertical Cutdown (The ₹35,000 Bed Trap) */}
       <Composition
         id="FounderHouseShort"
